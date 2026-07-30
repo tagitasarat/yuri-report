@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="YURI — รายงานสแกนหุ้น US ประจำรอบ (เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน)">
+<title>YURI — รายงานรอบ 30 ก.ค. 2026</title>
+<style>*{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%}</style>
+</head>
+<body>
+<style>
+  :root{
+    --paper:#FBFAF6; --card:#FFFFFF; --ink:#161726; --ink-2:#414459; --ink-3:#6E7288;
+    --line:#E4E2DC; --line-2:#EFEDE8;
+    --accent:#5B4B8A; --accent-soft:#EDE9F6;
+    --buy:#127A56; --buy-soft:#E4F2EC;
+    --wait:#B26205; --wait-soft:#FBF0E0;
+    --avoid:#B32D23; --avoid-soft:#FAE9E7;
+    --hold:#5D6B7E; --hold-soft:#EDEFF2;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,monospace;
+    --thai:"Noto Sans Thai","Sarabun","IBM Plex Sans Thai","Leelawadee UI",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#15161F; --card:#1E1F2C; --ink:#EFF0F6; --ink-2:#B7BACB; --ink-3:#888DA3;
+      --line:#2F3142; --line-2:#262838;
+      --accent:#A99BE0; --accent-soft:#272444;
+      --buy:#4FC898; --buy-soft:#152E27;
+      --wait:#E8A34A; --wait-soft:#312614;
+      --avoid:#F0766A; --avoid-soft:#33201E;
+      --hold:#93A2B5; --hold-soft:#222C3A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15161F; --card:#1E1F2C; --ink:#EFF0F6; --ink-2:#B7BACB; --ink-3:#888DA3;
+    --line:#2F3142; --line-2:#262838;
+    --accent:#A99BE0; --accent-soft:#272444;
+    --buy:#4FC898; --buy-soft:#152E27;
+    --wait:#E8A34A; --wait-soft:#312614;
+    --avoid:#F0766A; --avoid-soft:#33201E;
+    --hold:#93A2B5; --hold-soft:#222C3A;
+  }
+  :root[data-theme="light"]{
+    --paper:#FBFAF6; --card:#FFFFFF; --ink:#161726; --ink-2:#414459; --ink-3:#6E7288;
+    --line:#E4E2DC; --line-2:#EFEDE8;
+    --accent:#5B4B8A; --accent-soft:#EDE9F6;
+    --buy:#127A56; --buy-soft:#E4F2EC;
+    --wait:#B26205; --wait-soft:#FBF0E0;
+    --avoid:#B32D23; --avoid-soft:#FAE9E7;
+    --hold:#5D6B7E; --hold-soft:#EDEFF2;
+  }
+
+  *{box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--thai);
+       font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+  .wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem 4rem}
+
+  /* masthead */
+  .mast{padding:1.6rem 0 1.1rem;border-bottom:2px solid var(--ink)}
+  .kicker{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+          color:var(--accent);display:flex;gap:.5rem;align-items:center}
+  .kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+  h1{font-size:1.8rem;line-height:1.22;font-weight:800;letter-spacing:-.02em;
+     margin:.4rem 0 .3rem;text-wrap:balance}
+  .stamp{font-family:var(--mono);font-size:.78rem;color:var(--ink-3);
+         font-variant-numeric:tabular-nums}
+  .themebtn{position:absolute;top:1.7rem;right:1.15rem;background:var(--card);
+            border:1px solid var(--line);color:var(--ink-2);border-radius:999px;
+            font-size:.95rem;line-height:1;padding:.4rem .55rem;cursor:pointer}
+  .mastwrap{position:relative}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:var(--paper);
+      border-bottom:1px solid var(--line);margin:0 -1.15rem;padding:.55rem 1.15rem;
+      overflow-x:auto;-webkit-overflow-scrolling:touch}
+  nav ul{display:flex;gap:.4rem;list-style:none;margin:0;padding:0;white-space:nowrap}
+  nav a{display:block;font-size:.8rem;font-weight:600;text-decoration:none;
+        color:var(--ink-2);padding:.3rem .7rem;border:1px solid var(--line);border-radius:999px}
+  nav a:hover{border-color:var(--accent);color:var(--accent)}
+  nav a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* sections */
+  section{padding-top:2.1rem;scroll-margin-top:3.4rem}
+  h2{font-size:1.2rem;font-weight:800;letter-spacing:-.01em;margin:0 0 .2rem;
+     display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+  .h2note{font-size:.78rem;font-weight:500;color:var(--ink-3);letter-spacing:0}
+  .rule{height:3px;background:var(--ink);width:2.2rem;margin:.45rem 0 1rem;border-radius:2px}
+  h3{font-size:1rem;font-weight:800;margin:1.5rem 0 .5rem}
+  p{margin:.7rem 0}
+
+  /* verdict */
+  .verdict{background:var(--card);border:1px solid var(--line);border-radius:14px;
+           padding:1.1rem 1.15rem;margin-top:1.1rem;display:flex;flex-direction:column;gap:.85rem}
+  .vrow{display:flex;gap:.75rem;align-items:flex-start}
+  .vnum{flex:none;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--accent-soft);
+        color:var(--accent);font-family:var(--mono);font-size:.75rem;font-weight:700;
+        display:flex;align-items:center;justify-content:center;margin-top:.15rem}
+  .vrow p{margin:0;font-size:.95rem;line-height:1.6}
+
+  /* tickets */
+  .tickets{display:flex;flex-direction:column;gap:.7rem;margin-top:1rem}
+  .tk{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--buy);
+      border-radius:10px;padding:.85rem 1rem;display:flex;flex-direction:column;gap:.5rem}
+  .tk.wait{border-left-color:var(--wait)}
+  .tk.stop{border-left-color:var(--avoid)}
+  .tk.hold{border-left-color:var(--hold)}
+  .tkhead{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+  .tick{font-family:var(--mono);font-size:1.12rem;font-weight:700}
+  .lots{font-size:.82rem;font-weight:700;color:var(--buy);background:var(--buy-soft);
+        padding:.1rem .5rem;border-radius:5px}
+  .tk.wait .lots{color:var(--wait);background:var(--wait-soft)}
+  .tk.stop .lots{color:var(--avoid);background:var(--avoid-soft)}
+  .tk.hold .lots{color:var(--hold);background:var(--hold-soft)}
+  .px{margin-left:auto;font-family:var(--mono);font-size:.92rem;font-weight:600;
+      font-variant-numeric:tabular-nums}
+  .why{font-size:.88rem;color:var(--ink-2);margin:0;line-height:1.55}
+  .meta{display:flex;flex-wrap:wrap;gap:.3rem}
+  .chip{font-size:.72rem;font-family:var(--mono);color:var(--ink-3);
+        border:1px solid var(--line);border-radius:5px;padding:.08rem .42rem}
+
+  /* callout */
+  .call{border:1px solid var(--line);border-left:4px solid var(--accent);background:var(--card);
+        border-radius:10px;padding:.9rem 1rem;margin:1rem 0}
+  .call.warn{border-left-color:var(--wait)}
+  .call.alert{border-left-color:var(--avoid)}
+  .call h4{margin:0 0 .4rem;font-size:.95rem;font-weight:800}
+  .call p{margin:.45rem 0;font-size:.9rem;line-height:1.6}
+  .call p:last-child{margin-bottom:0}
+
+  blockquote{margin:.8rem 0;padding:.55rem .9rem;border-left:3px solid var(--line);
+             color:var(--ink-2);font-size:.9rem;background:var(--line-2);border-radius:0 8px 8px 0}
+  blockquote p{margin:0}
+
+  /* tables */
+  .scroller{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.9rem -1.15rem;
+            padding:0 1.15rem}
+  table{border-collapse:collapse;width:100%;font-size:.84rem;min-width:32rem}
+  thead th{text-align:left;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+           color:var(--ink-3);font-weight:700;padding:.4rem .5rem;border-bottom:2px solid var(--line);
+           white-space:nowrap;position:sticky;top:0;background:var(--paper)}
+  td{padding:.45rem .5rem;border-bottom:1px solid var(--line-2);vertical-align:top}
+  td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+  tbody tr:hover{background:var(--line-2)}
+  .tkr{font-family:var(--mono);font-weight:700}
+  .hint{font-size:.75rem;color:var(--ink-3);margin:.2rem 0 0}
+
+  .b-buy{color:var(--buy);font-weight:700}
+  .b-wait{color:var(--wait);font-weight:700}
+  .b-avoid{color:var(--avoid);font-weight:700}
+  .b-hold{color:var(--hold);font-weight:700}
+  .stale{text-decoration:line-through;color:var(--ink-3)}
+
+  /* price map */
+  .pmap{background:var(--card);border:1px solid var(--line);border-radius:10px;
+        padding:.85rem 1rem;margin:.7rem 0}
+  .pmap .pmt{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.5rem}
+  .bar{position:relative;height:.55rem;border-radius:99px;background:var(--line-2);margin:1.5rem 0 1.2rem}
+  .seg{position:absolute;top:0;height:100%;border-radius:99px}
+  .seg.acc{background:var(--buy-soft);border:1px solid var(--buy)}
+  .seg.dz{background:var(--wait-soft);border:1px solid var(--wait)}
+  .seg.bl{background:var(--accent-soft);border:1px solid var(--accent)}
+  .mark{position:absolute;top:-.35rem;width:2px;height:1.25rem;background:var(--ink)}
+  .mark span{position:absolute;top:-1.15rem;left:50%;transform:translateX(-50%);
+             font-family:var(--mono);font-size:.7rem;font-weight:700;white-space:nowrap;color:var(--ink)}
+  .legend{display:flex;gap:.8rem;flex-wrap:wrap;font-size:.72rem;color:var(--ink-3);
+          font-family:var(--mono)}
+  .legend i{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;margin-right:.25rem}
+
+  ul.tight{margin:.6rem 0;padding-left:1.15rem}
+  ul.tight li{margin:.35rem 0;font-size:.9rem;line-height:1.55}
+
+  footer{margin-top:2.6rem;padding-top:1.1rem;border-top:1px solid var(--line);
+         font-size:.78rem;color:var(--ink-3)}
+  footer a{color:var(--accent)}
+  .src{font-size:.74rem;line-height:1.7;word-break:break-word}
+  .src a{color:var(--ink-3)}
+</style>
+
+<div class="wrap">
+
+<div class="mastwrap">
+  <button class="themebtn" id="tt" aria-label="สลับโหมดสว่าง/มืด">◐</button>
+  <header class="mast">
+    <div class="kicker">Yuri Algorithm · รอบหลัง FOMC + งบ Big Tech</div>
+    <h1>เหลือไม้ฟรี 1 ไม้ — ใช้กับอะไรดี</h1>
+    <div class="stamp">30 ก.ค. 2026 · ราคาอ้างอิง = ปิด 29 ก.ค. · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
+  </header>
+</div>
+
+<nav aria-label="สารบัญ">
+  <ul>
+    <li><a href="#verdict">คำตอบ</a></li>
+    <li><a href="#stale">ราคาตกยุค</a></li>
+    <li><a href="#macro">บริบทตลาด</a></li>
+    <li><a href="#scan">ตารางสแกน</a></li>
+    <li><a href="#dcf">DCF</a></li>
+    <li><a href="#shop">ซื้อ/ตัดออก</a></li>
+    <li><a href="#conflict">แผนขัดกัน</a></li>
+    <li><a href="#thesis">Thesis alert</a></li>
+    <li><a href="#gaps">ข้อมูลที่ขาด</a></li>
+  </ul>
+</nav>
+
+<!-- ============ VERDICT ============ -->
+<section id="verdict">
+  <h2>คำตอบสั้น <span class="h2note">ไม้ฟรีไม้สุดท้ายของเดือน ก.ค.</span></h2>
+  <div class="rule"></div>
+
+  <div class="verdict">
+    <div class="vrow"><div class="vnum">1</div>
+      <p><strong>ถ้าจะใช้ → NVDA</strong> คือตัวเดียวที่ผ่านเกณฑ์คุณภาพครบโดยไม่ต้องฝืนกติกาข้อไหนเลย</p></div>
+    <div class="vrow"><div class="vnum">2</div>
+      <p><strong>ถ้าไม่ใช้ → ก็ถูกต้องเหมือนกัน</strong> ค่าคอมที่ประหยัดได้คิดเป็นเงินไม่กี่ดอลลาร์ แต่ซื้อแพงไป 5% บนไม้หนึ่งคือเงินหลายเท่าของค่าคอมนั้น — <em>การปล่อยไม้ฟรีหมดอายุ แพงน้อยกว่าการเอาไม้ฟรีไปไล่ราคาเสมอ</em></p></div>
+    <div class="vrow"><div class="vnum">3</div>
+      <p><strong>ทำไมไม่ใช่ MSFT ทั้งที่ตารางขึ้นเขียว</strong> — ตารางใช้ราคาปิด 29 ก.ค. ที่ 390.54 ซึ่งเป็น<em>ราคาก่อนงบ</em> งบออกหลังตลาดปิดคืนนั้นแล้วหุ้นกระโดด <strong>+7.8% ไป ~421</strong> พอใส่ราคาจริง MSFT ตกเป็น ⚪ ทันทีเพราะติด NO-CHASE gap-up — <em>ของดีจริง แต่ราคาเก็บส่วนต่างไปหมดในคืนเดียว</em></p></div>
+  </div>
+</section>
+
+<!-- ============ STALE PRICES ============ -->
+<section id="stale">
+  <h2>⚠️ ราคาในตารางตกยุค 2 ตัว <span class="h2note">งบออกหลังตลาดปิด</span></h2>
+  <div class="rule"></div>
+  <p>engine ดึงได้แค่ราคาปิด 29 ก.ค. ซึ่งเป็น<strong>ราคาก่อนงบ</strong>ของ MSFT และ META — คำนวณใหม่ด้วยสูตรเดียวกับ engine (Disc piecewise + Score = Q × (0.6+0.4×Disc/100) × regime 0.9):</p>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ในตาราง (ปิด 29)</th><th>ราคาจริงหลังงบ</th><th>Disc</th><th>Score</th><th>Action ที่ถูกต้อง</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">MSFT</td><td class="n stale">390.54</td><td class="n"><strong>~421</strong> <span style="color:var(--buy)">+7.8%</span></td>
+          <td class="n">63 → <strong>49</strong></td><td class="n">70.5 → <strong>65.9</strong></td>
+          <td><span class="b-hold">⚪ ถือ/รอย่อ</span><br><span class="hint">NO-CHASE gap-up</span></td></tr>
+      <tr><td class="tkr">META</td><td class="n stale">585.61</td><td class="n"><strong>~533</strong> <span style="color:var(--avoid)">−9%</span></td>
+          <td class="n">56 → <strong>68</strong></td><td class="n">59.2 → <strong>62.7</strong></td>
+          <td><span class="b-hold">⚪ ถือ/รอย่อ</span><br><span class="hint">Score ยังไม่ถึงเส้น 65</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="hint">META ~533 เป็นตัวเลขอนุมานจากพาดหัวข่าว ยังไม่ใช่ราคาปิดจริง — รอบหน้า engine จะดึงของจริงมาทับ</p>
+
+  <div class="call alert">
+    <h4>สรุปหลังแก้ราคา</h4>
+    <p>กระดานนี้ <strong>ไม่มี 🟢 เหลือเลยแม้แต่ตัวเดียว</strong></p>
+  </div>
+</section>
+
+<!-- ============ MACRO ============ -->
+<section id="macro">
+  <h2>บริบทตลาด <span class="h2note">เปลี่ยน 2 เรื่องใหญ่</span></h2>
+  <div class="rule"></div>
+
+  <h3>1. FOMC 29 ก.ค. — คงดอก แต่ hawkish ยืนยันแล้ว → ลด regime 1.0 → 0.9</h3>
+  <ul class="tight">
+    <li>คงดอก <strong>3.50–3.75%</strong> เป็นครั้งที่ 5 ติด แต่โหวต <strong>9–3</strong></li>
+    <li><strong>Hammack · Kashkari · Logan dissent ขอ "ขึ้นดอก" พร้อมกันทั้งสามคน</strong> — ครั้งแรกตั้งแต่ ก.ย. 2016 ที่มี 3 เสียงค้านไปทางเดียวกัน</li>
+    <li>ประธาน Warsh ตัด forward guidance ทิ้ง แถลงการณ์สั้นผิดปกติ</li>
+    <li><strong>ตลาดย้ายไป price ขึ้นดอก 2 ครั้งในปี 2026</strong> (ก.ย. ~82%)</li>
+  </ul>
+  <div class="call warn">
+    <p>รอบที่แล้วเราจดเงื่อนไขไว้ล่วงหน้าว่า <em>"ถ้า 29 ก.ค. ขึ้นจริง/ส่งสัญญาณขึ้น ให้ลดเหลือ 0.9"</em> — สามเสียง dissent + ตลาด price 2 hikes = ส่งสัญญาณแล้ว จึงลดตามกฎที่ตั้งไว้เอง ผลคือ <strong>Score ทั้งกระดานต่ำลง ~10% โดยตั้งใจ</strong> และเส้น BUY (65) จึงเข้มขึ้น</p>
+    <p>ข่าวดีข้างเดียว: <strong>fed_window ปิดแล้ว</strong> (ประชุมถัดไป ก.ย.) → ไม่มีตัวคูณ ×0.5 บังคับอีก</p>
+  </div>
+
+  <h3>2. งบ Big Tech แยกทาง</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ผล</th><th>หุ้น</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">MSFT</td>
+          <td>rev <strong>90.0B +18%</strong> (est 87.6B) · adj EPS <strong>4.74</strong> vs est 4.24 (<strong>+11.8%</strong>) · <strong>Azure +43% ทะลุ 100B ต่อปีครั้งแรก</strong> · RPO 678B +84%</td>
+          <td class="n" style="color:var(--buy)"><strong>+8–9%</strong></td></tr>
+      <tr><td class="tkr">META</td>
+          <td>rev <strong>60.8B +28%</strong> beat · แต่ EPS 6.18 <strong>miss −13.8%</strong> · <strong>FCF ยุบ 8.5B → 784M</strong> · capex Q2 31.1B กิน OCF 31.9B เกือบหมด · ยก capex guide FY26 → <strong>130–145B</strong> · guide Q3 ต่ำกว่าคาด</td>
+          <td class="n" style="color:var(--avoid)"><strong>−9%</strong></td></tr>
+      <tr><td class="tkr">AMZN</td><td><strong>งบคืนนี้ 30 ก.ค.</strong></td><td class="n b-avoid">BINARY</td></tr>
+      <tr><td class="tkr">GOOGL</td><td>22 ก.ค. ผ่านแล้ว — rev 119.8B +24% · Cloud +82% · beat แต่ยก capex guide</td><td class="n">−4.7% แล้วฟื้น</td></tr>
+      <tr><td class="tkr">MELI</td><td>งบ <strong>5 ส.ค.</strong> (อีก 6 วัน)</td><td class="n">ใกล้ binary</td></tr>
+      <tr><td class="tkr">MRVL / NVDA</td><td>งบ 20 ส.ค. / <strong>26 ส.ค.</strong></td><td class="n">ยังไกล</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ SCAN ============ -->
+<section id="scan">
+  <h2>ตารางสแกน <span class="h2note">30 ตัว · regime 0.9 · ปิด 29 ก.ค.</span></h2>
+  <div class="rule"></div>
+  <p class="hint">↔ เลื่อนตารางซ้าย-ขวาได้</p>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>%ต่ำ 52wH</th><th>Q</th><th>Disc</th><th>Score</th><th>ทรง</th><th>Action</th><th>Gate เด่น</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">MSFT</td><td class="n">390.54</td><td class="n">29.1%</td><td class="n">92</td><td class="n">63</td><td class="n"><strong>70.5</strong></td><td>🔴↘</td>
+          <td><span class="stale">🟢 ซื้อ</span> <span class="b-hold">⚪</span></td><td>⚠️ ราคาตกยุค — จริง ~421 ติด NO-CHASE</td></tr>
+      <tr><td class="tkr">MRVL</td><td class="n">163.40</td><td class="n"><strong>50.5%</strong></td><td class="n">72</td><td class="n">90</td><td class="n">62.2</td><td>🔴↘</td>
+          <td><span class="b-wait">🟠 ทบทวน</span></td><td>ต่ำกว่าไฮ &gt;50% → เช็ก value-trap</td></tr>
+      <tr><td class="tkr">NVDA</td><td class="n"><strong>190.01</strong></td><td class="n">19.6%</td><td class="n"><strong>95</strong></td><td class="n">39</td><td class="n"><strong>64.5</strong></td><td>🔴↘</td>
+          <td><span class="b-hold">⚪ ถือ/รอย่อ</span></td><td><strong>ต่ำกว่า base FV · ตกเส้น BUY 0.5 แต้ม</strong></td></tr>
+      <tr><td class="tkr">SNPS</td><td class="n">373.69</td><td class="n">42.7%</td><td class="n">78</td><td class="n">78</td><td class="n">63.9</td><td>🔴↘</td>
+          <td><span class="b-hold">⚪</span></td><td>thesis:watch · RSI 22</td></tr>
+      <tr><td class="tkr">GOOGL</td><td class="n">336.71</td><td class="n">17.5%</td><td class="n">95</td><td class="n">33</td><td class="n">62.5</td><td>🟢↘</td>
+          <td><span class="b-hold">⚪</span></td><td>thesis:watch</td></tr>
+      <tr><td class="tkr">NFLX</td><td class="n">73.63</td><td class="n">41.9%</td><td class="n">75</td><td class="n">77</td><td class="n">61.3</td><td>🟢↗</td>
+          <td><span class="b-hold">⚪</span></td><td>NO-CHASE ยืนใกล้ไฮ</td></tr>
+      <tr><td class="tkr">MELI</td><td class="n">1863.31</td><td class="n">26.9%</td><td class="n">82</td><td class="n">57</td><td class="n">61.2</td><td>🟢↘</td>
+          <td><span class="b-hold">⚪</span></td><td>งบ 5 ส.ค.</td></tr>
+      <tr><td class="tkr">AVGO</td><td class="n">370.32</td><td class="n">25.1%</td><td class="n">82</td><td class="n">53</td><td class="n">59.8</td><td>🔴↘</td>
+          <td><span class="b-hold">⚪</span></td><td>เหนือ base FV 85%</td></tr>
+      <tr><td class="tkr">META</td><td class="n">585.61</td><td class="n">26.2%</td><td class="n">80</td><td class="n">56</td><td class="n">59.2</td><td>🔴↘</td>
+          <td><span class="b-hold">⚪</span></td><td>⚠️ จริง ~533 · <strong>thesis→watch</strong></td></tr>
+      <tr><td class="tkr">ASML</td><td class="n">1550.69</td><td class="n">22.4%</td><td class="n">82</td><td class="n">46</td><td class="n">57.8</td><td>🔴↘</td><td><span class="b-hold">⚪</span></td><td>—</td></tr>
+      <tr><td class="tkr">TSM</td><td class="n">374.67</td><td class="n">21.8%</td><td class="n">80</td><td class="n">44</td><td class="n">56.0</td><td>🔴↘</td><td><span class="b-hold">⚪</span></td><td>—</td></tr>
+      <tr><td class="tkr">COHR</td><td class="n">222.05</td><td class="n">49.5%</td><td class="n">65</td><td class="n">89</td><td class="n">55.9</td><td>🔴↘</td><td><span class="b-hold">⚪</span></td><td>Q ต่ำ (65)</td></tr>
+      <tr><td class="tkr">COST</td><td class="n">974.03</td><td class="n">11.0%</td><td class="n">92</td><td class="n">13</td><td class="n">54.0</td><td>🟢↘</td><td><span class="b-hold">⚪</span></td><td>NO-CHASE RSI 76</td></tr>
+      <tr><td class="tkr">AMZN</td><td class="n">226.65</td><td class="n">18.6%</td><td class="n">80</td><td class="n">36</td><td class="n">53.5</td><td>🔴↘</td><td><span class="b-hold">⚪</span></td><td><strong>BINARY งบคืนนี้</strong></td></tr>
+      <tr><td class="tkr">HCA</td><td class="n">408.18</td><td class="n">26.4%</td><td class="n">70</td><td class="n">56</td><td class="n">51.9</td><td>🔴↘</td><td><span class="b-hold">⚪</span></td><td>MoS หนา แต่ Q/conviction กลาง</td></tr>
+      <tr><td class="tkr">LLY</td><td class="n">1210.02</td><td class="n">3.2%</td><td class="n">78</td><td class="n">7</td><td class="n">44.0</td><td>🔴↘</td><td><span class="b-wait">🟠 ทบทวน</span></td><td>ใกล้ไฮ ไม่มีส่วนลด</td></tr>
+      <tr><td class="tkr">MRK</td><td class="n">130.36</td><td class="n">3.5%</td><td class="n">75</td><td class="n">7</td><td class="n">42.3</td><td>🔴↘</td><td><span class="b-wait">🟠 ทบทวน</span></td><td>เหนือ DCF base 91 มาก</td></tr>
+      <tr><td class="tkr">O</td><td class="n">65.54</td><td class="n">2.4%</td><td class="n">75</td><td class="n">6</td><td class="n">42.2</td><td>🔴↘</td><td><span class="b-wait">🟠 ทบทวน</span></td><td>yield ห่าง 10Y บาง + โลก rate-hike</td></tr>
+      <tr><td class="tkr">NVO</td><td class="n">51.58</td><td class="n">16.7%</td><td class="n">60</td><td class="n">30</td><td class="n">38.9</td><td>🟢↘</td><td><span class="b-wait">🟠 ทบทวน</span></td><td>SLEEP-WELL: conviction LOW</td></tr>
+      <tr><td class="tkr">V · MA · BRK-B · AAPL</td><td class="n">368/563/509/338</td><td class="n">1–6%</td><td class="n">85–92</td><td class="n">6–8</td><td class="n">47–52</td><td>—</td><td><span class="b-hold">⚪</span></td><td>ใกล้ไฮ ไม่มีส่วนลด</td></tr>
+      <tr><td class="tkr">PG</td><td class="n">146.10</td><td class="n">11.3%</td><td class="n">85</td><td class="n">14</td><td class="n">50.2</td><td>🔴↗</td><td><span class="b-hold">⚪</span></td><td>แดงเด้ง — รอ base</td></tr>
+      <tr><td class="tkr">CRWD · PANW · UNH · VICI</td><td class="n">179/314/421/27.1</td><td class="n">9–18%</td><td class="n">72–80</td><td class="n">9–33</td><td class="n">45–49</td><td>—</td><td><span class="b-hold">⚪</span></td><td>—</td></tr>
+      <tr><td class="tkr">PFE</td><td class="n">25.15</td><td class="n">9.5%</td><td class="n">58</td><td class="n">10</td><td class="n">33.4</td><td>🔴↘</td><td><span class="b-hold">⚪</span></td><td>thesis:watch · NO-CHASE RSI 70</td></tr>
+      <tr><td class="tkr">IIPR</td><td class="n">61.21</td><td class="n">6.4%</td><td class="n">50</td><td class="n">8</td><td class="n">28.5</td><td>🟢↗</td><td><span class="b-hold">⚪</span></td><td>thesis:watch · value-trap</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ DCF ============ -->
+<section id="dcf">
+  <h2>Earth Evans DCF <span class="h2note">Damodaran FCFF 10 ปี + Monte Carlo 20,000 รอบ</span></h2>
+  <div class="rule"></div>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>Base FV</th><th>Δ รอบก่อน</th><th>Bull FV</th><th>MoS</th><th>ตำแหน่งในแถบ</th><th>อ่านผล</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">NVDA</td><td class="n">190.01</td><td class="n"><strong>205.46</strong></td><td class="n">—</td><td class="n">332.50</td>
+          <td class="n" style="color:var(--buy)"><strong>+7.5%</strong></td><td class="n"><strong>−12%</strong></td>
+          <td><strong>ต่ำกว่ามูลค่าฐาน — ตัวเดียวในกลุ่ม AI</strong></td></tr>
+      <tr><td class="tkr">HCA</td><td class="n">408.18</td><td class="n">472.16</td><td class="n">—</td><td class="n">622.81</td>
+          <td class="n" style="color:var(--buy)"><strong>+13.6%</strong></td><td class="n">−43%</td><td>MoS หนาสุด แต่ policy risk ถึง midterm พ.ย.</td></tr>
+      <tr><td class="tkr">META</td><td class="n">585.61 → ~533</td><td class="n">697.21</td><td class="n">—</td><td class="n">978.02</td>
+          <td class="n">+16% → +31%</td><td class="n">−40%</td><td>⚠️ <strong>FV ตัวนี้ใช้ไม่ได้แล้ว</strong></td></tr>
+      <tr><td class="tkr">UNH</td><td class="n">420.57</td><td class="n">432.97</td><td class="n">—</td><td class="n">549.95</td><td class="n">+2.9%</td><td class="n">−11%</td><td>~fair · DOJ ยังค้าง</td></tr>
+      <tr><td class="tkr">NFLX</td><td class="n">73.63</td><td class="n">72.17</td><td class="n">—</td><td class="n">106.65</td><td class="n">−2.0%</td><td class="n">+4%</td><td>~fair พอดีเป๊ะ</td></tr>
+      <tr><td class="tkr">PFE</td><td class="n">25.15</td><td class="n">23.56</td><td class="n">—</td><td class="n">31.25</td><td class="n">−6.7%</td><td class="n">+21%</td><td>fair ไม่ใช่ของถูก · cliff จริง</td></tr>
+      <tr><td class="tkr">MSFT</td><td class="n">390.54 → <strong>~421</strong></td><td class="n"><strong>346.08</strong></td>
+          <td class="n" style="color:var(--buy)"><strong>+4.3%</strong></td><td class="n">447.18</td>
+          <td class="n">−12.8% → −17.8%</td><td class="n">44% → <strong>74%</strong></td><td>งบดันขึ้น แต่ราคาวิ่งเร็วกว่า FV</td></tr>
+      <tr><td class="tkr">MELI</td><td class="n">1863.31</td><td class="n">1177.75</td><td class="n">—</td><td class="n">2646.42</td><td class="n">−58%</td><td class="n">47%</td><td>กลางแถบ · งบ 5 ส.ค.</td></tr>
+      <tr><td class="tkr">MRVL</td><td class="n">163.40</td><td class="n">89.82</td><td class="n">—</td><td class="n">152.44</td><td class="n">−81.9%</td><td class="n"><strong>118%</strong></td><td><strong>เหนือ bull FV แล้ว</strong></td></tr>
+      <tr><td class="tkr">SNPS</td><td class="n">373.69</td><td class="n">217.08</td><td class="n">—</td><td class="n">325.89</td><td class="n">−72.1%</td><td class="n">144%</td><td>เหนือ bull FV</td></tr>
+      <tr><td class="tkr">GOOGL</td><td class="n">336.71</td><td class="n">219.52</td><td class="n">—</td><td class="n">286.33</td><td class="n">−53.4%</td><td class="n">175%</td><td>เหนือ bull FV</td></tr>
+      <tr><td class="tkr">AVGO</td><td class="n">370.32</td><td class="n">200.61</td><td class="n">—</td><td class="n">296.47</td><td class="n">−84.6%</td><td class="n">177%</td><td>เหนือ bull FV</td></tr>
+      <tr><td class="tkr">MRK</td><td class="n">130.36</td><td class="n">91.04</td><td class="n">—</td><td class="n">115.39</td><td class="n">−43.2%</td><td class="n">162%</td><td>เหนือ bull FV</td></tr>
+      <tr><td class="tkr">PG</td><td class="n">146.10</td><td class="n">104.08</td><td class="n">—</td><td class="n">120.92</td><td class="n">−40.4%</td><td class="n">250%</td><td>DCF อนุรักษ์เกินไปกับ moat ยาว</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call">
+    <h4>ทำไม Δ FV เปลี่ยนแค่ MSFT ตัวเดียว</h4>
+    <p>FY26 ปิดปีแล้ว จึงอัพ <code>revenue_base</code> จาก 318,273 (LTM ถึง Q3) → <strong>332,003 (FY26 เต็มปี)</strong> · ตัวอื่นยังใช้ assumptions ชุด 25 ก.ค. เพราะยังไม่มีงบใหม่มาเปลี่ยน input — <strong>ไม่ใช่ว่าไม่ได้รัน แต่รันแล้วได้เท่าเดิม</strong></p>
+  </div>
+
+  <h3>Price Map — ตัวที่เกี่ยวกับการตัดสินใจรอบนี้</h3>
+
+  <div class="pmap">
+    <div class="pmt"><span class="tkr" style="font-size:1rem">NVDA</span>
+      <span class="hint">ราคาอยู่ <strong>ต่ำกว่าโซนสะสมทั้งโซน</strong> = จุดที่ engine ออกแบบมาให้เก็บ</span></div>
+    <div class="bar">
+      <div class="seg acc" style="left:18%;width:14%"></div>
+      <div class="seg dz" style="left:52%;width:16%"></div>
+      <div class="seg bl" style="left:88%;width:8%"></div>
+      <div class="mark" style="left:8%"><span>190.01</span></div>
+    </div>
+    <div class="legend"><span><i class="seg acc" style="position:static"></i>acc 203–216</span>
+      <span><i class="seg dz" style="position:static"></i>dz 261–277</span>
+      <span><i class="seg bl" style="position:static"></i>bull 329–336</span></div>
+  </div>
+
+  <div class="pmap">
+    <div class="pmt"><span class="tkr" style="font-size:1rem">MSFT</span>
+      <span class="hint">ทะลุ dz ขึ้นมาแล้ว เหลือทางถึง bull ~6%</span></div>
+    <div class="bar">
+      <div class="seg acc" style="left:2%;width:17%"></div>
+      <div class="seg dz" style="left:37%;width:20%"></div>
+      <div class="seg bl" style="left:86%;width:8%"></div>
+      <div class="mark" style="left:71%"><span>~421</span></div>
+    </div>
+    <div class="legend"><span><i class="seg acc" style="position:static"></i>acc 343–363</span>
+      <span><i class="seg dz" style="position:static"></i>dz 385–409</span>
+      <span><i class="seg bl" style="position:static"></i>bull 443–452</span></div>
+  </div>
+
+  <div class="pmap">
+    <div class="pmt"><span class="tkr" style="font-size:1rem">HCA</span>
+      <span class="hint">ต่ำกว่า acc ทั้งโซน = MoS หนา แต่ Q แค่ 70</span></div>
+    <div class="bar">
+      <div class="seg acc" style="left:26%;width:13%"></div>
+      <div class="seg dz" style="left:54%;width:14%"></div>
+      <div class="seg bl" style="left:89%;width:6%"></div>
+      <div class="mark" style="left:0%"><span>408.18</span></div>
+    </div>
+    <div class="legend"><span><i class="seg acc" style="position:static"></i>acc 467–496</span>
+      <span><i class="seg dz" style="position:static"></i>dz 531–564</span>
+      <span><i class="seg bl" style="position:static"></i>bull 617–629</span></div>
+  </div>
+</section>
+
+<!-- ============ SHOPPING ============ -->
+<section id="shop">
+  <h2>Shopping list <span class="h2note">ไม้ฟรี 1 ไม้</span></h2>
+  <div class="rule"></div>
+
+  <div class="tickets">
+    <div class="tk">
+      <div class="tkhead"><span class="tick">NVDA</span><span class="lots">อันดับ 1</span>
+        <span class="px">≤ 195</span></div>
+      <p class="why">ตัวเดียวในจอที่ผ่านครบทุกด่านโดยไม่ต้องฝืนกติกาข้อไหน</p>
+      <div class="meta"><span class="chip">Q 95</span><span class="chip">conviction HIGH</span>
+        <span class="chip">thesis intact</span><span class="chip">MoS +7.5%</span>
+        <span class="chip">RSI 40</span><span class="chip">งบ 26 ส.ค.</span>
+        <span class="chip">sizeMult 0.92</span><span class="chip">ถือ 0.68% / cap 8%</span></div>
+    </div>
+  </div>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>เกณฑ์</th><th>NVDA</th><th>ผ่าน?</th></tr></thead>
+    <tbody>
+      <tr><td>Q (คุณภาพ)</td><td class="n">95 — สูงสุดเท่า GOOGL</td><td>✅</td></tr>
+      <tr><td>Conviction</td><td>HIGH</td><td>✅</td></tr>
+      <tr><td>Thesis</td><td>intact</td><td>✅</td></tr>
+      <tr><td>ราคา vs DCF base</td><td class="n">190.01 vs <strong>205.46</strong> = ถูกกว่า 7.5%</td><td>✅</td></tr>
+      <tr><td>ทรงวัน</td><td>🔴↘ แดงจมก้น — ไม่ใช่ gap-up</td><td>✅ ไม่ติด NO-CHASE</td></tr>
+      <tr><td>RSI</td><td class="n">40.4</td><td>✅ ไม่ร้อน</td></tr>
+      <tr><td>Binary event</td><td>งบ 26 ส.ค. (อีก 27 วัน)</td><td>✅ ไกลพอ</td></tr>
+      <tr><td>เพดานพอร์ต</td><td class="n">0.68% จาก 8% = เหลือเกือบเต็ม</td><td>✅</td></tr>
+      <tr><td><strong>Yuri Score</strong></td><td class="n"><strong>64.5</strong> vs เส้น BUY 65</td><td>❌ ตกไป <strong>0.5 แต้ม</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call">
+    <p>ที่มันเป็น ⚪ ไม่ใช่ 🟢 คือ <strong>ตกเส้นไป 0.5 คะแนน จาก regime_mult 0.9 ที่เพิ่งลดวันนี้เอง</strong> (ถ้าคง 1.0 ไว้ Score = 71.7 = 🟢 ซื้อ) — ตัว NVDA ไม่ได้แย่ลงเลย ตลาดต่างหากที่เพิ่งถูกหักส่วนลดความเสี่ยงเพิ่ม จึงไม่ขายผ้าเอาหน้ารอด: <strong>ตารางบอก ⚪ ก็คือ ⚪</strong> แต่ถ้าจะใช้ไม้ฟรี นี่คือตัวที่คุณภาพต่อความเสี่ยงดีที่สุดในจอ</p>
+  </div>
+
+  <div class="call alert">
+    <h4>⚠️ ต้องรู้ก่อนกด — THESIS ALERT</h4>
+    <p>ที่ NVDA ร่วง 3 วันติด (−5% วันที่ 28, −3.5% วันที่ 29) <strong>ไม่ใช่เรื่องดีมานด์ แต่เป็นประเด็น "circular financing"</strong> — มีรายงานว่า NVDA คุยจะ backstop เงินทุน <strong>250B</strong> ให้ OpenAI เช่า compute และอาจช่วย finance การซื้อชิปอีกถึง <strong>350B</strong> = ขายของให้ลูกค้าที่ตัวเองออกเงินให้ ตลาดจึงตั้งคำถามเรื่องคุณภาพรายได้และความเสี่ยงเครดิต</p>
+    <p>ยังให้ <code>thesis: intact</code> เพราะยังเป็นข่าวขั้นเจรจา ไม่ใช่ตัวเลขในงบ <strong>แต่ถ้างบ 26 ส.ค. ยืนยันว่า backlog พึ่ง vendor financing เป็นสัดส่วนใหญ่ ให้ลดเป็น watch ทันที</strong> — นี่คือความเสี่ยงที่ต้องรับรู้ก่อนกด ไม่ใช่หลังกด</p>
+  </div>
+
+  <div class="tickets">
+    <div class="tk hold">
+      <div class="tkhead"><span class="tick">ไม่ใช้ไม้ฟรี</span><span class="lots">อันดับ 2</span>
+        <span class="px">SGOV/VGSH</span></div>
+      <p class="why">กระดานไม่มี 🟢 เหลือหลังแก้ราคา · ตลาดเพิ่งเข้าโหมด "price ขึ้นดอก 2 ครั้ง" · <strong>AMZN งบคืนนี้ + MELI งบ 5 ส.ค.</strong> = อีก 2 binary ในสัปดาห์เดียว การถือเงินสดรอผ่านสองงบนี้ไม่ใช่ความขี้ขลาด มันคือการซื้อ optionality ฟรี</p>
+      <div class="meta"><span class="chip">dry powder 10.0%</span></div>
+    </div>
+  </div>
+
+  <h3>❌ ตัดออก และเหตุผล</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ทำไมไม่ใช่ตัวนี้</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">MSFT</td><td>ธุรกิจดีที่สุดในจอ แต่ <strong>gap +7.8% = NO-CHASE ตรงๆ</strong> · ตำแหน่งในแถบกระโดด 44% → 74% ในคืนเดียว = ส่วนต่างถูกเก็บไปหมดแล้ว รอย่อกลับเข้า dz 385–409 ค่อยว่ากัน</td></tr>
+      <tr><td class="tkr">META</td><td>ราคา ~533 ดูถูกเทียบ FV 697 <strong>แต่ FV นั้นคำนวณก่อนรู้ว่า capex FY26 พุ่งเป็น 130–145B และ FCF เหลือ 784M</strong> — ซื้อของถูกโดยอ้างโมเดลที่ตัวเองรู้ว่าตกยุคแล้ว คือหลอกตัวเอง ต้องรื้อ assumptions ก่อน</td></tr>
+      <tr><td class="tkr">SNPS</td><td>RSI 22 oversold สุดในจอ + ต่ำกว่าไฮ 42.7% แต่ราคา 373.69 <strong>เหนือ base FV 217 อยู่ 72%</strong> = ถูกเทียบตัวเองในอดีต ไม่ใช่ถูกเทียบมูลค่า · thesis ยัง watch</td></tr>
+      <tr><td class="tkr">MRVL</td><td>ร่วง 50.5% จากไฮ = ลึกสุดในจอ แต่ <strong>ราคา 163 เหนือ bull FV 152 ด้วยซ้ำ</strong> — value-trap check ผ่านแล้ว ผลคือ <em>"ไม่ใช่ของถูก"</em> · ยังบวก 106% YTD = ที่ร่วงคือคืนกำไร</td></tr>
+      <tr><td class="tkr">AMZN</td><td>งบคืนนี้ = BINARY บล็อกตรงๆ</td></tr>
+      <tr><td class="tkr">HCA</td><td>MoS หนาสุด (+13.6%) แต่ Q 70 / conviction MED และ policy risk ลากยาวถึง midterm พ.ย. — ไม่ใช่ของที่เอาไม้ฟรีไม้สุดท้ายไปลง</td></tr>
+      <tr><td class="tkr">NFLX · UNH · PFE</td><td>อยู่ ~fair value ทั้งสามตัว ไม่มีส่วนลดให้ซื้อ</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ CONFLICT ============ -->
+<section id="conflict">
+  <h2>⚖️ ต้องพูดตรงๆ <span class="h2note">ไม้ฟรีนี้เข้าเงื่อนไขที่ตั้งไว้เองแล้ว</span></h2>
+  <div class="rule"></div>
+
+  <p>รอบ 25 ก.ค. เราจดแผนไม้ฟรีเดือน ก.ค. ไว้ล่วงหน้าใน Trade Log ว่า:</p>
+  <blockquote><p>"ไม้ 2 = รอหลัง FOMC/งบ → <strong>META &lt;650</strong> / MSFT 328–348 / UNH &lt;400 · ไม่ถึงโซน = ปล่อยหมดอายุ ไม่ฝืน"</p></blockquote>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Trigger ที่ตั้งไว้</th><th>ราคาวันนี้</th><th>เข้าเงื่อนไข?</th></tr></thead>
+    <tbody>
+      <tr><td><strong>META &lt; 650</strong></td><td class="n"><strong>~533</strong></td><td>✅ <strong>เข้า และเข้าลึกด้วย</strong></td></tr>
+      <tr><td>MSFT 328–348</td><td class="n">~421</td><td>❌ ไปคนละทาง</td></tr>
+      <tr><td>UNH &lt; 400</td><td class="n">420.57</td><td>❌ ยังไม่ถึง</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call warn">
+    <h4>กำลังแนะนำสวนแผนที่ตั้งไว้เอง — เหตุผลคือฐานที่ใช้ตั้ง trigger นั้นพังไปแล้ว</h4>
+    <p>trigger "META &lt;650" มาจาก base FV 697 (ซื้อเมื่อมี MoS ≥ ~7%) แต่ FV 697 คำนวณ<strong>ก่อน</strong>รู้ว่า capex FY26 จะพุ่งเป็น 130–145B และ FCF จะเหลือ 784M จาก 8.5B — ในโมเดล FCFF การรีด reinvestment ขึ้นขนาดนี้กดมูลค่าลงแรงมาก ประเมินหยาบๆ ถ้า FV ลง 25–30% จะได้ราว <strong>490–520 ซึ่งต่ำกว่าราคา 533 วันนี้</strong> แปลว่ายังตอบไม่ได้ว่า 533 ถูกหรือแพง จนกว่าจะรื้อ assumptions ใหม่</p>
+    <p>กติกา "ไม่ถึงโซน = ปล่อยหมดอายุ ไม่ฝืน" มีไว้กันการไล่ราคา ไม่ได้มีไว้บังคับให้ซื้อเมื่อถึงโซนโดยที่เหตุผลเบื้องหลังโซนนั้นเปลี่ยนไปแล้ว — <strong>การเข้าเงื่อนไขราคาโดยที่โมเดลกำหนดราคาพังพร้อมกัน ไม่ใช่สัญญาณซื้อ มันคือสัญญาณให้กลับไปคำนวณใหม่</strong></p>
+    <p>ถ้าตัดสินใจยึดแผนเดิม (ซึ่งมีเหตุผลของมัน — วินัยตามแผนที่จดไว้ล่วงหน้ามีค่าในตัวเอง) META มี room ถึงเพดานเหลือ 3.27% จาก cap 8% · sizeMult 0.41 — ขอแค่ให้เป็นการตัดสินใจที่รู้ว่า <strong>FV 697 ในตารางใช้อ้างอิงไม่ได้แล้ว</strong></p>
+  </div>
+</section>
+
+<!-- ============ THESIS ============ -->
+<section id="thesis">
+  <h2>🚨 Thesis alert</h2>
+  <div class="rule"></div>
+
+  <div class="tickets">
+    <div class="tk stop">
+      <div class="tkhead"><span class="tick">META</span><span class="lots">intact → WATCH</span></div>
+      <p class="why">รายได้ยังเร่ง +28% จึงยังไม่ broken <strong>แต่ FCF ยุบจาก 8.5B เหลือ 784M</strong> และ capex guide FY26 ขึ้นเป็น 130–145B — <strong>โมเดล FCFF ที่ใช้ตีมูลค่า META ทั้งหมดถูกกระทบตรงจุด</strong> → FV 697.21 ถือว่าใช้ไม่ได้จนกว่าจะรื้อ s2c/capex ใหม่ · Zuckerberg เปรยเรื่องจะทำธุรกิจ cloud = อาจเป็นการเปลี่ยนโครงสร้างธุรกิจ ไม่ใช่แค่รอบ capex</p>
+    </div>
+    <div class="tk wait">
+      <div class="tkhead"><span class="tick">NVDA</span><span class="lots">intact · ยกธง</span></div>
+      <p class="why">circular financing (ดูรายละเอียดใน Shopping list) · trigger ชัดเจน: <strong>งบ 26 ส.ค.</strong></p>
+    </div>
+    <div class="tk">
+      <div class="tkhead"><span class="tick">SNPS</span><span class="lots">ข่าวดีสวนกลับ</span></div>
+      <p class="why">27 ก.ค. ที่งาน DAC 2026 SNPS ประกาศ agentic AI workflow ออกแบบชิปแบบ autonomous ร่วมกับ <strong>NVIDIA (Nemotron) + Microsoft</strong> และ <strong>AMD กำลังทดสอบ</strong> · RTL validation เร็วขึ้นถึง 50 เท่า → หุ้น +4–5% วันนั้น = หลักฐานว่า SNPS เป็น<strong>คนขาย</strong> agentic AI เอง ไม่ได้นั่งรอถูก Kimi K3 disrupt · คง watch จนกว่างบหน้าจะยืนยัน pricing power</p>
+    </div>
+    <div class="tk stop">
+      <div class="tkhead"><span class="tick">IIPR</span><span class="lots">candidate ทยอยออก</span></div>
+      <p class="why">default ใหม่ 20 ก.ค. (Parallel ~5% ของ rent) · Q 50 = ต่ำสุดในพอร์ต · payout &gt;100% · ไม่มีอะไรเปลี่ยนในทางที่ดีขึ้นรอบนี้</p>
+    </div>
+    <div class="tk wait">
+      <div class="tkhead"><span class="tick">GOOGL</span><span class="lots">ยัง watch</span></div>
+      <p class="why">งบ 22 ก.ค. ดีทุกบรรทัด (rev +24%, Cloud +82%) แต่ประเด็น capex เดิมยังอยู่ · ราคาฟื้นมา 336.71 = <strong>เหนือ bull FV 286 อยู่ 18%</strong> ไม่ใช่จุดเติมอยู่ดี</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GAPS ============ -->
+<section id="gaps">
+  <h2>ข้อมูลที่ยังขาด <span class="h2note">ไม่เดา</span></h2>
+  <div class="rule"></div>
+  <ul class="tight">
+    <li><strong>ราคาปิดจริง 30 ก.ค. ของ MSFT/META/AMZN</strong> — ตอนรัน yfinance มีถึงแค่ปิด 29 ก.ค. ตัวเลข ~421 / ~533 เป็นระดับ premarket/พาดหัวข่าว ไม่ใช่ราคาปิด</li>
+    <li><strong>ผลงบ AMZN คืนนี้</strong> — รอบหน้าค่อยอ่าน</li>
+    <li><strong>assumptions ของ META หลัง capex guide ใหม่</strong> — ต้องรื้อ s2c/capex ก่อนใช้ FV ตัวนั้นตัดสินใจ (งานรอบหน้า)</li>
+    <li><strong>Q/conviction ของ O, UNH, VICI, PFE, PG, BRK.B, MRK, IIPR</strong> — ยังเป็นค่าประเมินเบื้องต้น ยังไม่ผ่าน YURI MASTER review</li>
+  </ul>
+</section>
+
+<footer>
+  <p><strong>เครื่องมือช่วยคิด — decision สุดท้ายของนายท่านครับ</strong> · ไม่ใช่คำแนะนำการลงทุน</p>
+  <p class="src">แหล่งอ้างอิง:
+    <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm">FOMC statement 29 ก.ค.</a> ·
+    <a href="https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html">Fed rate decision (CNBC)</a> ·
+    <a href="https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html">Microsoft Q4</a> ·
+    <a href="https://fortune.com/2026/07/29/meta-earnings-zuckerberg-hints-cloud-business-free-cash-flow-capex/">Meta Q2 / FCF (Fortune)</a> ·
+    <a href="https://www.cnbc.com/2026/07/30/microsoft-msft-meta-stock-today-earnings.html">AI trade splits Big Tech</a> ·
+    <a href="https://www.benzinga.com/trading-ideas/movers/26/07/60701139/nvidia-stock-falls-5-how-credit-risk-sharing-is-impacting-the-ai-trade">NVDA credit risk sharing</a> ·
+    <a href="https://www.stocktitan.net/news/NVDA/nvidia-sets-conference-call-for-second-quarter-financial-t2wo8k69dark.html">NVDA Q2 call 26 ส.ค.</a> ·
+    <a href="https://www.stocktitan.net/news/SNPS/synopsys-showcases-comprehensive-autonomous-engineering-workflows-x5gake6wmuxq.html">Synopsys DAC 2026</a> ·
+    <a href="https://247wallst.com/investing/2026/07/28/amd-sinks-8-marvell-sinks-7-intel-fall-6-as-ai-chip-trade-narrows-to-nvidia/">Marvell selloff</a> ·
+    <a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report">Amazon Q2 30 ก.ค.</a>
+  </p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('tt');
+  if(!b) return;
+  b.addEventListener('click',function(){
+    var r=document.documentElement;
+    var cur=r.getAttribute('data-theme');
+    if(!cur) cur = window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+    r.setAttribute('data-theme', cur==='dark' ? 'light' : 'dark');
+  });
+})();
+</script>
+
+</body>
+</html>
