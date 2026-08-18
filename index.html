@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="YURI — รายงานสแกนหุ้น US ประจำรอบ (เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน)">
-<title>YURI — รายงานรอบ 14 ส.ค. 2026</title>
+<title>YURI — รายงานรอบ 18 ส.ค. 2026</title>
 <style>*{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%}</style>
 </head>
 <body>
@@ -182,304 +182,351 @@
 <div class="mastwrap">
   <button class="themebtn" id="tt" aria-label="สลับโหมดสว่าง/มืด">◐</button>
   <header class="mast">
-    <div class="kicker">Yuri Algorithm · รอบ 14 ส.ค.</div>
-    <h1>ปิดช่องว่าง LLY แล้ว — คำตอบคือ “แพงกว่ากรณี bull อีก 8%”</h1>
-    <div class="stamp">14 ส.ค. 2026 · ราคาปิดศุกร์ 14 ส.ค. จริงทั้ง 30 ตัว · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
+    <div class="kicker">Yuri Algorithm · รอบ 18 ส.ค.</div>
+    <h1>ปิดช่องว่าง COHR แล้ว — และเจอบั๊กที่ทำให้ด่านกันไล่ราคาหลวมกว่าความจริง</h1>
+    <div class="stamp">18 ส.ค. 2026 · ราคาระหว่างวัน ~21:05 น. ไทย (ตลาดเปิดได้ ~35 นาที) · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
   </header>
 </div>
 
 <nav aria-label="สารบัญ">
   <ul>
     <li><a href="#verdict">คำตอบ</a></li>
-    <li><a href="#mos">ส่วนลดทรงตัว</a></li>
-    <li><a href="#macro">CPI/PPI + Fed</a></li>
+    <li><a href="#bug">บั๊กข้อมูล</a></li>
+    <li><a href="#cohr">COHR ตัวใหม่</a></li>
+    <li><a href="#mos">ส่วนลดสลับอันดับ</a></li>
+    <li><a href="#macro">Macro + Fed</a></li>
     <li><a href="#scan">ตารางสแกน</a></li>
     <li><a href="#dcf">DCF ทั้งกระดาน</a></li>
-    <li><a href="#lly">LLY ตัวใหม่</a></li>
     <li><a href="#pmap">Price Map</a></li>
     <li><a href="#shop">Shopping list</a></li>
     <li><a href="#thesis">Thesis alert</a></li>
-    <li><a href="#chg">แก้ config</a></li>
     <li><a href="#cal">ปฏิทิน</a></li>
-    <li><a href="#gaps">ช่องว่างที่เหลือ</a></li>
+    <li><a href="#gaps">ข้อมูลที่ขาด</a></li>
   </ul>
 </nav>
 
 <!-- ============ VERDICT ============ -->
 <section id="verdict">
-  <h2>คำตอบสั้น <span class="h2note">รอบที่ 4 ติดที่ไม่มีดีล</span></h2>
+  <h2>คำตอบสั้น <span class="h2note">รอบที่ 5 ติดที่ไม่มีดีล</span></h2>
   <div class="rule"></div>
 
   <div class="verdict">
     <div class="vrow"><div class="vnum">1</div>
-      <p><strong>ไม่มีดีลรอบนี้</strong> — กระดาน 30 ตัวไม่มีตัวไหนแตะเส้น BUY (Score ≥65 + Disc ≥35) สูงสุดคือ SNPS 61.5 ซึ่งติดครบสามด่าน: thesis:watch + ราคาเหนือ bull FV 27% + ทรงยืนใกล้ไฮ <em>ถือ SGOV/VGSH ต่อคือคำตอบที่ถูกตามระบบ</em></p></div>
+      <p><strong>ไม่มีดีลรอบนี้</strong> — สูงสุดคือ MELI <strong>63.3</strong> ยังไม่ถึงเส้น BUY (Score ≥65 + Disc ≥35) และตัวมันเองติดทั้ง <code>thesis:watch</code> และ NO-CHASE → <em>ถือ SGOV/VGSH ต่อ</em></p></div>
     <div class="vrow"><div class="vnum">2</div>
-      <p><strong>งานจริงของรอบนี้คือปิดช่องว่างที่จดไว้เอง — สร้าง DCF ให้ LLY ครั้งแรก</strong> ผลคือ base FV <strong>736.51</strong> · bull <strong>1,090.64</strong> เทียบราคา <strong>1,181.44</strong> = <strong>เหนือ bull 8.3%</strong> และเหนือ P95 ของ Monte Carlo → งบดีจริง แต่ราคา price ระดับ bull ไปหมดแล้ว</p></div>
+      <p><strong>เจอบั๊กข้อมูลที่ต้องรายงานก่อนเรื่องอื่น</strong> — yfinance ไม่มีแท่งรายวันของ <strong>วันจันทร์ 17 ส.ค.</strong> ให้เลยทั้ง 30 ตัว ทำให้ระบบเทียบราคากับวันศุกร์แทน <strong>13 ตัวจาก 30 อ่านทรงวันผิด</strong> และผิดไปในทางที่ทำให้ด่านกันไล่ราคา <em>หลวมกว่าความจริง</em></p></div>
     <div class="vrow"><div class="vnum">3</div>
-      <p><strong>ต่างจาก 2 รอบก่อนตรงที่ส่วนลด “ทรงตัว” ไม่ใช่ “หด”</strong> — กระดานแกว่งสองทาง ตัวขึ้นก็มีตัวลงก็มี เหลือหุ้นต่ำกว่ามูลค่าฐาน 3 ตัวเท่าเดิม และ UNH ถูกลงจริงเป็นรอบที่สองติด</p></div>
+      <p><strong>งานหลักของรอบ = สร้าง DCF ให้ COHR ครั้งแรก</strong> ปิดช่องที่จดไว้เองรอบก่อน ผลคือ base FV <strong>132.70</strong> · bull <strong>254.86</strong> เทียบราคา <strong>315.25</strong> = ราคาเป็น <strong>2.4 เท่าของมูลค่าฐาน</strong> และเหนือ P95 ของ Monte Carlo ถึง 58% → <strong>ห้ามเติม</strong></p></div>
     <div class="vrow"><div class="vnum">4</div>
-      <p><strong>มีข้อที่ผมจดผิดรอบก่อนต้องแก้ — วันงบ PANW</strong> ผมจดไว้ 18 ส.ค. <strong>ของจริงคือ 1 ก.ย. หลังตลาดปิด</strong> (งบ Q4 FY26 รอบบัญชีจบ 31 ก.ค.) ปฏิทินแก้แล้ว</p></div>
+      <p><strong>META ขึ้นเป็นตัวที่มีส่วนลดหนาที่สุดในเล่มเป็นครั้งแรก</strong> (MoS +7.1% แซง UNH/HCA) — ไม่ใช่เพราะโมเดลดีขึ้น แต่เพราะ<strong>ราคาลง 8.6% ใน 2 เซสชัน</strong> ขณะที่ FV ลงแค่ 2.2%</p></div>
+    <div class="vrow"><div class="vnum">5</div>
+      <p><strong>รีเฟรช risk-free ทั้งเล่ม 4.56% → 4.73%</strong> ตามยีลด์ 10 ปีจริงที่ค้างมาตั้งแต่ตั้งฐาน 17 ก.ค. — โดยขยับ <em>ทั้ง</em> terminal growth และ WACC ขึ้น 17bp เท่ากัน ผลคือ FV ทุกตัว<strong>ลง</strong> ~2%</p></div>
   </div>
+</section>
+
+<!-- ============ BUG ============ -->
+<section id="bug">
+  <h2>บั๊กข้อมูลวันจันทร์ <span class="h2note">รายงานก่อนเรื่องอื่น</span></h2>
+  <div class="rule"></div>
+
+  <div class="call alert">
+    <h4>เกิดอะไรขึ้น</h4>
+    <p>yfinance <strong>ไม่มีแท่งรายวันของวันจันทร์ 17 ส.ค.</strong> — 29 ตัวหายทั้งแท่ง ส่วน NVO มีแท่งแต่เป็น NaN ทั้งแถว ทำให้ค่า <code>prev_close</code> ที่เครื่องใช้เทียบ กลายเป็น<strong>ราคาปิดวันศุกร์ 14 ส.ค.</strong> แทน → ด่าน “อ่านทรงวัน” เทียบราคาข้ามไป 1 เซสชันทั้งกระดาน</p>
+    <p><strong>ตัวอย่างที่ชัดที่สุด:</strong> ก่อนแก้ ระบบเข้าใจว่า META ลง 7.2% “วันเดียว” (= แดงจมก้น = โซนเก็บ ไม่ block) ความจริงคือ <strong>ลงวันจันทร์ 3.5% แล้วลงต่อวันอังคารอีก 3.8%</strong> คนละเรื่องกัน</p>
+  </div>
+
+  <p>ผมกู้ราคาปิดวันจันทร์คืนมาจากแท่ง 60 นาที (สำเร็จครบทั้ง 30 ตัว รวม NVO ที่รายวันเป็น NaN) แล้วรันใหม่ — <strong>13 ตัวจาก 30 เปลี่ยนทรงจากแดงเป็นเขียว</strong></p>
+
+  <div class="call warn">
+    <h4>ทิศทางของความผิดพลาดสำคัญกว่าขนาด</h4>
+    <p>ในกติกา Yuri: 🔴 <strong>แดงจมก้น = “โซนเก็บ” ไม่ block</strong> ส่วน 🟢 <strong>gap-up ยืน = block ทันที</strong></p>
+    <p>บั๊กนี้ทำให้กระดานดู “แดง” กว่าความจริง → <strong>ด่าน No-chase หลวมกว่าที่ควรเป็น ไม่ใช่เข้มกว่า</strong> คือถ้ามีตัวที่คะแนนถึงเส้น มันจะปล่อยผ่านให้ซื้อในวันที่เป็นเขียว-ไล่ราคาจริงๆ</p>
+    <p><em>รอบนี้คำตอบสุดท้ายไม่เปลี่ยน เพราะไม่มีตัวไหนแตะเส้น BUY อยู่แล้ว — แต่ต้องบันทึกไว้เพราะรอบหน้าอาจไม่โชคดีแบบนี้</em></p>
+  </div>
+</section>
+
+<!-- ============ COHR ============ -->
+<section id="cohr">
+  <h2>COHR — โมเดลแรก <span class="h2note">งานหลักของรอบ</span></h2>
+  <div class="rule"></div>
+
+  <p>รอบก่อนผมจดไว้เองว่า <em>“COHR ยังไม่มี DCF = ห้ามใช้คะแนนตัดสินซื้อ”</em> รอบนี้ปิดช่องนั้นแล้ว</p>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>รายการ</th><th>ค่า</th></tr></thead>
+    <tbody>
+      <tr><td>Base FV</td><td class="n b-avoid"><strong>$132.70</strong></td></tr>
+      <tr><td>Bull FV</td><td class="n">$254.86</td></tr>
+      <tr><td>Monte Carlo P50</td><td class="n">$127.99</td></tr>
+      <tr><td>Monte Carlo <strong>P95</strong></td><td class="n">$199.08</td></tr>
+      <tr><td><strong>ราคาวันนี้</strong></td><td class="n"><strong>$315.25</strong></td></tr>
+      <tr><td>MoS base</td><td class="n b-avoid">−137.6%</td></tr>
+      <tr><td>MoS bull</td><td class="n b-avoid">−23.7%</td></tr>
+      <tr><td>pv_terminal / VOA</td><td class="n">73.8% <span class="hint">สูง = เชื่อมั่นต่ำ ปกติของโมเดลรอบแรก</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call alert">
+    <h4>ราคาวันนี้อยู่เหนือ P95 ของ Monte Carlo 20,000 รอบ อยู่ 58%</h4>
+    <p>แปลว่าในการจำลอง 20,000 ครั้งที่สุ่มสมมติฐานรอบค่าฐาน <strong>แทบไม่มีครั้งไหนออกมาได้มูลค่าเท่าราคาตลาดวันนี้</strong> — การอัพ Q 65→70 รอบก่อนถูกต้องในแง่ธุรกิจ แต่ไม่ได้แปลว่าราคาซื้อได้</p>
+  </div>
+
+  <h3>บรรทัดเงินสดที่ต้องพูดออกมาดังๆ</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>FY25</th><th>FY26</th><th>เปลี่ยน</th></tr></thead>
+    <tbody>
+      <tr><td>รายได้</td><td class="n">5,810.1</td><td class="n">7,118.2</td><td class="n b-buy">+22.5% ✅</td></tr>
+      <tr><td>op income (GAAP)</td><td class="n">534.9</td><td class="n">901.5</td><td class="n b-buy">+68.5% ✅</td></tr>
+      <tr><td><strong>เงินสดจากดำเนินงาน</strong></td><td class="n">633.6</td><td class="n b-avoid"><strong>79.5</strong></td><td class="n b-avoid">−87.4% 🔴</td></tr>
+      <tr><td>capex</td><td class="n">440.8</td><td class="n b-avoid">1,110.1</td><td class="n b-avoid">+150% 🔴</td></tr>
+      <tr><td><strong>FCF</strong></td><td class="n">+192.8</td><td class="n b-avoid"><strong>−1,030.6</strong></td><td class="n b-avoid">🔴</td></tr>
+      <tr><td>สต็อกสินค้า</td><td class="n">1,437.6</td><td class="n b-avoid">2,581.0</td><td class="n b-avoid">+79% 🔴</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="hint">หน่วย: ล้านดอลลาร์ · ปีบัญชี FY26 จบ 30 มิ.ย. 2026 รายงาน 12 ส.ค.</p>
+
+  <p>รายได้ทำสถิติ กำไรทำสถิติ <strong>แต่เงินสดจากการดำเนินงานเหลือ 79.5 ล้าน</strong> ตัวการคือสต็อกที่บวมขึ้น 1,143 ล้าน กับ capex ที่เพิ่มเท่าตัวครึ่ง</p>
+
+  <div class="call warn">
+    <h4>สิ่งที่ผมยังตอบไม่ได้ — และไม่เดา</h4>
+    <p>จากงบปีเดียวผมยังแยกไม่ได้ว่าสต็อกก้อนนี้คือ <strong>“เตรียมของให้ดีมานด์ที่มีจริง”</strong> (= การลงทุน) หรือ <strong>“ของค้างที่กำลังจะกลายเป็น write-down”</strong> (= สัญญาณเตือน) นี่คือเหตุผลที่ผมตั้งค่าความไม่แน่นอนของ COHR <em>กว้างกว่าทุกตัวในเล่ม</em></p>
+    <p><strong>คง Q 70 ไม่ลด</strong> (ไม่ลด Q เพราะราคาหรือเพราะกลัว) <strong>แต่ตั้งเงื่อนไขล่วงหน้าไว้แล้ว: ถ้า Q1–Q2 FY27 สต็อกไม่แปลงกลับเป็นเงินสด = ลด Q ทันที</strong></p>
+  </div>
+
+  <h3>โซน DCF ของ COHR ใช้เป็นโซนซื้อไม่ได้</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>เส้นจริงบนกราฟ</th><th>ราคา</th></tr></thead>
+    <tbody>
+      <tr><td>ราคาวันนี้</td><td class="n">315.25</td></tr>
+      <tr><td>EMA200</td><td class="n">272.76</td></tr>
+      <tr><td>low 3 เดือน</td><td class="n">220.68</td></tr>
+      <tr><td><strong>โซนที่ DCF ปั๊มออกมา</strong></td><td class="n b-avoid"><strong>131–139</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>โซน DCF อยู่<strong>ต่ำกว่า low 3 เดือนถึง 40%</strong> = ไม่ใช่โซนที่ราคาจะไปถึงในกรอบเวลาที่มีความหมาย <strong>มันเป็นคำบอกว่าโมเดลกับตลาดคนละโลก ไม่ใช่คำสั่งให้ตั้งรอ</strong> — ผมจึงไม่เอาเลขนี้เข้า shopping list</p>
+
+  <blockquote><p><strong>ราคา COHR 2 วันล่าสุด:</strong> ศุกร์ปิด 325.86 → <strong>จันทร์ปิด 350.99 (+7.7%)</strong> จากข่าวลูกค้าเริ่มทดสอบ SiC substrate 300mm + โน้ต Mizuho + โบรกขึ้นเป้า → <strong>อังคาร ~315 (−10.2%)</strong> คืนหมดและเกิน · กลุ่มเดียวกันทั้งแถบ: MRVL +5.5% → −7.6% · ASML +2.1% → −4.9% · TSM +1.1% → −4.0% — <em>การขึ้น-ลงรอบนี้ไม่มีข้อมูลใหม่เรื่องมูลค่าเลย</em></p></blockquote>
 </section>
 
 <!-- ============ MOS ============ -->
 <section id="mos">
-  <h2>ส่วนลดสัปดาห์นี้ <span class="h2note">เทียบ 7 ส.ค. → 14 ส.ค.</span></h2>
+  <h2>ส่วนลดสลับอันดับครั้งแรก <span class="h2note">เทียบ 14 ส.ค. → 18 ส.ค.</span></h2>
   <div class="rule"></div>
+
+  <p>ยังเหลือหุ้นที่ราคาต่ำกว่ามูลค่าฐาน <strong>3 ตัวเท่าเดิม</strong> — แต่รอบนี้ <strong>สลับอันดับกันเป็นครั้งแรก</strong></p>
 
   <div class="scroller">
   <table>
-    <thead><tr><th>Ticker</th><th>MoS 7 ส.ค.</th><th>MoS 14 ส.ค.</th><th>เกิดอะไร</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>MoS 14 ส.ค.</th><th>MoS 18 ส.ค.</th><th>เกิดอะไร</th></tr></thead>
     <tbody>
-      <tr><td><span class="tkr">HCA</span></td><td class="n">+10.6%</td><td class="n b-buy">+10.5%</td><td>ราคาแทบไม่ขยับ (+0.1%) — ยังหนาสุดในจอ</td></tr>
-      <tr><td><span class="tkr">UNH</span></td><td class="n">+6.4%</td><td class="n b-buy">+7.4%</td><td><strong>ถูกลงจริงเป็นรอบที่ 2 ติด</strong> — ราคา −1.1%</td></tr>
-      <tr><td><span class="tkr">META</span></td><td class="n">+1.8%</td><td class="n b-wait">+0.6%</td><td>ราคา +1.3% — เหลือส่วนลดแค่เศษ นั่งทับ base FV พอดี</td></tr>
-      <tr><td><span class="tkr">NFLX</span></td><td class="n">−2.2%</td><td class="n b-avoid">−8.2%</td><td>ราคา +5.8% จากข่าว Ackman เข้าถือ</td></tr>
-      <tr><td><span class="tkr">NVDA</span></td><td class="n">−8.2%</td><td class="n b-avoid">−10.1%</td><td>ราคา +1.8%</td></tr>
-      <tr><td><span class="tkr">PFE</span></td><td class="n">−12.3%</td><td class="n b-avoid">−12.9%</td><td>ราคา +0.5%</td></tr>
+      <tr><td><span class="tkr">META</span></td><td class="n">+0.6% <span class="hint">(อันดับ 3)</span></td><td class="n b-buy"><strong>+7.1%</strong> <span class="hint">(อันดับ 1)</span></td><td>ราคา <strong>−8.6%</strong> ใน 2 เซสชัน · FV ลงแค่ −2.2%</td></tr>
+      <tr><td><span class="tkr">UNH</span></td><td class="n">+7.4%</td><td class="n b-buy">+6.3%</td><td>ราคา −1.2% · FV −2.4% = เกือบหักล้างกัน</td></tr>
+      <tr><td><span class="tkr">HCA</span></td><td class="n">+10.5% <span class="hint">(อันดับ 1)</span></td><td class="n b-buy">+5.9% <span class="hint">(อันดับ 3)</span></td><td>ราคา <strong>+1.8%</strong> · FV −3.2% = ส่วนลดหดจากสองทาง</td></tr>
+      <tr><td><span class="tkr">NVDA</span></td><td class="n">−10.1%</td><td class="n b-avoid">−9.2%</td><td>ราคา −2.8%</td></tr>
+      <tr><td><span class="tkr">NFLX</span></td><td class="n">−8.2%</td><td class="n b-avoid">−10.2%</td><td>ราคาแทบไม่ขยับ · FV ลงจาก rf</td></tr>
+      <tr><td><span class="tkr">COHR</span> 🆕</td><td class="n">—</td><td class="n b-avoid">−137.6%</td><td>โมเดลแรก</td></tr>
     </tbody>
   </table>
   </div>
 
   <div class="call">
-    <h4>ประโยคเดียวที่สรุปทั้งรอบ</h4>
-    <p><strong>Δ FV = 0 ทุกตัวที่มีโมเดลอยู่แล้ว</strong> — ไม่มีบริษัทไหนออกงบใหม่ในสัปดาห์นี้ที่กระทบสมมติฐาน <em>สิ่งที่เปลี่ยนคือราคาล้วนๆ</em> ตัวเลข MoS ที่ขยับจึงเป็นผลของราคา ไม่ใช่ของกิจการ</p>
+    <h4>เรื่องที่ผมระวังตัวเอง: การรีเฟรช risk-free</h4>
+    <p>วิธี Earth Evans กำหนดว่า <strong>terminal growth = ยีลด์ 10 ปีสหรัฐ</strong> ซึ่งในไฟล์ค้างที่ <strong>4.56%</strong> ตั้งแต่ตั้งฐาน 17 ก.ค. ขณะที่วันนี้จริงคือ <strong>4.73%</strong></p>
+    <p><strong>จุดที่ต้องระวัง:</strong> ถ้าขยับแค่ terminal growth ขึ้น FV ทุกตัวจะสูงขึ้นทันทีโดยไม่มีอะไรดีขึ้นจริง — เป็นการปรับข้างเดียวให้ตัวเลขสวย ผมจึงขยับ <strong>terminal growth + WACC ต้นทาง + WACC ปลายทาง ขึ้น 17bp เท่ากันทั้งสามตัว</strong></p>
+    <p><strong>ผลออกมา FV ทุกตัวลง ~2%</strong> = ทิศตรงข้ามกับที่การปรับข้างเดียวจะให้ นั่นคือหลักฐานว่าไม่ได้ปรับเข้าข้างตัวเอง · <em>ΔFV รอบนี้มาจากการรีเฟรช rf อย่างเดียว ไม่มีบริษัทไหนออกงบใหม่ระหว่าง 14→18 ส.ค.</em></p>
   </div>
 </section>
 
 <!-- ============ MACRO ============ -->
 <section id="macro">
-  <h2>เงินเฟ้อเย็นลงทั้งสองฝั่ง <span class="h2note">แต่ยังไม่ใช่ใบเบิกทางของผม</span></h2>
+  <h2>บริบทตลาด <span class="h2note">ของใหม่รอบนี้เป็นฝั่งลบ</span></h2>
   <div class="rule"></div>
 
   <div class="scroller">
   <table>
-    <thead><tr><th>ตัวเลข (ออกสัปดาห์นี้)</th><th>ผล</th><th>คาด</th></tr></thead>
+    <thead><tr><th>เรื่อง</th><th>ตัวเลข</th></tr></thead>
     <tbody>
-      <tr><td>CPI ก.ค. (12 ส.ค.)</td><td class="n b-buy">+0.1% MoM · ทั้งปี 3.4%</td><td class="n">ลง 0.1pp</td></tr>
-      <tr><td>core CPI</td><td class="n">+0.2% MoM · ทั้งปี <strong>2.5%</strong></td><td class="n">ลง 0.1pp</td></tr>
-      <tr><td>PPI ก.ค. (13 ส.ค.)</td><td class="n b-buy">แบน 0.0% MoM</td><td class="n">+0.2%</td></tr>
-      <tr><td>ก.ย. hike odds (CME FedWatch)</td><td class="n"><strong>~40–42%</strong></td><td class="n">จาก ~62% เมื่อ 4 ส.ค.</td></tr>
+      <tr><td>ceasefire อิหร่าน</td><td>ทรัมป์ไม่ต่ออายุ หมดอายุวันจันทร์</td></tr>
+      <tr><td>น้ำมันดิบสหรัฐ</td><td class="n"><strong>ทะลุ $85/บาร์เรล</strong></td></tr>
+      <tr><td>บอนด์ยีลด์ 30 ปี</td><td class="n b-avoid"><strong>5.32% = สูงสุดตั้งแต่ปี 2007</strong></td></tr>
+      <tr><td>บอนด์ยีลด์ 10 ปี</td><td class="n">4.73%</td></tr>
+      <tr><td>S&amp;P 500</td><td>ลงเป็นวันที่ 3 ติด (−0.44%) · Nasdaq −1.0~1.2%</td></tr>
     </tbody>
   </table>
   </div>
 
-  <p>ผลคือ S&amp;P 500 <strong>ปิดเหนือ 7,800 ครั้งแรก</strong> (พฤ. 13 ส.ค.) แล้วทรงตัวปิดศุกร์ +0.1% — เบรกออกจากกรอบ 3 เดือนด้วยแรงหนุน 3 เรื่องพร้อมกัน: ความมั่นใจดีมานด์ AI, ราคาน้ำมันลง, ความกลัว Fed ตึงที่ผ่อนลง · กำไร Q2 ทั้งตลาดโต ~48% (ตัด investment gains ของ GOOGL/AMZN แล้วเหลือ ~29%)</p>
+  <p>ตลาดเพิ่งปิดเหนือ 7,800 ครั้งแรกเมื่อ 13 ส.ค. แล้วย่อกลับ 3 วันติด — <strong>ยีลด์ยาวที่ขึ้นแบบนี้คือเหตุผลที่ไม่ยก regime_mult ไม่ใช่เหตุผลให้ยก</strong></p>
 
-  <h3>regime_mult คง 0.9 — ครบ 1 ใน 2 ข้อ ยังไม่พอ</h3>
+  <h3>Fed — คง regime_mult 0.9 (รอบที่ 4)</h3>
   <div class="scroller">
   <table>
-    <thead><tr><th>เงื่อนไขที่เขียนไว้ล่วงหน้า 31 ก.ค.</th><th>สถานะวันนี้</th><th>ครบ?</th></tr></thead>
+    <thead><tr><th>เงื่อนไข</th><th>สถานะวันนี้</th><th>ครบ?</th></tr></thead>
     <tbody>
-      <tr><td>(ก) core PCE เดือน ก.ค. ≤0.1% MoM</td><td><strong>ยังไม่ออก</strong> (ราว 28 ส.ค.)</td><td class="b-avoid">✕</td></tr>
-      <tr><td>(ข) ตลาด price ≤1 hike</td><td>ก.ย. odds เหลือ ~40–42% ชัดกว่ารอบก่อนมาก</td><td class="b-buy">✓</td></tr>
+      <tr><td>(ก) core PCE ก.ค. ≤0.1% MoM</td><td><strong>ยังไม่ออก</strong> (~28 ส.ค.)</td><td class="b-avoid">❌</td></tr>
+      <tr><td>(ข) ตลาด price ≤1 hike</td><td>odds ก.ย. ลงจาก ~40–42% เหลือ <strong>~30%</strong></td><td class="b-buy">✅</td></tr>
     </tbody>
   </table>
   </div>
+  <p>เงื่อนไข (ข) แน่นขึ้นอีก แต่กติกาที่เขียนไว้ตั้งแต่ 31 ก.ค. คือต้องครบ<strong>ทั้งคู่</strong> → <strong>ไม่ขยับ</strong></p>
 
   <div class="call alert">
-    <h4>จุดที่ต้องระวังตัวเองที่สุดในรอบนี้</h4>
-    <p>เงื่อนไข (ข) เพิ่งเข้า · ตลาดทำนิวไฮ · CPI/PPI เย็นทั้งคู่ — ทุกอย่างชวนให้ปรับเกณฑ์ขึ้นแล้วบอกว่า “บรรยากาศเปลี่ยนแล้ว” <strong>แต่กติกาที่เขียนไว้ก่อนรู้ผลคือ “ครบทั้งคู่” ไม่ใช่ “ครบข้อใดข้อหนึ่ง”</strong></p>
-    <p>ถ้าผ่อนตอนนี้ Score ทั้งกระดานจะสูงขึ้นราว 11% ทันที <em>โดยไม่มีบริษัทไหนดีขึ้นเลยแม้แต่บริษัทเดียว</em> — นั่นคือการหลอกตัวเองด้วยเลขคูณ</p>
+    <h4>🔺 สัปดาห์หน้าคือสัปดาห์ binary หนักที่สุดของเดือน</h4>
+    <p><strong>26 ส.ค.</strong> — NVDA + SNPS + CRWD งบวันเดียวกัน (หลังตลาดปิดทั้งสามตัว)<br>
+    <strong>27 ส.ค.</strong> — MRVL งบ<br>
+    <strong>27–29 ส.ค.</strong> — Jackson Hole · Kevin Warsh ขึ้นเวทีครั้งแรกในฐานะประธาน Fed<br>
+    <strong>~28 ส.ค.</strong> — core PCE ก.ค. = เงื่อนไข (ก) ที่ค้างอยู่</p>
+    <p><strong>ตั้งใจไว้ล่วงหน้า (จดก่อนรู้ผล): รอบสแกนอังคาร 25 ส.ค. ให้เปิด fed_window</strong> → บีบขนาดไม้ลงครึ่งหนึ่งทั้งกระดานโดยอัตโนมัติ</p>
   </div>
-
-  <blockquote><p><strong>ประกาศล่วงหน้า:</strong> core PCE ก.ค. (~28 ส.ค.) คือประตูเดียวที่เหลือ ถ้า ≤0.1% MoM ผมจะปรับเป็น 1.0 ในรอบถัดไปทันที และจะบอกพร้อมกันว่านั่นทำให้ 4–5 ตัวขยับเข้าใกล้เส้น BUY โดยพื้นฐานไม่เปลี่ยน → <strong>ต่อให้ regime กลับ 1.0 ผมก็ยังกรองด้วย DCF ก่อนเสมอ</strong></p></blockquote>
 </section>
 
 <!-- ============ SCAN ============ -->
 <section id="scan">
-  <h2>ตารางสแกน <span class="h2note">30 ตัว · ปิด 14 ส.ค.</span></h2>
+  <h2>ตารางสแกน <span class="h2note">หลังแก้ prev_close แล้ว · 30 ตัว</span></h2>
   <div class="rule"></div>
 
   <div class="scroller">
   <table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>ห่างไฮ</th><th>Q</th><th>Disc</th><th>Score</th><th>ทรงวัน</th><th>Action</th><th>Gate</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>%ต่ำ 52wH</th><th>Q</th><th>Disc</th><th>Score</th><th>ทรงวัน</th><th>Action</th><th>Gate</th></tr></thead>
     <tbody>
-      <tr><td><span class="tkr">O</span></td><td class="n">62.95</td><td class="n">5.9%</td><td class="n">75</td><td class="n">8</td><td class="n">42.6</td><td>🔴↘ จมก้น</td><td class="b-wait">🟠 ทบทวน</td><td>sizeMult 0.53</td></tr>
-      <tr><td><span class="tkr">MRK</span></td><td class="n">134.71</td><td class="n">0.7%</td><td class="n">75</td><td class="n">5</td><td class="n">41.9</td><td>🔴↗ แดงเด้ง</td><td class="b-wait">🟠 ทบทวน</td><td>แดงเด้ง — รอ base</td></tr>
-      <tr><td><span class="tkr">NVO</span></td><td class="n">46.23</td><td class="n">25.3%</td><td class="n">52</td><td class="n">53</td><td class="n">38.0</td><td>🔴↘ จมก้น</td><td class="b-wait">🟠 ทบทวน</td><td>watch · Sleep-Well LOW</td></tr>
-      <tr><td><span class="tkr">IIPR</span></td><td class="n">57.13</td><td class="n">12.6%</td><td class="n">45</td><td class="n">18</td><td class="n">27.2</td><td>🔴↘ จมก้น</td><td class="b-wait">🟠 ทบทวน</td><td>watch · Sleep-Well LOW</td></tr>
-      <tr><td><span class="tkr">SNPS</span></td><td class="n">414.07</td><td class="n">33.9%</td><td class="n">78</td><td class="n">69</td><td class="n"><strong>61.5</strong></td><td>🟢↗ ใกล้ไฮ</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch · NO-CHASE</td></tr>
-      <tr><td><span class="tkr">MELI</span></td><td class="n">1,854.96</td><td class="n">27.2%</td><td class="n">82</td><td class="n">58</td><td class="n"><strong>61.4</strong></td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch · sizeMult 0.83</td></tr>
-      <tr><td><span class="tkr">NFLX</span></td><td class="n">78.10</td><td class="n">38.4%</td><td class="n">75</td><td class="n">73</td><td class="n"><strong>60.3</strong></td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 73</td></tr>
-      <tr><td><span class="tkr">GOOGL</span></td><td class="n">347.44</td><td class="n">14.9%</td><td class="n">95</td><td class="n">25</td><td class="n">59.8</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch · sizeMult 0.78</td></tr>
-      <tr><td><span class="tkr">META</span></td><td class="n">598.74</td><td class="n">24.6%</td><td class="n">80</td><td class="n">51</td><td class="n">58.0</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch · sizeMult 0.41</td></tr>
-      <tr><td><span class="tkr">MRVL</span></td><td class="n">221.58</td><td class="n">32.8%</td><td class="n">72</td><td class="n">68</td><td class="n">56.5</td><td>🔴↗ แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.50</td></tr>
-      <tr><td><span class="tkr">COST</span></td><td class="n">960.56</td><td class="n">12.3%</td><td class="n">92</td><td class="n">17</td><td class="n">55.2</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 1.00</td></tr>
-      <tr><td><span class="tkr">AVGO</span></td><td class="n">401.17</td><td class="n">18.8%</td><td class="n">82</td><td class="n">36</td><td class="n">55.0</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 1.00</td></tr>
-      <tr><td><span class="tkr">NVDA</span></td><td class="n">226.26</td><td class="n">4.2%</td><td class="n">95</td><td class="n">7</td><td class="n">53.7</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 76</td></tr>
-      <tr><td><span class="tkr">MSFT</span></td><td class="n">498.15</td><td class="n">9.5%</td><td class="n">92</td><td class="n">10</td><td class="n">52.9</td><td>🟢↗ ใกล้ไฮ</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
-      <tr><td><span class="tkr">HCA</span></td><td class="n">408.35</td><td class="n">26.4%</td><td class="n">70</td><td class="n">56</td><td class="n">51.9</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 1.00</td></tr>
-      <tr><td><span class="tkr">V</span></td><td class="n">364.32</td><td class="n">2.4%</td><td class="n">92</td><td class="n">6</td><td class="n">51.7</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.97</td></tr>
-      <tr><td><span class="tkr">PG</span></td><td class="n">144.04</td><td class="n">12.6%</td><td class="n">85</td><td class="n">18</td><td class="n">51.3</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.95</td></tr>
-      <tr><td><span class="tkr">MA</span></td><td class="n">566.49</td><td class="n">5.3%</td><td class="n">90</td><td class="n">8</td><td class="n">51.1</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 1.00</td></tr>
-      <tr><td><span class="tkr">BRK-B</span></td><td class="n">506.11</td><td class="n">5.9%</td><td class="n">88</td><td class="n">8</td><td class="n">50.0</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.96</td></tr>
-      <tr><td><span class="tkr">AAPL</span></td><td class="n">305.97</td><td class="n">11.1%</td><td class="n">85</td><td class="n">13</td><td class="n">50.0</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 1.00</td></tr>
-      <tr><td><span class="tkr">COHR</span></td><td class="n">343.84</td><td class="n">21.9%</td><td class="n"><strong>70 ⬆️</strong></td><td class="n">45</td><td class="n">49.0</td><td>🟢↗ ใกล้ไฮ</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
-      <tr><td><span class="tkr">UNH</span></td><td class="n">400.79</td><td class="n">13.2%</td><td class="n">80</td><td class="n">20</td><td class="n">48.8</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.82</td></tr>
-      <tr><td><span class="tkr">VICI</span></td><td class="n">26.38</td><td class="n">17.2%</td><td class="n">72</td><td class="n">32</td><td class="n">47.1</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.88</td></tr>
-      <tr><td><span class="tkr">ASML</span></td><td class="n">1,847.40</td><td class="n">7.5%</td><td class="n">82</td><td class="n">9</td><td class="n">46.9</td><td>🔴↗ แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.50</td></tr>
-      <tr><td><span class="tkr">LLY</span></td><td class="n">1,181.44</td><td class="n">5.4%</td><td class="n">82</td><td class="n">8</td><td class="n">46.6</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 1.00</td></tr>
-      <tr><td><span class="tkr">TSM</span></td><td class="n">428.86</td><td class="n">10.5%</td><td class="n">80</td><td class="n">11</td><td class="n">46.5</td><td>🔴↗ แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.50</td></tr>
-      <tr><td><span class="tkr">AMZN</span></td><td class="n">264.83</td><td class="n">7.8%</td><td class="n">80</td><td class="n">9</td><td class="n">45.8</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.85</td></tr>
-      <tr><td><span class="tkr">CRWD</span></td><td class="n">219.94</td><td class="n">3.3%</td><td class="n">75</td><td class="n">7</td><td class="n">42.3</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 78</td></tr>
-      <tr><td><span class="tkr">PANW</span></td><td class="n">386.76</td><td class="n">3.0%</td><td class="n">75</td><td class="n">7</td><td class="n">42.3</td><td>🔴↘ จมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 80</td></tr>
-      <tr><td><span class="tkr">PFE</span></td><td class="n">26.59</td><td class="n">4.4%</td><td class="n">58</td><td class="n">7</td><td class="n">32.8</td><td>🔴↗ แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch · แดงเด้ง</td></tr>
+      <tr><td><span class="tkr">MELI</span></td><td class="n">1789.98</td><td class="n">29.8%</td><td class="n">82</td><td class="n">64</td><td class="n"><strong>63.3</strong></td><td>🟢↗ ยืนใกล้ไฮ</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch; NO-CHASE</td></tr>
+      <tr><td><span class="tkr">META</span></td><td class="n">547.53</td><td class="n">30.5%</td><td class="n">80</td><td class="n">66</td><td class="n"><strong>62.1</strong></td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch; sizeMult 0.41</td></tr>
+      <tr><td><span class="tkr">SNPS</span></td><td class="n">406.60</td><td class="n">35.1%</td><td class="n">78</td><td class="n">70</td><td class="n"><strong>61.8</strong></td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch</td></tr>
+      <tr><td><span class="tkr">GOOGL</span></td><td class="n">342.03</td><td class="n">16.2%</td><td class="n">95</td><td class="n">29</td><td class="n">61.1</td><td>🔴↗ แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch; รอ base</td></tr>
+      <tr><td><span class="tkr">NFLX</span></td><td class="n">77.99</td><td class="n">38.5%</td><td class="n">75</td><td class="n">73</td><td class="n">60.3</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">AVGO</span></td><td class="n">379.10</td><td class="n">23.3%</td><td class="n">82</td><td class="n">48</td><td class="n">58.5</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>—</td></tr>
+      <tr><td><span class="tkr">MRVL</span></td><td class="n">218.62</td><td class="n">33.7%</td><td class="n">72</td><td class="n">69</td><td class="n">56.7</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 70</td></tr>
+      <tr><td><span class="tkr">MSFT</span></td><td class="n">481.23</td><td class="n">12.5%</td><td class="n">92</td><td class="n">18</td><td class="n">55.5</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 77</td></tr>
+      <tr><td><span class="tkr">COST</span></td><td class="n">960.88</td><td class="n">12.2%</td><td class="n">92</td><td class="n">17</td><td class="n">55.2</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>—</td></tr>
+      <tr><td><span class="tkr">NVDA</span></td><td class="n">219.90</td><td class="n">6.9%</td><td class="n">95</td><td class="n">8</td><td class="n">54.2</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>—</td></tr>
+      <tr><td><span class="tkr">COHR</span></td><td class="n">315.25</td><td class="n">28.4%</td><td class="n">70</td><td class="n">61</td><td class="n">53.1</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>🆕 มี DCF แล้ว</td></tr>
+      <tr><td><span class="tkr">PG</span></td><td class="n">143.38</td><td class="n">13.0%</td><td class="n">85</td><td class="n">19</td><td class="n">51.7</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>—</td></tr>
+      <tr><td><span class="tkr">V</span></td><td class="n">364.65</td><td class="n">2.3%</td><td class="n">92</td><td class="n">6</td><td class="n">51.7</td><td>🟢↗ ยืนใกล้ไฮ</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">HCA</span></td><td class="n">415.62</td><td class="n">25.1%</td><td class="n">70</td><td class="n">53</td><td class="n">51.1</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">MA</span></td><td class="n">572.46</td><td class="n">4.3%</td><td class="n">90</td><td class="n">7</td><td class="n">50.9</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">BRK-B</span></td><td class="n">502.48</td><td class="n">6.6%</td><td class="n">88</td><td class="n">8</td><td class="n">50.1</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">UNH</span></td><td class="n">396.09</td><td class="n">14.2%</td><td class="n">80</td><td class="n">23</td><td class="n">49.7</td><td>🟢↘ เขียว-fade</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>sizeMult 0.82</td></tr>
+      <tr><td><span class="tkr">AAPL</span></td><td class="n">309.30</td><td class="n">10.2%</td><td class="n">85</td><td class="n">10</td><td class="n">49.1</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">TSM</span></td><td class="n">415.51</td><td class="n">13.3%</td><td class="n">80</td><td class="n">20</td><td class="n">48.9</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>—</td></tr>
+      <tr><td><span class="tkr">VICI</span></td><td class="n">26.20</td><td class="n">17.7%</td><td class="n">72</td><td class="n">33</td><td class="n">47.5</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">ASML</span></td><td class="n">1799.01</td><td class="n">9.9%</td><td class="n">82</td><td class="n">10</td><td class="n">47.2</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 71</td></tr>
+      <tr><td><span class="tkr">LLY</span></td><td class="n">1211.99</td><td class="n">2.9%</td><td class="n">82</td><td class="n">6</td><td class="n">46.2</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE</td></tr>
+      <tr><td><span class="tkr">AMZN</span></td><td class="n">259.03</td><td class="n">9.8%</td><td class="n">80</td><td class="n">10</td><td class="n">46.1</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>—</td></tr>
+      <tr><td><span class="tkr">O</span></td><td class="n">62.54</td><td class="n">6.5%</td><td class="n">75</td><td class="n">8</td><td class="n">42.7</td><td>🟢↘ เขียว-fade</td><td class="b-wait">🟠 ทบทวน</td><td>sizeMult 0.53</td></tr>
+      <tr><td><span class="tkr">CRWD</span></td><td class="n">212.60</td><td class="n">6.5%</td><td class="n">75</td><td class="n">8</td><td class="n">42.7</td><td>🔴↘ แดงจมก้น</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 70</td></tr>
+      <tr><td><span class="tkr">PANW</span></td><td class="n">373.56</td><td class="n">6.3%</td><td class="n">75</td><td class="n">8</td><td class="n">42.7</td><td>🔴↗ แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>NO-CHASE RSI 72</td></tr>
+      <tr><td><span class="tkr">MRK</span></td><td class="n">137.15</td><td class="n">0.6%</td><td class="n">75</td><td class="n">5</td><td class="n">41.9</td><td>🟢↘ เขียว-fade</td><td class="b-wait">🟠 ทบทวน</td><td>sizeMult 0.96</td></tr>
+      <tr><td><span class="tkr">NVO</span></td><td class="n">45.76</td><td class="n">25.1%</td><td class="n">52</td><td class="n">53</td><td class="n">38.0</td><td>🟢↗ ยืนใกล้ไฮ</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch; NO-CHASE</td></tr>
+      <tr><td><span class="tkr">PFE</span></td><td class="n">27.29</td><td class="n">1.8%</td><td class="n">58</td><td class="n">6</td><td class="n">32.6</td><td>🟢↗ gap-up ยืน</td><td class="b-hold">⚪ ถือ/รอย่อ</td><td>watch; NO-CHASE</td></tr>
+      <tr><td><span class="tkr">IIPR</span></td><td class="n">55.34</td><td class="n">15.4%</td><td class="n">45</td><td class="n">26</td><td class="n">28.5</td><td>🔴↘ แดงจมก้น</td><td class="b-wait">🟠 ทบทวน</td><td><strong>SLEEP-WELL</strong></td></tr>
     </tbody>
   </table>
   </div>
-
-  <div class="call warn">
-    <h4>วิธีอ่าน 🟠 ทบทวน ให้ถูก</h4>
-    <p>🟠 <strong>ไม่ใช่สัญญาณขาย</strong> — <span class="tkr">O</span> และ <span class="tkr">MRK</span> ติด 🟠 เพราะ Score ต่ำกว่าเส้น 45 ซึ่งมาจาก <strong>Disc ต่ำ</strong> (ราคาห่างไฮแค่ 5.9% / 0.7%) ไม่ใช่เพราะกิจการมีปัญหา — ทั้งคู่ thesis intact และ O เพิ่งยก AFFO guidance</p>
-    <p>ส่วน <span class="tkr">NVO</span> / <span class="tkr">IIPR</span> ติด 🟠 จาก <strong>Sleep-Well (conviction LOW)</strong> ซึ่งเป็นคนละเรื่องกันโดยสิ้นเชิง</p>
-  </div>
+  <p class="hint">เส้น BUY = Score ≥65 + Disc ≥35 · สูงสุดวันนี้ 63.3 = ไม่ถึง</p>
 </section>
 
 <!-- ============ DCF ============ -->
 <section id="dcf">
-  <h2>Earth Evans — FV Range <span class="h2note">รันครบ 16 ตัว</span></h2>
+  <h2>Earth Evans ทั้งเล่ม <span class="h2note">17 ตัว · เรียงตาม MoS</span></h2>
   <div class="rule"></div>
 
   <div class="scroller">
   <table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>Base FV</th><th>Bull FV</th><th>MoS ฐาน</th><th>ตำแหน่ง base→bull</th><th>pv_terminal</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>Base FV</th><th>ΔFV</th><th>Bull FV</th><th>ราคา</th><th>MoS base</th><th>MoS bull</th></tr></thead>
     <tbody>
-      <tr><td><span class="tkr">HCA</span></td><td class="n">408.35</td><td class="n">456.37</td><td class="n">622.81</td><td class="n b-buy"><strong>+10.5%</strong></td><td class="n">−29%</td><td class="n">59.2%</td></tr>
-      <tr><td><span class="tkr">UNH</span></td><td class="n">400.79</td><td class="n">432.97</td><td class="n">549.95</td><td class="n b-buy"><strong>+7.4%</strong></td><td class="n">−28%</td><td class="n">61.4%</td></tr>
-      <tr><td><span class="tkr">META</span></td><td class="n">598.74</td><td class="n">602.22</td><td class="n">838.89</td><td class="n b-wait"><strong>+0.6%</strong></td><td class="n">−2%</td><td class="n">67.2%</td></tr>
-      <tr><td><span class="tkr">NFLX</span></td><td class="n">78.10</td><td class="n">72.17</td><td class="n">106.65</td><td class="n">−8.2%</td><td class="n">17%</td><td class="n">54.4%</td></tr>
-      <tr><td><span class="tkr">NVDA</span></td><td class="n">226.26</td><td class="n">205.46</td><td class="n">332.50</td><td class="n">−10.1%</td><td class="n">16%</td><td class="n">60.4%</td></tr>
-      <tr><td><span class="tkr">PFE</span></td><td class="n">26.59</td><td class="n">23.56</td><td class="n">31.25</td><td class="n">−12.9%</td><td class="n">39%</td><td class="n">45.7%</td></tr>
-      <tr><td><span class="tkr">PG</span></td><td class="n">144.04</td><td class="n">104.08</td><td class="n">120.92</td><td class="n b-avoid">−38.4%</td><td class="n">237%</td><td class="n">50.5%</td></tr>
-      <tr><td><span class="tkr">MSFT</span></td><td class="n">498.15</td><td class="n">346.08</td><td class="n">447.18</td><td class="n b-avoid">−43.9%</td><td class="n">150%</td><td class="n">63.2%</td></tr>
-      <tr><td><span class="tkr">MRK</span></td><td class="n">134.71</td><td class="n">91.04</td><td class="n">115.39</td><td class="n b-avoid">−48.0%</td><td class="n">179%</td><td class="n">46.7%</td></tr>
-      <tr><td><span class="tkr">MELI</span></td><td class="n">1,854.96</td><td class="n">1,174.69</td><td class="n">2,726.83</td><td class="n b-avoid">−57.9%</td><td class="n">44%</td><td class="n b-avoid">87.5% ⚠️</td></tr>
-      <tr><td><span class="tkr">GOOGL</span></td><td class="n">347.44</td><td class="n">219.52</td><td class="n">286.33</td><td class="n b-avoid">−58.3%</td><td class="n">192%</td><td class="n">65.3%</td></tr>
-      <tr><td><span class="tkr">LLY</span> 🆕</td><td class="n">1,181.44</td><td class="n"><strong>736.51</strong></td><td class="n"><strong>1,090.64</strong></td><td class="n b-avoid">−60.4%</td><td class="n">126%</td><td class="n">56.5%</td></tr>
-      <tr><td><span class="tkr">SNPS</span></td><td class="n">414.07</td><td class="n">217.08</td><td class="n">325.89</td><td class="n b-avoid">−90.7%</td><td class="n">181%</td><td class="n">54.8%</td></tr>
-      <tr><td><span class="tkr">AVGO</span></td><td class="n">401.17</td><td class="n">200.61</td><td class="n">296.47</td><td class="n b-avoid">−100.0%</td><td class="n">209%</td><td class="n">56.6%</td></tr>
-      <tr><td><span class="tkr">AMZN</span></td><td class="n">264.83</td><td class="n">123.22</td><td class="n">197.37</td><td class="n b-avoid">−114.9%</td><td class="n">191%</td><td class="n b-avoid">79.3% ⚠️</td></tr>
-      <tr><td><span class="tkr">MRVL</span></td><td class="n">221.58</td><td class="n">89.82</td><td class="n">152.44</td><td class="n b-avoid">−146.7%</td><td class="n">210%</td><td class="n">64.0%</td></tr>
+      <tr><td><span class="tkr">META</span></td><td class="n">589.09</td><td class="n">−2.2%</td><td class="n">820.01</td><td class="n">547.53</td><td class="n b-buy"><strong>+7.1%</strong></td><td class="n b-buy">+33.2%</td></tr>
+      <tr><td><span class="tkr">UNH</span></td><td class="n">422.66</td><td class="n">−2.4%</td><td class="n">536.73</td><td class="n">396.09</td><td class="n b-buy"><strong>+6.3%</strong></td><td class="n b-buy">+26.2%</td></tr>
+      <tr><td><span class="tkr">HCA</span></td><td class="n">441.74</td><td class="n">−3.2%</td><td class="n">604.10</td><td class="n">415.62</td><td class="n b-buy"><strong>+5.9%</strong></td><td class="n b-buy">+31.2%</td></tr>
+      <tr><td><span class="tkr">NVDA</span></td><td class="n">201.39</td><td class="n">−2.0%</td><td class="n">325.36</td><td class="n">219.90</td><td class="n b-wait">−9.2%</td><td class="n b-buy">+32.4%</td></tr>
+      <tr><td><span class="tkr">NFLX</span></td><td class="n">70.78</td><td class="n">−1.9%</td><td class="n">104.43</td><td class="n">77.99</td><td class="n b-wait">−10.2%</td><td class="n b-buy">+25.3%</td></tr>
+      <tr><td><span class="tkr">PFE</span></td><td class="n">23.05</td><td class="n">−2.2%</td><td class="n">30.56</td><td class="n">27.29</td><td class="n b-wait">−18.4%</td><td class="n">+10.7%</td></tr>
+      <tr><td><span class="tkr">COHR</span> 🆕</td><td class="n">132.70</td><td class="n"><em>ใหม่</em></td><td class="n">254.86</td><td class="n">315.25</td><td class="n b-avoid">−137.6%</td><td class="n b-avoid">−23.7%</td></tr>
+      <tr><td><span class="tkr">PG</span></td><td class="n">102.04</td><td class="n">−2.0%</td><td class="n">118.45</td><td class="n">143.38</td><td class="n b-avoid">−40.5%</td><td class="n b-avoid">−21.0%</td></tr>
+      <tr><td><span class="tkr">MSFT</span></td><td class="n">338.73</td><td class="n">−2.1%</td><td class="n">437.35</td><td class="n">481.23</td><td class="n b-avoid">−42.1%</td><td class="n b-avoid">−10.0%</td></tr>
+      <tr><td><span class="tkr">MRK</span></td><td class="n">89.36</td><td class="n">−1.8%</td><td class="n">113.15</td><td class="n">137.15</td><td class="n b-avoid">−53.5%</td><td class="n b-avoid">−21.2%</td></tr>
+      <tr><td><span class="tkr">MELI</span></td><td class="n">1138.11</td><td class="n">−3.1%</td><td class="n">2652.27</td><td class="n">1789.98</td><td class="n b-avoid">−57.3%</td><td class="n b-buy">+32.5%</td></tr>
+      <tr><td><span class="tkr">GOOGL</span></td><td class="n">214.93</td><td class="n">−2.1%</td><td class="n">280.03</td><td class="n">342.03</td><td class="n b-avoid">−59.1%</td><td class="n b-avoid">−22.1%</td></tr>
+      <tr><td><span class="tkr">LLY</span></td><td class="n">721.14</td><td class="n">−2.1%</td><td class="n">1067.00</td><td class="n">1211.99</td><td class="n b-avoid">−68.1%</td><td class="n b-avoid">−13.6%</td></tr>
+      <tr><td><span class="tkr">SNPS</span></td><td class="n">212.18</td><td class="n">−2.3%</td><td class="n">318.50</td><td class="n">406.60</td><td class="n b-avoid">−91.6%</td><td class="n b-avoid">−27.7%</td></tr>
+      <tr><td><span class="tkr">AVGO</span></td><td class="n">196.54</td><td class="n">−2.0%</td><td class="n">290.17</td><td class="n">379.10</td><td class="n b-avoid">−92.9%</td><td class="n b-avoid">−30.6%</td></tr>
+      <tr><td><span class="tkr">AMZN</span></td><td class="n">119.78</td><td class="n">−2.8%</td><td class="n">192.11</td><td class="n">259.03</td><td class="n b-avoid">−116.3%</td><td class="n b-avoid">−34.8%</td></tr>
+      <tr><td><span class="tkr">MRVL</span></td><td class="n">87.88</td><td class="n">−2.2%</td><td class="n">149.01</td><td class="n">218.62</td><td class="n b-avoid">−148.8%</td><td class="n b-avoid">−46.7%</td></tr>
     </tbody>
   </table>
   </div>
-  <p class="hint">ตำแหน่ง &gt;100% = ราคาอยู่เหนือ bull FV · pv_terminal สูง = มูลค่าพึ่งค่า terminal มาก = โมเดลเชื่อถือได้น้อยลง</p>
-</section>
-
-<!-- ============ LLY ============ -->
-<section id="lly">
-  <h2>LLY — DCF ครั้งแรก <span class="h2note">ปิดช่องว่างที่จดไว้รอบก่อน</span></h2>
-  <div class="rule"></div>
-
-  <p>รอบ 8 ส.ค. ผมยก Q ของ LLY จาก 78 → 82 หลังงบ Q2 แล้วเขียนไว้เองว่า <em>“ยังไม่มี DCF = ช่องว่างที่ต้องปิดรอบหน้า”</em> — รอบนี้ปิดแล้ว</p>
-
-  <div class="scroller">
-  <table>
-    <thead><tr><th>ตัวแปร</th><th>Base</th><th>Bull</th><th>ที่มา</th></tr></thead>
-    <tbody>
-      <tr><td>revenue_base</td><td class="n">78,500M</td><td class="n">←</td><td>LTM ผ่าน Q2-26</td></tr>
-      <tr><td>g1 / g2_5</td><td class="n">20% / 12%</td><td class="n">26% / 16%</td><td>guide FY26 85–87B · ราคาต่อหน่วยลงแล้ว −13%</td></tr>
-      <tr><td>margin y1 → target</td><td class="n">43% → 45%</td><td class="n">45% → 49%</td><td>adj. EBIT (คนละตัวกับ “performance margin” 49–50.5% ที่บริษัทรายงาน)</td></tr>
-      <tr><td>s2c</td><td class="n">1.6 / 2.2</td><td class="n">2.0 / 2.6</td><td>รอบลงทุนโรงงานใหญ่กินเงินหนัก</td></tr>
-      <tr><td>debt / cash / shares</td><td class="n">54.9B / 5.0B / 900M</td><td class="n">←</td><td>ณ 30 มิ.ย. 2026</td></tr>
-    </tbody>
-  </table>
-  </div>
-
-  <div class="pmap">
-    <div class="pmt"><span class="tick">LLY</span><span class="lots">เหนือ bull 8.3%</span><span class="px">1,181.44</span></div>
-    <div class="legend"><span>base FV <strong>736.51</strong></span><span>bull FV <strong>1,090.64</strong></span><span>MC P50 733.54</span><span>P5–P95 558–972</span></div>
-    <p class="why">ราคาอยู่ <strong>เหนือ P95 ของ Monte Carlo</strong> ทั้ง 20,000 รอบ</p>
-  </div>
-
-  <div class="call alert">
-    <h4>อ่านให้ตรง — นี่ไม่ใช่การบอกว่า LLY เป็นบริษัทแย่</h4>
-    <p>งบ Q2 คือ rev <strong>23.0B +48%</strong> (ปริมาณ +60%) · EPS non-GAAP 8.38 · ยก guidance ขึ้นทั้งรายได้และมาร์จิ้น = ของจริงทั้งหมด</p>
-    <p><strong>แต่โมเดลอนุรักษ์นิยมนี้บอกว่าราคาปัจจุบัน price การเติบโตระดับ bull ไปหมดแล้วและเกินไปอีก 8%</strong> → ซื้อ LLY วันนี้ = ซื้อด้วยเรื่องเล่า ไม่ใช่ด้วยส่วนลด ซึ่งไม่ใช่วิธีของ Yuri</p>
-    <p class="hint"><strong>ข้อจำกัดที่ต้องบอกตรงๆ:</strong> ถ้า capitalize R&amp;D (~11–12B/ปี) แบบ Damodaran เต็มสูตร FV จะสูงขึ้นพอสมควร โมเดลนี้จึงเป็น <em>ขอบล่าง</em> ไม่ใช่คำตัดสินสุดท้าย — แต่ต่อให้ปรับแล้ว ระยะห่างจาก 1,181 ก็ยังไม่ใช่ “ของถูก”</p>
-  </div>
+  <p class="hint">ΔFV ของทุกตัวมาจากการรีเฟรช risk-free อย่างเดียว — ไม่มีบริษัทไหนออกงบใหม่ในช่วง 14→18 ส.ค.</p>
 </section>
 
 <!-- ============ PRICE MAP ============ -->
 <section id="pmap">
-  <h2>Price Map <span class="h2note">3 ตัวที่ยังมีส่วนลด</span></h2>
+  <h2>Price Map <span class="h2note">ผูกโซนกับเส้นจริงบนกราฟ</span></h2>
   <div class="rule"></div>
 
-  <div class="pmap">
-    <div class="pmt"><span class="tick">HCA</span><span class="lots">MoS +10.5%</span><span class="px">408.35</span></div>
-    <div class="bar">
-      <div class="seg acc" style="left:25.8%;width:9.6%"></div><div class="seg dz" style="left:51.1%;width:11.7%"></div><div class="seg bl" style="left:84.6%;width:4.3%"></div><div class="mark" style="left:10.1%"><span>408.35</span></div>
-    </div>
-    <div class="legend"><span><i style="background:var(--buy-soft);border:1px solid var(--buy)"></i>สะสม 452–479</span><span><i style="background:var(--wait-soft);border:1px solid var(--wait)"></i>ตัดสินใจ 523–556</span><span><i style="background:var(--accent-soft);border:1px solid var(--accent)"></i>bull FV 617–629</span></div>
-    <p class="why"><strong>ไม่ได้ถืออยู่ (0% ของพอร์ต)</strong> · ราคาอยู่ <em>ต่ำกว่า</em> โซนสะสมทั้งโซน = ตามตัวเลขคือถูกที่สุดในจอ</p>
-    <p class="why"><strong>แต่ต้องอ่านคู่กับข้อเท็จจริงที่สวนทาง:</strong> สัปดาห์นี้ Barclays หั่น Overweight → Equal weight (ปริมาณ + payer mix) · <strong>BofA เป้า 370 · Wells Fargo 369 — ต่ำกว่าราคาปัจจุบัน 408 ทั้งคู่</strong> ขณะที่โมเดลผมบอก 456 · ผ่าตัด IP −2.3% / OP −3.4% คือของมาร์จิ้นสูงที่หดจริง · JPM ประเมินทั้งปีเสีย ACA ได้ถึง 1.1B</p>
-    <div class="meta"><span class="chip">Q 70 (ต่ำสุดในกลุ่มมีส่วนลด)</span><span class="chip">conviction MED</span><span class="chip">thesis intact</span></div>
-    <p class="why"><strong>สรุป:</strong> ถ้านายท่านจะเข้า ให้เข้าเพราะเชื่อว่าคนไข้ที่หลุด ACA จะกลับมาหลัง midterm ไม่ใช่เพราะเลข MoS</p>
+  <blockquote><p><strong>ผมไม่ใช้โซนที่เครื่องปั๊มมาตรงๆ</strong> — เครื่องคำนวณโซนสะสมจาก base FV × 0.99–1.05 เฉยๆ ซึ่งหลายครั้งไปตกในที่ที่ราคาไม่มีโครงสร้างรองรับ (เคสที่ชัดที่สุดคือ COHR ข้างบน) ตารางนี้เทียบกับเส้นจริงก่อนเสมอ</p></blockquote>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>EMA200</th><th>MA200</th><th>low 3 เดือน</th><th>Base FV</th><th>Bull FV</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tkr">META</span></td><td class="n">547.53</td><td class="n">624.61</td><td class="n">625.82</td><td class="n">524.49</td><td class="n">589.09</td><td class="n">820.01</td></tr>
+      <tr><td><span class="tkr">UNH</span></td><td class="n">396.09</td><td class="n">367.85</td><td class="n">344.27</td><td class="n">372.59</td><td class="n">422.66</td><td class="n">536.73</td></tr>
+      <tr><td><span class="tkr">HCA</span></td><td class="n">415.62</td><td class="n">426.10</td><td class="n">454.59</td><td class="n">353.99</td><td class="n">441.74</td><td class="n">604.10</td></tr>
+      <tr><td><span class="tkr">COHR</span></td><td class="n">315.25</td><td class="n">272.76</td><td class="n">266.45</td><td class="n">220.68</td><td class="n">132.70</td><td class="n">254.86</td></tr>
+      <tr><td><span class="tkr">NFLX</span></td><td class="n">77.99</td><td class="n">87.79</td><td class="n">89.04</td><td class="n">65.08</td><td class="n">70.78</td><td class="n">104.43</td></tr>
+    </tbody>
+  </table>
   </div>
 
   <div class="pmap">
-    <div class="pmt"><span class="tick">UNH</span><span class="lots">MoS +7.4%</span><span class="px">400.79</span></div>
-    <div class="bar">
-      <div class="seg acc" style="left:21.5%;width:13.6%"></div><div class="seg dz" style="left:46.7%;width:15.2%"></div><div class="seg bl" style="left:81.9%;width:5.8%"></div><div class="mark" style="left:7.7%"><span>400.79</span></div>
-    </div>
-    <div class="legend"><span><i style="background:var(--buy-soft);border:1px solid var(--buy)"></i>สะสม 429–455</span><span><i style="background:var(--wait-soft);border:1px solid var(--wait)"></i>ตัดสินใจ 477–506</span><span><i style="background:var(--accent-soft);border:1px solid var(--accent)"></i>bull FV 544–555</span></div>
-    <p class="why"><strong>1.47% ของพอร์ต</strong> · core cap 8% → เหลือที่เยอะ — <strong>ถูกลงจริงเป็นรอบที่ 2 ติด</strong> ในสัปดาห์ที่ตลาดทำนิวไฮ · ทรงวัน “เขียว-fade” = ไม่ติด NO-CHASE รอบนี้ · <strong>ตัวที่ระบบขวางน้อยที่สุดตอนนี้</strong></p>
-    <div class="meta"><span class="chip">Q 80</span><span class="chip">conviction MED</span><span class="chip">thesis intact</span></div>
-    <p class="why">ข่าวรอบนี้: Bernstein คง Buy (12 ส.ค.) · UnitedHealthcare ประกาศจะคืนกำไรปี 2026 จากแผน ACA รายบุคคลทั้งหมด · <strong>มีฟ้องใหม่เรื่องความล้มเหลวด้าน cyber security/governance เพิ่มอีกคดี</strong> — DOJ ยังเป็นเหตุผลที่ conviction ค้างที่ MED และเป็นเหตุผลที่มันไม่ขึ้นแม้ตัวเลขดี</p>
+    <div class="pmt"><strong>META</strong> <span class="hint">อยู่ต่ำกว่า EMA200 ถึง 12.3% = เทรนด์ลงชัด</span></div>
+    <p class="why">ฐานจริงที่ใกล้ที่สุดคือกลุ่ม low <strong>519.78–524.49</strong> (ต่ำกว่าราคาวันนี้แค่ ~4%) → โซนสะสมที่ใช้ได้จริง <strong>520–548</strong> · โซนตัดสิน = กลับขึ้นยืนเหนือ EMA200 ~625 · เป้าฐาน 589 / bull 820</p>
+    <p class="why"><strong>แต่รอบนี้ยังติดเพดาน sleeve</strong> (ถืออยู่ 4.73% จากเพดาน 8% → ขนาดไม้เหลือ 0.41 เท่า) = โซนนี้เป็นข้อมูลไว้เตรียมใจ ไม่ใช่คำสั่งซื้อ</p>
   </div>
 
   <div class="pmap">
-    <div class="pmt"><span class="tick">META</span><span class="lots">MoS +0.6%</span><span class="px">598.74</span></div>
-    <div class="bar">
-      <div class="seg acc" style="left:12.9%;width:11.0%"></div><div class="seg dz" style="left:44.5%;width:13.2%"></div><div class="seg bl" style="left:85.0%;width:4.9%"></div><div class="mark" style="left:13.7%"><span>598.74</span></div>
-    </div>
-    <div class="legend"><span><i style="background:var(--buy-soft);border:1px solid var(--buy)"></i>สะสม 596–632</span><span><i style="background:var(--wait-soft);border:1px solid var(--wait)"></i>ตัดสินใจ 699–742</span><span><i style="background:var(--accent-soft);border:1px solid var(--accent)"></i>bull FV 831–847</span></div>
-    <p class="why"><strong>4.73% ของพอร์ต</strong> (ก้อนใหญ่สุดในหุ้นรายตัว) · เพดาน core 8% → sizeMult เหลือ <strong>0.41</strong> · ราคาอยู่<em>ในโซนสะสมพอดี</em> · MC: อยู่ระหว่าง P25 (529) กับ P75 (661) ค่อนไปทางกลาง</p>
-    <div class="meta"><span class="chip">Q 80</span><span class="chip">conviction HIGH</span><span class="chip">thesis watch</span></div>
-    <p class="why"><strong>ยังติดธง watch</strong> จาก capex FY26 130–145B + FCF ที่ยุบจาก 8.5B เหลือ 784M ใน Q2 · <strong>ปลดธงได้ต้องเห็นงบ Q3 (~ปลาย ต.ค.) ว่า FCF ฟื้นหรือ capex หยุดยกพื้น — ไม่ปลดด้วยราคา</strong></p>
+    <div class="pmt"><strong>UNH</strong> <span class="hint">อยู่เหนือ EMA200 8.2% = ทรงกลับตัวขึ้นแล้ว</span></div>
+    <p class="why">ฐาน <strong>367.85</strong> (EMA200) กับ <strong>372.59</strong> (low 3 เดือน) ชิดกัน = โซนแข็ง → โซนสะสมที่ใช้ได้จริง <strong>368–380</strong> (ต่ำกว่าราคาวันนี้ ~4–7%) · เป้าฐาน 422.66</p>
+  </div>
+
+  <div class="pmap">
+    <div class="pmt"><strong>HCA</strong> <span class="hint">ราคาต่ำกว่า EMA200 นิดเดียว (−2.2%) แต่ MA200 ยังกดอยู่ที่ 454.59</span></div>
+    <p class="why">low 3 เดือน = low 52 สัปดาห์ ที่ 353.99 ห่างลงไป 15% → <strong>ไม่มีโซนสะสมที่ชิด = รอ</strong> · วันนี้ +2.7% ทรง gap-up = NO-CHASE block อยู่แล้ว</p>
   </div>
 </section>
 
-<!-- ============ SHOPPING ============ -->
+<!-- ============ SHOP ============ -->
 <section id="shop">
-  <h2>Shopping list <span class="h2note">รอบที่ 4 ติดที่ว่าง</span></h2>
+  <h2>Shopping list สัปดาห์นี้</h2>
   <div class="rule"></div>
 
   <div class="tickets">
     <div class="tk hold">
-      <div class="tkhead"><span class="tick">ไม่มีดีล</span><span class="lots">ถือ SGOV/VGSH ต่อ</span></div>
-      <p class="why">dry powder ปัจจุบัน <strong>10.46% ของพอร์ต</strong> (SGOV 9.30% + VGSH 0.68% + cash 0.48%) — สัดส่วนที่พอเหมาะกับสถานการณ์ที่ตลาดทำนิวไฮและไม่มีของถูก</p>
+      <div class="tkhead"><span class="tkr">ไม่มีดีล</span> <span class="lots">รอบที่ 5 ติด</span></div>
+      <p class="why"><strong>ถือ cash/SGOV/VGSH ต่อ</strong> — ไม่ใช่การนั่งเฉย แต่เป็นคำตอบที่ถูกตามระบบ: ไม่มีตัวไหนแตะเส้น BUY (Score ≥65 + Disc ≥35) สูงสุดคือ MELI 63.3</p>
     </div>
   </div>
 
-  <h3>ไล่ 5 อันดับคะแนนสูงสุด ว่าตกที่ข้อไหน</h3>
+  <h3>สามตัวที่ราคาต่ำกว่ามูลค่าฐาน — ทำไมยังไม่ซื้อ</h3>
   <div class="scroller">
   <table>
-    <thead><tr><th>#</th><th>Ticker</th><th>Score</th><th>ตกที่ข้อไหน</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>MoS</th><th>ติดด่านอะไร</th></tr></thead>
     <tbody>
-      <tr><td class="n">1</td><td><span class="tkr">SNPS</span></td><td class="n">61.5</td><td>thesis:watch (Kimi K3) + ราคา<strong>เหนือ bull FV 27%</strong> + ทรงยืนใกล้ไฮ = NO-CHASE ครบสามด่าน</td></tr>
-      <tr><td class="n">2</td><td><span class="tkr">MELI</span></td><td class="n">61.4</td><td>thesis:watch (op margin หด 2 ไตรมาสติด) + pv_terminal 87.5% = โมเดลเชื่อถือได้น้อยสุดในจอ</td></tr>
-      <tr><td class="n">3</td><td><span class="tkr">NFLX</span></td><td class="n">60.3</td><td>RSI 73 + ราคาพลิกไปเหนือ base FV แล้ว 8.2% (เด้งจากข่าว Ackman)</td></tr>
-      <tr><td class="n">4</td><td><span class="tkr">GOOGL</span></td><td class="n">59.8</td><td>ราคา<strong>เหนือ bull FV 21%</strong> + thesis:watch (capex)</td></tr>
-      <tr><td class="n">5</td><td><span class="tkr">META</span></td><td class="n">58.0</td><td>MoS เหลือ +0.6% + thesis:watch + sizeMult 0.41</td></tr>
+      <tr><td><span class="tkr">META</span></td><td class="n b-buy">+7.1%</td><td>Score 62.1 ไม่ถึงเส้น · <strong>เพดาน core sleeve: ถืออยู่ 4.73% จาก 8% → ขนาดไม้เหลือ 0.41 เท่า</strong> · <code>thesis:watch</code> · เพิ่งเริ่มพิจารณาคดี 29 รัฐวันนี้</td></tr>
+      <tr><td><span class="tkr">UNH</span></td><td class="n b-buy">+6.3%</td><td>Score 49.7 ต่ำกว่าเส้นมาก (Disc แค่ 23 เพราะห่าง 52wH แค่ 14%)</td></tr>
+      <tr><td><span class="tkr">HCA</span></td><td class="n b-buy">+5.9%</td><td><strong>ทรง gap-up ยืน = NO-CHASE block ตรงๆ</strong> (+2.7% วันนี้)</td></tr>
     </tbody>
   </table>
   </div>
 
-  <h3>ถ้าจะวางไม้แบบไม่ต้องไล่ราคา — limit เท่านั้น</h3>
-  <div class="scroller">
-  <table>
-    <thead><tr><th>Ticker</th><th>โซน limit</th><th>เงื่อนไขที่ต้องเป็นจริงก่อน</th></tr></thead>
-    <tbody>
-      <tr><td><span class="tkr">UNH</span></td><td class="n b-buy">≤ 400</td><td>ยังต่ำกว่า base FV · Q 80 · thesis intact — ตัวที่ระบบขวางน้อยที่สุด</td></tr>
-      <tr><td><span class="tkr">HCA</span></td><td class="n">≤ 390</td><td>ต้องยอมรับความเสี่ยง ACA/payer mix ที่นักวิเคราะห์กำลังหั่นสวนทาง</td></tr>
-      <tr><td><span class="tkr">META</span></td><td class="n">≤ 555</td><td><strong>รอปลดธง watch ก่อน (งบ Q3 ปลาย ต.ค.)</strong> — ไม่ใช่ราคาอย่างเดียว</td></tr>
-      <tr><td><span class="tkr">NFLX</span></td><td class="n">≤ 68</td><td>ต่ำกว่า base FV 72.17 ให้มี MoS จริง ไม่ใช่ไล่หลัง Ackman</td></tr>
-    </tbody>
-  </table>
+  <div class="call">
+    <h4>สิ่งที่ผมจะทำถ้าเป็นเงินตัวเอง</h4>
+    <p><strong>ไม่ทำอะไรจนพ้น 28 ส.ค.</strong> — สัปดาห์หน้ามีงบ 4 ตัว + Jackson Hole + core PCE อัดกันใน 3 วัน การลงมือก่อนหน้านั้นคือการเดาผลของเหตุการณ์ที่รู้อยู่แล้วว่ากำลังจะมา</p>
   </div>
-  <p class="hint"><strong>ไม่ถึงโซน = ไม่ฝืน</strong></p>
 </section>
 
 <!-- ============ THESIS ============ -->
@@ -487,144 +534,91 @@
   <h2>Thesis alert</h2>
   <div class="rule"></div>
 
-  <h3><span class="tkr">NVDA</span> — alert ยังเปิด แต่รายละเอียดออกมาผ่อนลง</h3>
-  <div class="scroller">
-  <table>
-    <thead><tr><th>ฝั่งผ่อน</th><th>ฝั่งกดดัน</th></tr></thead>
-    <tbody>
-      <tr><td>backstop 250B <strong>ไม่ใช่เงินสดจ่ายล่วงหน้า</strong> — เป็น contingent guarantee ที่ทำงานเฉพาะเมื่อ OpenAI ผิดนัดค่าเช่า</td><td>Burry และคนอื่นยังเรียกว่า circular spending “ระดับพระคัมภีร์”</td></tr>
-      <tr><td>ภาระเลื่อนไปหลังปี <strong>2028</strong></td><td>11 ส.ค. NVDA พยายามดับข่าว แต่ Wall Street ยังไม่ซื้อทั้งหมด</td></tr>
-      <tr><td>เงินทุนจริงอยู่ที่ Apollo/BlackRock/Blackstone/Brookfield/GS/KKR <strong>ไม่ใช่งบดุล NVDA</strong> = อ่านได้ว่าเป็นการ<em>ถอย</em>ออกจาก vendor financing</td><td>หุ้นกลุ่มชิปมีวัน −5% จากประเด็นนี้ในสัปดาห์</td></tr>
-      <tr><td>Q1 FY27: rev 81.6B +85% · ดาต้าเซ็นเตอร์ 75.2B GM 75%</td><td>ใบอนุญาตส่งออกจีนยังไม่ชัด</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p><strong>ยังไม่ลดเป็น watch</strong> — เพราะโครงสร้างดีลที่เปิดเผยออกมาไม่ใช่ vendor financing บนงบดุล · จุดตัดสินยังเป็นงบ <strong>26 ส.ค.</strong> (ราคา 226.26 เหนือ base FV 205.46 อยู่ 10% อยู่แล้ว = ไม่ใช่จุดเข้าไม่ว่าผลจะออกทางไหน)</p>
-
-  <h3><span class="tkr">NVO</span> — คง Q 52 ไม่ขยับ ทั้งที่ beat-and-raise</h3>
-  <div class="scroller">
-  <table>
-    <thead><tr><th>ด้านบวก</th><th>ด้านลบ</th></tr></thead>
-    <tbody>
-      <tr><td>งบ Q2 (4 ส.ค.) beat + ยก guidance ทั้งปีเป็น <strong>0% ถึง −6% cc</strong></td><td>หุ้นยัง <strong>−6% ในวัน beat-and-raise</strong></td></tr>
-      <tr><td>Wegovy แบบเม็ดโตแรง อนุมัติครบทุกประเทศ EU · UK 300k คนไข้</td><td>REIMAGINE 4 (head-to-head vs tirzepatide): CagriSema ลด นน. 15.2% ผ่านแค่ non-inferiority และ <strong>แพ้เรื่องคุมน้ำตาล</strong></td></tr>
-      <tr><td>REDEFINE 9 ผ่าน superiority vs placebo</td><td>แรงกดราคาสหรัฐ + Medicaid ตัดความคุ้มครอง + เสียส่วนแบ่งให้ LLY</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="call warn">
-    <h4>เหตุผลที่ไม่ยก Q</h4>
-    <p>guidance ที่ “ดีขึ้น” ยังแปลว่ายอดขายทั้งปี <em>ไม่โต</em> (0 ถึง −6%) · และ ZEUS ที่ล้มเหลวรอบก่อนผมหั่นไปแล้ว 60→52 จะหั่นซ้ำก็เป็นการนับสองครั้ง → <strong>คงไว้ที่ 52</strong></p>
-    <p>ถือ 1.44% ของพอร์ต · <strong>เหตุผลที่ยังอยู่ในรายการ “ทบทวน” คือ Sleep-Well (conviction LOW) ไม่ใช่เพราะราคา</strong> — FDA ตัดสิน CagriSema ปลายปี 26 คือจุดตัดสินถัดไป</p>
+  <div class="call alert">
+    <h4>META — เริ่มแถลงด้วยวาจาคดีรวมอัยการสูงสุด 29 รัฐ (18 ส.ค.)</h4>
+    <p>ต่อจากที่แพ้คดีนิวเม็กซิโก ~$1B · ราคาลง 2 เซสชันคนละเหตุ: <strong>จันทร์ −3.5%</strong> (ความเสี่ยงคดี + คำถามกลยุทธ์ AI) · <strong>อังคาร −3.8%</strong> (วันเริ่มแถลง)</p>
+    <p><strong>แต่ยังไม่กระทบโมเดล</strong> — ตอนรื้อสมมติฐาน 31 ก.ค. ผมตั้งใจ<em>ไม่</em>บวกกลับค่าใช้จ่ายทางกฎหมาย 2.40B เพราะถือว่าเป็นรายการที่เกิดซ้ำเชิงโครงสร้าง ไม่ใช่รายการครั้งเดียว → ข่าวคดีรอบนี้อยู่ในกรอบที่โมเดลเผื่อไว้แล้ว</p>
+    <p><strong>เงื่อนไขที่จะทำให้ thesis เสียจริง (จดล่วงหน้า):</strong> (ก) คำตัดสินที่บังคับเปลี่ยนโครงสร้างการทำงานของ feed วัยรุ่น หรือ (ข) ค่าปรับ/ค่าเสียหายระดับที่กระทบมาร์จิ้นเป้าหมาย 43% อย่างถาวร — <em>“เริ่มพิจารณาคดี” ยังไม่ใช่ทั้งสองข้อ</em></p>
   </div>
 
-  <h3>ธง watch ที่ยังไม่มีเหตุปลด</h3>
   <div class="scroller">
   <table>
-    <thead><tr><th>Ticker</th><th>เงื่อนไขปลดธง</th><th>วันที่จะรู้</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>ธง</th><th>สถานะรอบนี้</th></tr></thead>
     <tbody>
-      <tr><td><span class="tkr">SNPS</span></td><td>Kimi K3 ไม่กินส่วนแบ่ง EDA จริง + guidance FY27 ไม่ถูกหั่น</td><td><strong>งบ 26 ส.ค.</strong> + Investor Day 30 ก.ย.</td></tr>
-      <tr><td><span class="tkr">MELI</span></td><td>op margin Q3 &gt;8% หรือประกาศจบรอบลงทุน</td><td>งบ Q3 (~ต้น พ.ย.)</td></tr>
-      <tr><td><span class="tkr">GOOGL</span></td><td>capex FY26 หยุดยกพื้น + FCF กลับเป็นบวก</td><td>งบ Q3 (~ปลาย ต.ค.)</td></tr>
-      <tr><td><span class="tkr">META</span></td><td>FCF ฟื้น หรือ capex หยุดยกพื้น</td><td>งบ Q3 (~ปลาย ต.ค.)</td></tr>
-      <tr><td><span class="tkr">IIPR</span></td><td>ยืนคำเดิม: <strong>candidate ออก</strong> — Q 45 · Parallel ผิดนัดเช่า 593,000 ตร.ฟุต · ถือ 0.28% = เศษ</td><td>ไม่มีข่าวใหม่รอบนี้</td></tr>
+      <tr><td><span class="tkr">MELI</span></td><td class="b-wait">watch</td><td>เงื่อนไขปลดธงเดิม: op margin Q3 กลับเหนือ 8% หรือประกาศจบรอบลงทุน → <strong>งบ 4 พ.ย.</strong> (แก้จากที่ไฟล์ค้างว่า “อีก 5 วัน”)</td></tr>
+      <tr><td><span class="tkr">SNPS</span></td><td class="b-wait">watch</td><td>รอ<strong>งบ 26 ส.ค.</strong> ยืนยัน pricing power หลังประเด็น Kimi K3 · ราคาเหนือ bull FV 27.7%</td></tr>
+      <tr><td><span class="tkr">NVO</span></td><td class="b-wait">watch</td><td>conviction LOW → Sleep-Well block อยู่แล้ว · candidate ทยอยออก · <em>ตัวเดียวที่ข้อมูลรายวัน 17 ส.ค. เป็น NaN ทั้งแถว</em></td></tr>
+      <tr><td><span class="tkr">IIPR</span></td><td class="b-wait">watch</td><td>Q 45 ต่ำกว่าเส้น 50 = เข้ากติกา “ของห่วยต่อให้ถูกก็ข้าม” · <strong>เลิกนับเป็นตัวเติม (ไม่ใช่คำสั่งขาย)</strong></td></tr>
+      <tr><td><span class="tkr">PFE</span></td><td class="b-wait">watch</td><td>value-trap profile · MoS −18.4% (แย่ลงจาก −12.9%)</td></tr>
+      <tr><td><span class="tkr">COHR</span></td><td class="b-hold">intact</td><td>ธงยังไม่เปลี่ยน <strong>แต่ตั้ง trigger ใหม่แล้ว</strong>: เงินสดจากดำเนินงานไม่กลับมาบวกมีนัยใน Q1–Q2 FY27 = ลด Q</td></tr>
     </tbody>
   </table>
   </div>
 </section>
 
-<!-- ============ CONFIG CHANGES ============ -->
-<section id="chg">
-  <h2>สิ่งที่แก้ใน config รอบนี้</h2>
-  <div class="rule"></div>
-
-  <div class="scroller">
-  <table>
-    <thead><tr><th>รายการ</th><th>เดิม → ใหม่</th><th>เหตุผล</th></tr></thead>
-    <tbody>
-      <tr><td><span class="tkr">COHR</span> Q</td><td class="n b-buy">65 → <strong>70</strong></td><td>งบ Q4 FY26 (13 ส.ค.): rev 2.046B +33.8% (คาด 1.98B) · EPS 1.74 vs 1.62 · GM 38.5%/40.2% · FY26 rev 7.118B +22.5% · <strong>guide Q1 FY27 rev 2.2–2.4B (cons 2.13B) + EPS 1.85–2.05 (cons 1.77) เหนือ consensus ทั้งบรรทัดบน-ล่าง</strong> = รายได้เร่ง + มาร์จิ้นขยาย 2 ไตรมาสติด · หุ้น −4% after-hours หลังวิ่ง +9% วันก่อนงบ = sell-the-news ไม่ใช่งบพัง · <strong>ยังไม่มี DCF = ห้ามใช้คะแนนตัดสินซื้อ</strong></td></tr>
-      <tr><td><span class="tkr">LLY</span></td><td class="n">ไม่มี DCF → <strong>736.51 / 1,090.64</strong></td><td>สร้าง assumptions + รัน Earth Evans ครั้งแรก</td></tr>
-      <tr><td>วันงบ <span class="tkr">PANW</span></td><td class="n"><span class="stale">18 ส.ค.</span> → <strong>1 ก.ย.</strong></td><td>แก้ข้อมูลที่ผมจดผิดรอบก่อน (หลังตลาดปิด · รอบบัญชีจบ 31 ก.ค.)</td></tr>
-      <tr><td><span class="tkr">NVO</span> Q</td><td class="n">52 → 52</td><td>บันทึกเหตุผลว่าทำไมไม่ขยับทั้งที่มี beat-and-raise</td></tr>
-      <tr><td>regime_mult</td><td class="n">0.9 → 0.9</td><td>ครบ 1 ใน 2 เงื่อนไข</td></tr>
-      <tr><td>ราคาใน assumptions.json</td><td class="n">7 ส.ค. → <strong>14 ส.ค.</strong></td><td>อัพเดตครบ 15 ตัว + เพิ่ม LLY</td></tr>
-    </tbody>
-  </table>
-  </div>
-</section>
-
-<!-- ============ CALENDAR ============ -->
+<!-- ============ CAL ============ -->
 <section id="cal">
-  <h2>ปฏิทินข้างหน้า</h2>
+  <h2>ปฏิทิน binary <span class="h2note">แก้ให้ตรงแล้วรอบนี้</span></h2>
   <div class="rule"></div>
 
   <div class="scroller">
   <table>
-    <thead><tr><th>วันที่</th><th>เหตุการณ์</th><th>ทำไมสำคัญ</th></tr></thead>
+    <thead><tr><th>วันที่</th><th>เหตุการณ์</th><th>อีกกี่วัน</th><th>หมายเหตุ</th></tr></thead>
     <tbody>
-      <tr><td class="n">18 ส.ค.</td><td>RDDT เข้า S&amp;P 500</td><td>ไม่มีในพอร์ต — แต่เป็น index event ที่ทำให้กระแสเงินไหลผิดปกติ</td></tr>
-      <tr><td class="n"><strong>26 ส.ค.</strong></td><td><strong>NVDA งบ Q2 FY27</strong></td><td>จุดตัดสิน thesis alert circular financing</td></tr>
-      <tr><td class="n"><strong>26 ส.ค.</strong></td><td><strong>SNPS งบ Q3 FY26</strong></td><td>จุดตัดสินธง watch — ตัวคะแนนสูงสุดในกระดาน</td></tr>
-      <tr><td class="n">27 ส.ค.</td><td>MRVL งบ Q2 FY27</td><td>ราคาเหนือ bull FV 147% = ไม่ใช่จุดเข้าไม่ว่าผลออกทางไหน</td></tr>
-      <tr><td class="n"><strong>~28 ส.ค.</strong></td><td><strong>core PCE เดือน ก.ค.</strong></td><td><strong>ประตูสุดท้ายของเงื่อนไข regime_mult → 1.0</strong></td></tr>
-      <tr><td class="n">1 ก.ย.</td><td>PANW งบ Q4 FY26 <span class="chip">แก้จาก 18 ส.ค.</span></td><td>cons EPS 0.976 · rev 3.3501B</td></tr>
-      <tr><td class="n">ต้น ก.ย.</td><td>payroll เดือน ส.ค.</td><td>ถ้าติดลบอีกเดือน → หั่น Q ตัว cyclical (ไม่ใช่ขยับ regime)</td></tr>
-      <tr><td class="n">16 ก.ย.</td><td>FOMC</td><td>ตลาด price ขึ้นดอก ~40–42%</td></tr>
-      <tr><td class="n">30 ก.ย.</td><td>SNPS Investor Day</td><td></td></tr>
-      <tr><td class="n">~20 ต.ค.</td><td>NFLX งบ Q3</td><td></td></tr>
-      <tr><td class="n">ปลาย ต.ค.</td><td>META / GOOGL งบ Q3</td><td>เงื่อนไขปลดธง watch ทั้งสองตัว</td></tr>
-      <tr><td class="n">ปลายปี 26</td><td>FDA ตัดสิน CagriSema (NVO)</td><td>จุดตัดสินสุดท้ายเรื่อง NVO</td></tr>
+      <tr><td class="n"><strong>26 ส.ค.</strong></td><td><strong>NVDA</strong> (Q2 FY27)</td><td class="n">8</td><td>ไฟล์ค้างไว้ผิดเป็น <span class="stale">26 วัน</span></td></tr>
+      <tr><td class="n"><strong>26 ส.ค.</strong></td><td><strong>SNPS</strong> (Q3 FY26)</td><td class="n">8</td><td>ไม่เคยมีในไฟล์</td></tr>
+      <tr><td class="n"><strong>26 ส.ค.</strong></td><td><strong>CRWD</strong></td><td class="n">8</td><td>ไม่เคยมีในไฟล์</td></tr>
+      <tr><td class="n"><strong>27 ส.ค.</strong></td><td><strong>MRVL</strong> (Q2 FY27)</td><td class="n">9</td><td>ไฟล์ค้างไว้ผิดเป็น <span class="stale">20 วัน</span></td></tr>
+      <tr><td class="n"><strong>27–29 ส.ค.</strong></td><td><strong>Jackson Hole</strong> (Warsh ครั้งแรก)</td><td class="n">9–11</td><td></td></tr>
+      <tr><td class="n"><strong>~28 ส.ค.</strong></td><td><strong>core PCE ก.ค.</strong></td><td class="n">10</td><td>เงื่อนไข (ก) ของ regime_mult</td></tr>
+      <tr><td class="n">1 ก.ย.</td><td>PANW (Q4 FY26)</td><td class="n">14</td><td></td></tr>
+      <tr><td class="n">2 ก.ย.</td><td>AVGO (Q3 FY26)</td><td class="n">15</td><td></td></tr>
+      <tr><td class="n">24 ก.ย.</td><td>COST (Q4 FY26)</td><td class="n">37</td><td></td></tr>
+      <tr><td class="n">22 ต.ค.</td><td>AMZN (Q3)</td><td class="n">65</td><td>ไฟล์ค้างไว้ผิดเป็น <span class="stale">91 วัน</span></td></tr>
+      <tr><td class="n">4 พ.ย.</td><td>MELI (Q3)</td><td class="n">78</td><td><strong>ไฟล์ค้างไว้ผิดเป็น <span class="stale">5 วัน</span></strong></td></tr>
+      <tr><td class="n">~ปลาย ต.ค.</td><td>LLY (Q3)</td><td class="n">~78</td><td><strong>ไฟล์ค้างไว้ผิดเป็น <span class="stale">5 วัน</span></strong> · วันจริงยังไม่ยืนยัน</td></tr>
     </tbody>
   </table>
+  </div>
+
+  <div class="call warn">
+    <h4>ข้อสังเกตที่ต้องบันทึก</h4>
+    <p>ฟิลด์ “อีกกี่วันจะถึงงบ” ในไฟล์<strong>ไม่ได้นับถอยหลังเอง</strong> — MELI กับ LLY ค้างอยู่ที่ “อีก 5 วัน” ทั้งที่ทั้งคู่ออกงบไปแล้วตั้งแต่ 5 ส.ค. ถ้าบังเอิญตัวไหนคะแนนถึงเส้นในรอบก่อนๆ ด่านกันงบจะ block ผิด <strong>รอบนี้แก้ครบทุกตัวแล้ว</strong></p>
   </div>
 </section>
 
 <!-- ============ GAPS ============ -->
 <section id="gaps">
-  <h2>สถานะพอร์ต + ช่องว่างที่เหลือ</h2>
+  <h2>ข้อมูลที่ยังขาด <span class="h2note">ระบุไว้ ไม่เดา</span></h2>
   <div class="rule"></div>
-
-  <div class="scroller">
-  <table>
-    <thead><tr><th>กลุ่ม</th><th>%พอร์ต</th></tr></thead>
-    <tbody>
-      <tr><td>ETF core (SCHD 24.2% + SCHG 20.8% + VOO 20.8% + JEPQ 1.0% + MSTY เศษ)</td><td class="n"><strong>66.8%</strong></td></tr>
-      <tr><td>Dry powder (SGOV 9.30% + VGSH 0.68% + cash 0.48%)</td><td class="n b-buy"><strong>10.46%</strong></td></tr>
-      <tr><td>หุ้นรายตัว 19 ตัว</td><td class="n"><strong>22.71%</strong></td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p class="hint">Top รายตัว: META 4.73% · O 3.79% · GOOGL 1.73% · UNH 1.47% · NVO 1.44% · MELI 1.34% · NFLX 1.29% · AMZN 1.18% · VICI 0.96% · MSFT 0.85% — <strong>ไม่มีตัวไหนชนเพดาน</strong> (core 8% / sat 3%)</p>
-
-  <h3>จดไว้ล่วงหน้า เพื่อกันตัวเองเปลี่ยนใจตามราคา</h3>
   <ul class="tight">
-    <li><strong>26 ส.ค.:</strong> อ่านงบ NVDA + SNPS → ตัดสินธง watch ตามเงื่อนไขที่เขียนไว้ <em>ไม่ใช่ตามราคาที่หุ้นวิ่งหลังงบ</em></li>
-    <li><strong>~28 ส.ค.:</strong> core PCE ก.ค. → ถ้า ≤0.1% MoM = ครบทั้งสองข้อ → ปรับ regime_mult 0.9 → 1.0 และต้องประกาศพร้อมกันว่า Score ที่สูงขึ้นมาจากตัวคูณ ไม่ใช่จากกิจการ</li>
-    <li><strong>สร้าง DCF ให้ COHR</strong> — ยก Q เป็น 70 แล้วแต่ยังไม่มีมูลค่าอ้างอิง = ช่องว่างใหม่ที่เพิ่งเปิด ห้ามปล่อยค้างเกิน 2 รอบ</li>
-    <li><strong>คิวถัดไปตาม %พอร์ต: O (3.79%)</strong> — เพิ่งยก AFFO guidance เป็น 4.44–4.45 · ยกเป้าลงทุนเป็น 10B · JV ดาต้าเซ็นเตอร์ 6B กับ Cloud Capital · ที่ 62.95 ≈ 14.2x AFFO แต่ยังไม่มีตัวเลขในระบบ</li>
-    <li>ตัวที่ยังไม่มีโมเดลมูลค่าเลย 14 ตัว: O · VICI · IIPR · BRK-B · NVO · COST · V · MA · AAPL · ASML · TSM · CRWD · PANW · COHR</li>
+    <li><strong>งบดุล Q2-26 ของ META</strong> — ตัวเลขหนี้/เงินสด/จำนวนหุ้น ยังเป็นชุด Q1-26 (ค้างมาจากรอบ 31 ก.ค.)</li>
+    <li><strong>R&amp;D ของ COHR ปี FY22/FY21</strong> — ใช้ค่าประมาณในการคำนวณ R&amp;D amortization (FY23–FY26 เป็นตัวเลขจริง) → adjusted EBIT margin คลาดได้ ~±0.5pp</li>
+    <li><strong>operating lease ที่ไม่ใช่ capital lease ของ COHR</strong> — ไม่ได้แยกในงบที่ดึงมา จึงยังไม่ได้ปรับเข้าหนี้</li>
+    <li><strong>วันงบ Q3 ของ LLY</strong> — ยังไม่ยืนยัน ใช้ค่าประมาณปลาย ต.ค.–ต้น พ.ย.</li>
+    <li><strong>ราคาทั้งกระดานเป็นราคาระหว่างวัน</strong> (ตลาดเปิด ~35 นาที) ไม่ใช่ราคาปิด → H/L ของวันยังไม่นิ่ง ทรงวันอาจเปลี่ยนได้ถ้าดูตอนปิด</li>
+    <li><strong>แท่งรายวัน 17 ส.ค. ยังหายจากแหล่งข้อมูล</strong> — กู้ prev_close แล้ว แต่ RSI14 ยังคำนวณจากอนุกรมที่ขาดแท่งนั้น</li>
   </ul>
 </section>
 
 <footer>
   <p><strong>เครื่องมือช่วยคิด — decision สุดท้ายของนายท่านครับ</strong><br>
-  ไม่ใช่คำแนะนำการลงทุน · ราคาทั้งหมด = ปิดวันศุกร์ 14 ส.ค. 2026 · หน้านี้เขียนทับทุกรอบสแกน</p>
+  ไม่ใช่คำแนะนำการลงทุน · ราคาทั้งหมด = ระหว่างวัน อังคาร 18 ส.ค. 2026 ~21:05 น. ไทย · หน้านี้เขียนทับทุกรอบสแกน</p>
   <p class="src">
     ที่มา:
-    <a href="https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html">CPI ก.ค.</a> ·
-    <a href="https://www.cnbc.com/2026/08/13/wholesale-prices-were-flat-in-july-below-expectations-for-0point2percent-increase.html">PPI ก.ค.</a> ·
-    <a href="https://www.kiplinger.com/investing/economy/cpi-report-july-2026-what-to-expect">ก.ย. hike odds</a> ·
-    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-14-2026">S&amp;P 7,800</a> ·
-    <a href="https://investor.lilly.com/news-releases/news-release-details/lilly-reports-second-quarter-2026-financial-results-raises-full">LLY Q2 + guidance</a> ·
-    <a href="https://www.globenewswire.com/news-release/2026/08/12/3344051/11543/en/coherent-corp-reports-fourth-quarter-and-full-year-fiscal-2026-results.html">COHR Q4 FY26</a> ·
-    <a href="https://www.streetinsider.com/Earnings/Coherent,+Inc.+(COHR)+Tops+Q4+EPS+by+12c,+Offers+Guidance/26912815.html">COHR guide FY27</a> ·
-    <a href="https://www.cnbc.com/2026/08/11/nvidia-tries-to-quiet-circular-financing-accusations-wall-street-unsure-it-will-.html">NVDA circular financing</a> ·
-    <a href="https://finance.biggo.com/news/US_NVO_2026-08-05">NVO Q2</a> ·
-    <a href="https://finance.biggo.com/news/US_O_2026-08-05">O Q2 + AFFO guide</a> ·
-    <a href="https://finance.yahoo.com/healthcare/articles/could-hca-healthcare-inc-hca-221733771.html">HCA payer mix + downgrade</a> ·
-    <a href="https://en.cryptonomist.ch/2026/08/13/netflix-inc-stock-nears-77-89-resistance-as-ackman-takes-new-stake/">NFLX / Ackman</a> ·
-    <a href="https://www.stocktitan.net/news/PANW/palo-alto-networks-to-announce-fiscal-fourth-quarter-and-fiscal-year-3zilivv906w6.html">PANW งบ 1 ก.ย.</a> ·
-    <a href="https://www.stocktitan.net/news/SNPS/synopsys-announces-earnings-release-date-for-third-quarter-fiscal-vnhpbyj5mc5d.html">SNPS งบ 26 ส.ค.</a>
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-18-2026">ตลาด 18 ส.ค. / อิหร่าน / ยีลด์ 30 ปี</a> ·
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-18-dow-sp-500-nasdaq-080822735.html">Yahoo live 18 ส.ค.</a> ·
+    <a href="https://www.fool.com/investing/2026/08/17/why-meta-stock-is-falling-today/">META 17 ส.ค.</a> ·
+    <a href="https://www.benzinga.com/markets/tech/26/08/61257572/whats-going-on-with-meta-platforms-stock-monday-3">META คดี 29 รัฐ</a> ·
+    <a href="https://www.coherent.com/news/press-releases/fourth-quarter-and-fiscal-year-2026-results">COHR งบ FY26</a> ·
+    <a href="https://www.stocktitan.net/news/COHR/coherent-corp-reports-fourth-quarter-and-full-year-fiscal-2026-4dp7hm0orxpy.html">COHR รายละเอียด</a> ·
+    <a href="https://247wallst.com/investing/2026/08/17/ai-networking-stocks-are-rallying-on-monday-marvell-up-8-credo-up-8-ciena-joins-the-move/">AI networking rally จันทร์</a> ·
+    <a href="https://finance.yahoo.com/markets/stocks/articles/cohr-stock-pulls-back-thermal-072119977.html">COHR ย่อกลับ</a> ·
+    <a href="https://www.stocktitan.net/news/NVDA/nvidia-sets-conference-call-for-second-quarter-financial-t2wo8k69dark.html">NVDA งบ 26 ส.ค.</a> ·
+    <a href="https://www.stocktitan.net/news/SNPS/synopsys-announces-earnings-release-date-for-third-quarter-fiscal-vnhpbyj5mc5d.html">SNPS งบ 26 ส.ค.</a> ·
+    <a href="https://www.stocktitan.net/news/AVGO/broadcom-inc-to-announce-third-quarter-fiscal-year-2026-financial-dkaqc3d1n73a.html">AVGO งบ 2 ก.ย.</a> ·
+    <a href="https://www.kansascityfed.org/research/jackson-hole-economic-symposium/">Jackson Hole 2026</a> ·
+    <a href="https://tradingeconomics.com/united-states/government-bond-yield">ยีลด์ 10 ปี</a>
   </p>
 </footer>
 
