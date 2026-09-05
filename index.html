@@ -197,6 +197,7 @@
     <li><a href="#scan">ตารางสแกน</a></li>
     <li><a href="#dcf">DCF ทั้งกระดาน</a></li>
     <li><a href="#key">จุดสำคัญ 3 เรื่อง</a></li>
+    <li><a href="#new">🆕 PANW+COST</a></li>
     <li><a href="#pmap">Price Map</a></li>
     <li><a href="#shop">Shopping list</a></li>
     <li><a href="#thesis">Thesis alert</a></li>
@@ -337,7 +338,7 @@
 
 <!-- ============ DCF ============ -->
 <section id="dcf">
-  <h2>FV range ทั้งกระดาน <span class="h2note">18 ตัวที่มี DCF · ΔFV = 0 ทุกตัวรอบนี้</span></h2>
+  <h2>FV range ทั้งกระดาน <span class="h2note">20 ตัวที่มี DCF · 🆕 เพิ่ม PANW + COST · ΔFV = 0 ทุกตัวเดิม</span></h2>
   <div class="rule"></div>
   <div class="scroller">
   <table>
@@ -360,6 +361,8 @@
       <tr><td class="tkr">COHR</td><td class="n">281.86</td><td class="n">132.7</td><td class="n">254.86</td><td class="n b-avoid"><strong>-112.4%</strong></td><td class="n">122%</td><td class="n">1.55x</td></tr>
       <tr><td class="tkr">AMZN</td><td class="n">258.51</td><td class="n">119.78</td><td class="n">192.11</td><td class="n b-avoid"><strong>-115.8%</strong></td><td class="n">192%</td><td class="n">1.68x</td></tr>
       <tr><td class="tkr">MRVL</td><td class="n">223.55</td><td class="n">95.84</td><td class="n">160.66</td><td class="n b-avoid"><strong>-133.3%</strong></td><td class="n">197%</td><td class="n">1.77x</td></tr>
+      <tr><td class="tkr">COST 🆕</td><td class="n">915.74</td><td class="n">387.51</td><td class="n">501.64</td><td class="n b-avoid"><strong>-136.3%</strong></td><td class="n">463%</td><td class="n">2.06x</td></tr>
+      <tr><td class="tkr">PANW 🆕</td><td class="n">333.26</td><td class="n">70.67</td><td class="n">103.06</td><td class="n b-avoid"><strong>-371.6%</strong></td><td class="n">811%</td><td class="n">3.73x</td></tr>
       <tr><td class="tkr">CRWD</td><td class="n">213.1</td><td class="n">28.43</td><td class="n">48.31</td><td class="n b-avoid"><strong>-649.6%</strong></td><td class="n">929%</td><td class="n">5.84x</td></tr>
     </tbody>
   </table>
@@ -369,7 +372,7 @@
     <h4>⚠️ ข้อจำกัดของ FV ชุดนี้ที่ต้องพูดทุกรอบ</h4>
     <p>โมเดลบังคับ <strong>terminal ROIC = terminal WACC</strong> = ล็อกให้บริษัทออกจากเกมที่ ~11x NOPAT · กติกานี้ <strong>กดค่า FV ของบริษัท ROIC สูงลงอย่างเป็นระบบ</strong> ไม่ใช่บั๊กเลข แต่เป็นทางเลือกเชิงอนุรักษ์นิยม</p>
     <p>→ ตัวที่ MoS ติดลบหนัก (CRWD −650% · MRVL −133% · AMZN −116% · GOOGL −58%) <strong>ห้ามอ่านว่า “แพงเกินจริง” เดี่ยวๆ</strong> ต้องเช็กด้วย multiple ควบเสมอ</p>
-    <p><strong>CRWD ที่ราคา 5.84 เท่าของ P90</strong> อยู่นอก distribution ทั้งเส้น → ติดธง <code>dcf_validity: INVALID</code> ใช้เป็นด่านซื้อไม่ได้ ตัดสินจากงบ+ราคาแทน</p>
+    <p><strong>สามตัวที่ราคาอยู่นอก distribution ทั้งเส้น → <code>dcf_validity: INVALID</code> ใช้เป็นด่านซื้อไม่ได้:</strong> CRWD 5.84x P90 · <strong>PANW 3.73x</strong> · <strong>COST 2.06x</strong> — ตัดสินจากงบ+ราคาแทน (รายละเอียดใน 🆕 PANW+COST)</p>
   </div>
 
   <h3>สิ่งที่เปลี่ยนเทียบรอบ 28 ส.ค.</h3>
@@ -432,6 +435,170 @@
   </div>
 </section>
 
+
+<!-- ============ PANW + COST ============ -->
+<section id="new">
+  <h2>🆕 PANW + COST — เปิดสมุด DCF ครั้งแรก <span class="h2note">นายท่านสั่ง 5 ก.ย.</span></h2>
+  <div class="rule"></div>
+
+  <p>ทำ DCF ได้ทั้งสองตัว · ทั้งคู่ให้ FV ต่ำกว่าราคาตลาดมาก <strong>แต่คนละระดับ และคนละเหตุผล</strong></p>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>ตัว</th><th>ผล</th><th>ใช้เป็นด่านซื้อได้ไหม</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">PANW</td><td class="n">Base FV <strong>70.67</strong> vs 333.26 = <strong>4.72x</strong><br>ราคา = <strong>3.48x ของ P95</strong></td><td class="b-avoid"><strong>❌ <code>dcf_validity: INVALID</code></strong><br>ไม่มีชุดสมมติฐานที่สมเหตุสมผลชุดไหนไปถึงราคาได้ → ใช้ deep-dive แทน (กลุ่มเดียวกับ CRWD)</td></tr>
+      <tr><td class="tkr">COST</td><td class="n">Base FV <strong>387.51</strong> vs 915.74 = <strong>2.36x</strong><br>ราคา = <strong>1.98x ของ P95</strong></td><td class="b-wait"><strong>⚠️ ไม่ใช่ trigger แต่ใช้อ่านทิศทาง/คุมขนาดไม้ได้</strong><br>ผ่อนกติกาแล้วเข้าใกล้ราคาได้จริง</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call">
+    <h4>ที่มาของตัวเลข — พูดตรงๆ ว่าเอามาจากไหน</h4>
+    <p>ไม่ได้ตั้งสมมติฐานขึ้นใหม่จากอากาศ · ทั้งสองตัวมี build ที่ทำจาก <strong>filing จริง</strong> อยู่ในสมุด Earth Evans ฝั่ง Endrossi แล้ว → ยกเข้ามาพร้อม <strong>ตรวจยืนยันอิสระ</strong></p>
+    <p><strong>PANW</strong> — 8-K/PR Q4 FY26 (1 ก.ย. 2026 · ปีบัญชีจบ 31 ก.ค. · 10-K ยังไม่ยื่น) · ✅ ตรวจแล้ว FY26 revenue <strong>11,480M (+24.5%)</strong> และ guide FY27 <strong>14.10–14.20B / adj EPS 4.16–4.19</strong> ตรงกับ PR บริษัทเป๊ะ</p>
+    <p><strong>COST</strong> — 10-Q Q3 FY2026 (12 สัปดาห์จบ 10 พ.ค. 2026) + 10-K FY2025 · ✅ ตรวจแล้ว FY25 net sales 269.9B + ค่าสมาชิก 5,323M = total revenue <strong>275,235M</strong> ตรงกับ 10-K</p>
+    <p><strong>ปรับ <code>terminal_g</code> เป็น 0.0473 ทั้งคู่</strong> — อีก 18 ตัวในเล่มใช้ risk-free 4.73% เหมือนกันหมด ถ้าปล่อยให้สองตัวใหม่ใช้ 4.70/4.80% การเทียบ MoS ข้ามตัวจะไม่มีความหมาย · เป็นการปรับเพื่อ<strong>ความเทียบได้</strong> ไม่ใช่การแต่งตัวเลข</p>
+  </div>
+
+  <h3>PANW — ไปไม่ถึงราคา และไปไม่ถึงแบบไม่มีทางแก้</h3>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>terminal ROIC</th><th>reinvest rate ปลายทาง</th><th>Base FV</th><th>ราคา/FV</th></tr></thead>
+    <tbody>
+      <tr><td>1x WACC <span class="hint">(กติกาบ้าน)</span></td><td class="n">52.6%</td><td class="n">70.67</td><td class="n b-avoid"><strong>4.72x</strong></td></tr>
+      <tr><td>2x WACC</td><td class="n">26.3%</td><td class="n">94.90</td><td class="n">3.51x</td></tr>
+      <tr><td>3x WACC</td><td class="n">17.5%</td><td class="n">102.98</td><td class="n">3.24x</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>Reverse DCF — ราคา 333.26 เรียกร้องอะไร</strong> (ปรับตัวแปรเดียว ตัวอื่นคงเดิม):</p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>ปรับตัวไหน</th><th>ต้องได้เท่าไหร่</th><th>ฐาน</th><th>อ่านว่า</th></tr></thead>
+    <tbody>
+      <tr><td>g ปีที่ 2–5</td><td class="n b-avoid"><strong>54.1%/ปี</strong></td><td class="n">14.0%</td><td>เร็วกว่า guide บริษัทเองเกิน 2 เท่า ต่อเนื่อง 4 ปี</td></tr>
+      <tr><td>margin ปลายทาง</td><td class="n b-avoid"><strong>136.97%</strong></td><td class="n">28.0%</td><td><strong>เกิน 100% = เป็นไปไม่ได้เชิงคณิตศาสตร์</strong></td></tr>
+      <tr><td>s2c ปี 1–5</td><td class="n b-avoid">ทะลุ 200x</td><td class="n">1.2x</td><td>ไม่ลู่เข้า</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call warn">
+    <h4>⚠️ ผมทดสอบสมมติฐานตัวเองแล้วพบว่าเดาผิด</h4>
+    <p>ผมคิดว่าตัวที่กด FV คือ <code>s2c</code> ที่ตั้งไว้ต่ำ (1.2x เพราะ PANW ซื้อกิจการเป็นระบบ — CyberArk, Console, Koi และไล่ซื้อ Okta/Datadog ตามข่าว) · <strong>ทดสอบแล้วไม่ใช่</strong> — ดัน s2c จาก 1.2 ไป 5.0 ขยับ FV แค่ 70.67 → 80.33 (<strong>+14%</strong>) ราคา/FV แทบไม่ขยับ (4.72x → 4.15x)</p>
+  </div>
+
+  <p><strong>ตัวจริงคือการปฏิบัติต่อ SBC:</strong></p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>กรอบบัญชี</th><th>margin ปีแรก / ปลายทาง</th><th>FV (1x)</th><th>FV (3x ROIC)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>ฐานเรา</strong> — SBC = ค่าใช้จ่ายจริง (Damodaran)</td><td class="n">19.0% / 28.0%</td><td class="n">70.67 <span class="hint">(4.72x)</span></td><td class="n">102.98 <span class="hint">(3.24x)</span></td></tr>
+      <tr><td>ครึ่งทาง — SBC ครึ่งหนึ่งเป็นของจริง</td><td class="n">24.5% / 33.5%</td><td class="n">86.85 <span class="hint">(3.84x)</span></td><td class="n">125.51 <span class="hint">(2.66x)</span></td></tr>
+      <tr><td><strong>ตามที่บริษัทเสนอ</strong> — non-GAAP OM</td><td class="n">29.5% / 39.0%</td><td class="n">102.76 <span class="hint">(3.24x)</span></td><td class="n b-avoid"><strong>147.77 (2.26x)</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>FY26 SBC = 1,712M = 14.9% ของรายได้</strong> — คือช่องว่าง 10.5pp ระหว่าง non-GAAP OM 29.5% กับ margin 19% ที่โมเดลใช้ → <strong>ต่อให้ยอมรับกรอบ non-GAAP ของบริษัททั้งดุ้น <em>และ</em> ผ่อน terminal ROIC เป็น 3 เท่าพร้อมกัน ราคายังสูงกว่า FV 2.26 เท่า</strong> — นี่คือเหตุผลที่ติดธง INVALID ไม่ใช่เพราะโมเดลอนุรักษ์นิยม</p>
+
+  <h4>งบ FY26 จริง กับสิ่งที่ทำให้ราคาร่วง</h4>
+  <div class="scroller">
+  <table>
+    <tbody>
+      <tr><td>รายได้ FY26</td><td class="n">11,480M <strong>+24.5%</strong> · Q4 3.41B <strong>+34%</strong></td></tr>
+      <tr><td>GAAP EBIT</td><td class="n">695M = <strong>6.1%</strong> <span class="hint">(โดน SBC 1,712 + amort 638 + ค่าซื้อกิจการ 295)</span></td></tr>
+      <tr><td>non-GAAP OI</td><td class="n">3,356M = 29.2% · adj FCF 4,414M = <strong>38.4% margin</strong></td></tr>
+      <tr><td>GAAP net income</td><td class="n b-avoid"><strong>307M</strong> <span class="hint">(Q4 ขาดทุน GAAP −282M จากรายการ non-cash −524M ตีมูลค่า convert CyberArk)</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>ทำไมร่วง −10.15% วันที่ 2 ก.ย. (แรงที่สุดใน 2 วันนับจาก ก.พ. 2024) — เป็นตัวเลข ไม่ใช่อารมณ์:</strong></p>
+  <ul class="tight">
+    <li><strong>gross margin guide ลง ~100bps</strong> (ต้นทุน AI/compute · Q4 GAAP GM 67.6% จาก 73.2% ปีก่อน)</li>
+    <li><strong>adj FCF margin guide 38.0% ต่ำกว่า FY26 ที่ทำได้ 38.4%</strong> — ถอยหลัง ไม่ใช่เดินหน้า</li>
+    <li>non-GAAP OM guide 29.5% = ได้ leverage แค่ <strong>+30bps</strong> บนการโต +23%</li>
+    <li><strong>NGS ARR โตจาก +63% เหลือ +22–23%</strong> (FY26 มี CyberArk เข้ามาแบบ inorganic)</li>
+    <li>guide Q1 บอกเป็นนัยว่า<strong>รายได้จะลดลงเทียบไตรมาสก่อน</strong></li>
+  </ul>
+
+  <div class="call alert">
+    <h4>คำตัดสิน PANW</h4>
+    <p>thesis <strong>intact</strong> — ธุรกิจไม่ได้พัง (โต 23% · ARR 11B · FCF margin 38%) · แต่ <strong>ไม่มีด่านมูลค่าให้ใช้</strong> และกราฟบอกว่ายังไม่ใช่จุด: <strong>เหนือ EMA200 27.4%</strong> แม้ร่วงมา 10.3% ทั้งสัปดาห์แล้ว · Score 48.4 · Disc 29 → <strong>ห้ามแตะ</strong></p>
+    <p>ระดับที่จะเริ่มมีความหมายคือ <strong>EMA200 261.55 / low 3 เดือน 251.15</strong> ไม่ใช่ระดับจาก DCF</p>
+  </div>
+
+  <h3>COST — ไปไม่ถึงเหมือนกัน แต่ “ไปไม่ถึง” คนละความหมาย</h3>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>terminal ROIC</th><th>Base FV</th><th>ราคา/FV</th></tr></thead>
+    <tbody>
+      <tr><td>1x WACC <span class="hint">(กติกาบ้าน)</span></td><td class="n">387.51</td><td class="n b-avoid"><strong>2.36x</strong></td></tr>
+      <tr><td>2x WACC</td><td class="n">544.04</td><td class="n">1.68x</td></tr>
+      <tr><td>3x WACC</td><td class="n">596.22</td><td class="n">1.54x</td></tr>
+      <tr><td><strong>ROIC จริงของบริษัท 36.6%</strong> <span class="hint">(~4.5x WACC)</span></td><td class="n b-buy"><strong>630.44</strong></td><td class="n"><strong>1.45x</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <blockquote><p><strong>ROIC จริง 36.6%</strong> = NOPAT 8,527 / invested capital 23,327 — สูงสุดกลุ่มต้นๆ ของทั้งเล่ม · กติกาบ้านที่บังคับ ROIC ปลายทาง = WACC ปลายทาง (8.2%) จึงลงโทษ COST หนักผิดปกติ: <strong>มันบังคับให้บริษัทที่คืนทุน 36.6% กลายเป็นบริษัทที่คืนทุน 8.2% ในวันสุดท้ายของโมเดล</strong> · <strong>ครึ่งหนึ่งของช่องว่างมาจากกติกานี้ล้วนๆ</strong> (387 → 630) ที่เหลืออีกครึ่งคือตลาดจ่ายพรีเมียมให้ความแน่นอน</p></blockquote>
+
+  <p><strong>Reverse DCF:</strong> ต้องได้ margin ปลายทาง <strong>10.27%</strong> (ฐาน 4.20% · LTM จริง <strong>3.82%</strong>) หรือโต 30%/ปี ปีที่ 2–5 → ทั้งคู่เป็นไปไม่ได้กับธุรกิจคลังสินค้าที่จงใจคืนมาร์จิ้นให้ลูกค้า · ต้องผ่อน<strong>พร้อมกันสองทาง</strong>ถึงจะแตะราคา: margin 6.0% <em>และ</em> ROIC 3x → FV 842 (1.09x) — margin 6% คือ 1.6 เท่าของที่ทำได้จริง</p>
+
+  <div class="call">
+    <h4>อัตราส่วนเดียวที่อธิบาย COST ทั้งบริษัท</h4>
+    <p style="font-size:1.05rem"><strong>ค่าสมาชิก LTM 5,781M ÷ กำไรจากการดำเนินงาน LTM 11,225M = 51.5%</strong></p>
+    <p>ถอดค่าสมาชิกออก ธุรกิจขายของเหลือ operating margin <strong>1.89%</strong> บนยอดขาย 287.8B → <strong>COST คือธุรกิจ subscription ที่เปิดร้านค้าเกือบเท่าทุนไว้เป็นเครื่องหาและรักษาสมาชิก</strong></p>
+    <p>มาร์จิ้นต่ำคือ<strong>กลยุทธ์ ไม่ใช่จุดอ่อน</strong> — สไลด์ Q3 ลิสต์การ<strong>ลด</strong>ราคาเอง (ปีกไก่ 16.99→14.99 · อัลมอนด์ 19.99→18.99 · ผ้าปูที่นอน 89.99→79.99) · moat คือ lock-in สมาชิก + สเกลการซื้อ + Kirkland + เป็นเจ้าของอาคารเอง 866 จาก 914 สาขา (94.7%) <strong>ไม่ใช่อำนาจตั้งราคาสินค้า</strong> → ห้ามโมเดลมาร์จิ้นวิ่งขึ้นแบบซอฟต์แวร์</p>
+  </div>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>สมาชิก (Q3 FY26)</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>สมาชิกจ่ายเงิน</td><td class="n">82.9M <strong>+4.1%</strong> · ผู้ถือบัตรรวม 148.5M</td></tr>
+      <tr><td>Executive</td><td class="n">41.2M = <strong>49.7% ของสมาชิกจ่ายเงิน · สร้างยอดขาย 75%</strong></td></tr>
+      <tr><td>อัตราต่ออายุ</td><td class="n">ทั่วโลก <strong>89.7%</strong> · สหรัฐ/แคนาดา <strong>92.2%</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>🆕 ข้อมูลใหม่ที่ยังไม่อยู่ในโมเดล — ยอดขายเดือน ส.ค. (ออก 2 ก.ย.)</h4>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>ส.ค. (4 สัปดาห์จบ 30 ส.ค.)</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>ยอดขายสุทธิ</td><td class="n"><strong>23.70B +9.9%</strong></td></tr>
+      <tr><td>comp รวม</td><td class="n">+8.4% <span class="hint">(สหรัฐ +9.0 · แคนาดา +4.0 · ตปท.อื่น +9.5)</span></td></tr>
+      <tr><td><strong>comp ไม่รวมน้ำมัน+อัตราแลกเปลี่ยน</strong></td><td class="n b-wait"><strong>+5.6%</strong></td></tr>
+      <tr><td>ดิจิทัล</td><td class="n">+17.9%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>ตัวเลขที่ต้องอ่านคือ +5.6%</strong> — เทียบ Q3 FY26 ที่ +6.6% และเดือน ก.ค. ที่ +6.9% · บริษัทระบุว่า Labor Day เลื่อนไป 1 สัปดาห์กดยอดไว้ <strong>น้อยกว่า 75bps</strong> → ปรับกลับแล้วราว <strong>+6.3%</strong> = <strong>ชะลอลงจริงแต่แผ่วๆ ไม่ใช่หน้าผา</strong></p>
+  <p>นี่คือความเสี่ยงข้อที่จดไว้ตั้งแต่ build: ~3pp ของการเติบโตที่รายงานมาจาก<strong>ราคาน้ำมันกับค่าเงิน</strong> ซึ่งเป็นของชั่วคราว — ถ้าน้ำมันย่อ ตัวเลขพาดหัวจะหดเข้าหา comp ปรับแล้ว และ<strong>เรื่องเล่า “COST กำลังเร่ง” ที่ค้ำ P/E 46 เท่าจะหมดแรง โดยที่ธุรกิจไม่ได้แย่ลงเลย</strong></p>
+
+  <h4>สิ่งที่น่าสนใจที่สุดของ COST รอบนี้อยู่ที่กราฟ ไม่ใช่ที่งบ</h4>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>ราคา</th><th>EMA200</th><th>MA200</th><th>low 3 เดือน</th></tr></thead>
+    <tbody><tr><td class="n"><strong>915.74</strong></td><td class="n">959.15 <span class="b-buy">(−4.5%)</span></td><td class="n">957.90</td><td class="n"><strong>905.77</strong> <span class="hint">(ห่างแค่ 1.1%)</span></td></tr></tbody>
+  </table>
+  </div>
+  <p><strong>COST de-rate ลงมาตลอดปี 2026 ในขณะที่ตัวเลขปฏิบัติการเร่งขึ้น</strong> — ตอนนี้หลุดทั้ง EMA200 และ MA200 มาจ่อ low 3 เดือน · Q 92 สูงเป็นอันดับต้นๆ ของเล่ม (รองแค่ NVDA/GOOGL ที่ 95) · Score 59.3</p>
+
+  <div class="call warn">
+    <h4>คำตัดสิน COST</h4>
+    <p>thesis <strong>intact</strong> · คุณภาพระดับบนของเล่ม · <strong>ยังไม่ใช่ 🟢</strong> เพราะ Disc 29 ต่ำกว่าเกณฑ์ 35 และ<strong>มีงบ Q4 + ทั้งปี FY26 วันที่ 24 ก.ย.</strong> (ไตรมาส 16 สัปดาห์ · street ~94.6B / EPS 6.56) = binary จริง</p>
+    <p><strong>ระดับที่มีความหมาย: 906–959</strong> (low 3 เดือน ถึง EMA200 — ราคาวันนี้อยู่ในกรอบนี้แล้ว) · ฐานลึกถัดไปคือระดับที่ DCF ผ่อน ROIC จริงชี้ไว้ที่ <strong>~630</strong> ซึ่งห่างจากราคาวันนี้ 31% = ระดับที่ต้องเกิดวิกฤตถึงจะได้เห็น ไม่ใช่ระดับตั้งรอ</p>
+    <p>⚠️ <strong>ฐาน LTM ในโมเดลยังเป็นของ Q3 FY26 — ต้องรีเฟรชหลังงบ 24 ก.ย.</strong></p>
+  </div>
+</section>
+
 <!-- ============ PRICE MAP ============ -->
 <section id="pmap">
   <h2>Price Map <span class="h2note">ทาบโซน DCF กับเส้นจริงบนกราฟ · เส้นครบ 30 ตัวถึง 4 ก.ย.</span></h2>
@@ -452,8 +619,8 @@
       <tr><td class="tkr">COHR</td><td class="n">281.86</td><td class="n">274.45</td><td class="n">276.44</td><td class="n">220.68</td><td class="n">+2.7%</td><td class="n">131–139</td><td class="b-hold">✅ แต่ไกลมาก</td></tr>
       <tr><td class="tkr">MRVL</td><td class="n">223.55</td><td class="n">170.09</td><td class="n">151.71</td><td class="n">162.90</td><td class="n b-avoid"><strong>+31.4%</strong></td><td class="n">95–101</td><td class="b-hold">✅ แต่ไกลมาก</td></tr>
       <tr><td class="tkr">CRWD</td><td class="n">213.10</td><td class="n">155.67</td><td class="n">142.49</td><td class="n">154.43</td><td class="n b-avoid"><strong>+36.9%</strong></td><td class="n">—</td><td class="b-avoid">❌ DCF INVALID</td></tr>
-      <tr><td class="tkr">PANW</td><td class="n">333.26</td><td class="n">261.55</td><td class="n">233.07</td><td class="n">251.15</td><td class="n b-avoid"><strong>+27.4%</strong></td><td class="n">—</td><td class="b-avoid">❌ ไม่มี DCF</td></tr>
-      <tr><td class="tkr">COST</td><td class="n">915.74</td><td class="n">959.15</td><td class="n">957.90</td><td class="n">905.77</td><td class="n">−4.5%</td><td class="n">—</td><td class="b-avoid">❌ ไม่มี DCF</td></tr>
+      <tr><td class="tkr">PANW</td><td class="n">333.26</td><td class="n">261.55</td><td class="n">233.07</td><td class="n">251.15</td><td class="n b-avoid"><strong>+27.4%</strong></td><td class="n">🆕 70–74</td><td class="b-avoid">❌ DCF INVALID (3.48x P95) — ใช้เส้นกราฟแทน</td></tr>
+      <tr><td class="tkr">COST</td><td class="n">915.74</td><td class="n">959.15</td><td class="n">957.90</td><td class="n">905.77</td><td class="n">−4.5%</td><td class="n">🆕 384–407</td><td class="b-wait">⚠️ ไกลเกินตั้ง limit — ผ่อน ROIC จริงได้ ~630</td></tr>
     </tbody>
   </table>
   </div>
@@ -495,6 +662,11 @@
       <p class="why"><strong>ระดับ: 197–210</strong> (EMA200 197.68 · MA200 196.53 · low 3 เดือน 189.80 เกาะกันแน่น) · Q 95 conviction HIGH — <strong>แต่ราคาเหนือฐาน 16.5% และ MoS บางลงเหลือ +3.7%</strong></p>
       <div class="meta"><span class="chip">Q 95</span><span class="chip">ถือ 0.74%</span><span class="chip">Disc 6</span><span class="chip">งบ 25 พ.ย.</span></div>
     </div>
+    <div class="tk hold">
+      <div class="tkhead"><span class="tick">COST 🆕</span><span class="lots">โควตาเต็ม 8pp</span><span class="px">915.74</span></div>
+      <p class="why"><strong>ระดับ: 906–959</strong> (low 3 เดือน 905.77 ถึง EMA200 959.15) — ราคาวันนี้อยู่ในกรอบแล้ว · Q 92 สูงเป็นอันดับต้นๆ ของเล่ม · หลุดทั้ง EMA200 และ MA200 มาจ่อ low 3 เดือน — <em>แต่ Disc 29 ต่ำกว่าเกณฑ์ 35 และมีงบ 24 ก.ย.</em></p>
+      <div class="meta"><span class="chip">Q 92</span><span class="chip">Score 59.3</span><span class="chip">P/E 46x</span><span class="chip">งบ 24 ก.ย.</span></div>
+    </div>
     <div class="tk wait">
       <div class="tkhead"><span class="tick">NFLX</span><span class="lots">เหลือ 6.59pp</span><span class="px">78.25</span></div>
       <p class="why"><strong>ระดับ: 70–74</strong> (โซนสะสม DCF ที่ยังใช้ตั้ง limit ได้จริง) · ฐานลึก low 3 เดือน <strong>65.08</strong> · Disc สูงสุดในเล่ม (73) หลุด EMA200 แล้ว −9.9% — <em>แต่ราคายังเหนือ base FV 10.6%</em></p>
@@ -506,7 +678,7 @@
   <ul class="tight">
     <li><strong>SNPS</strong> — เพิ่งพิสูจน์ว่าเบรก 200 วันไม่จริง + ธง <code>watch</code> ยังไม่ปลด + Investor Day 30 ก.ย. เป็น binary</li>
     <li><strong>AVGO</strong> — DCF ค้างก่อนงบ Q3 = <strong>ไม่มีฐานอ้างอิงเลยรอบนี้</strong></li>
-    <li><strong>MRVL / CRWD / PANW</strong> — เหนือ EMA200 <strong>31.4% / 36.9% / 27.4%</strong> · MRVL ยังเหนือ <em>bull</em> FV 39% = ถูกลง ไม่ใช่ของถูก</li>
+    <li><strong>MRVL / CRWD / PANW</strong> — เหนือ EMA200 <strong>31.4% / 36.9% / 27.4%</strong> · MRVL ยังเหนือ <em>bull</em> FV 39% = ถูกลง ไม่ใช่ของถูก · <strong>PANW มี DCF แล้วรอบนี้ ผลคือ INVALID</strong> — ระดับที่จะเริ่มมีความหมายคือ EMA200 <strong>261.55</strong> / low 3 เดือน <strong>251.15</strong></li>
     <li><strong>COHR</strong> — ทรง gap-up ยืน + เหนือ bull FV 11% · แรงหนุนเป็นข่าวกฎ (ข้อเสนอ FCC ห้ามนำเข้า optical transceiver จีน) ไม่ใช่งบ</li>
     <li><strong>GOOGL</strong> — Score เกือบสูงสุด (62.0) แต่ <strong>Disc 31 ยังต่ำกว่าเกณฑ์ 35</strong> + ธง <code>watch</code> ยังไม่ปลดตามเงื่อนไขของมันเอง</li>
   </ul>
@@ -592,9 +764,10 @@
     <p>ฐานรายได้ในโมเดลจึงล้าหลังไปทั้งไตรมาส และยังไม่มี debt/cash/shares หลัง Q3 จาก filing จริง → <strong>base FV 196.54 ของ AVGO รอบนี้ใช้อ้างอิงไม่ได้</strong> · ไม่รีเฟรชด้วยตัวเลขที่เดาเอา ต้องรื้อจาก 10-Q Q3 FY26 ก่อน <em>(AVGO ไม่ใช่ตัวที่จะซื้อรอบนี้อยู่แล้ว จึงไม่กระทบการตัดสินใจ)</em></p>
   </div>
 
-  <div class="call warn">
-    <h4>🟠 PANW / COST — ไม่มี DCF ในระบบเลย</h4>
-    <p>PANW เพิ่งรายงานงบดี (rev +34% · guide FY27 เหนือคาด) แต่ราคาร่วง 10.3% ในสัปดาห์ · COST อยู่ใต้ EMA200 −4.5% และมีงบ 24 ก.ย. — ทั้งสองตัวตัดสินได้แค่จากงบ+ราคา ไม่มีมูลค่าอ้างอิง</p>
+  <div class="call">
+    <h4>✅ ปิดแล้วรอบนี้ — PANW / COST มี DCF แล้ว</h4>
+    <p>นายท่านสั่ง 5 ก.ย. · ผลออกมาคนละอย่าง: <strong>PANW ติดธง <code>dcf_validity: INVALID</code></strong> (ราคา 3.48x P95 · reverse DCF ต้องการ margin ปลายทาง 137% = เป็นไปไม่ได้) → ตัดสินจากงบ+ราคาเหมือน CRWD · <strong>COST ใช้อ่านทิศทางได้</strong> (1.98x P95 · ผ่อน ROIC เป็นค่าจริง 36.6% ได้ FV 630 = 1.45x) แต่ไม่ใช่ trigger</p>
+    <p>🟠 <strong>ที่ยังเหลือ:</strong> ฐาน LTM ของ COST ยังเป็นของ Q3 FY26 — ต้องรีเฟรชหลังงบ 24 ก.ย. · PANW ยังไม่ยื่น 10-K FY26 (ใช้ 8-K/PR เป็นแหล่ง)</p>
   </div>
 
   <div class="call warn">
