@@ -185,7 +185,7 @@
   <header class="mast">
     <div class="kicker">Yuri Algorithm · รอบ 8 ก.ย.</div>
     <h1>แกนของตลาดเปลี่ยนจาก Fed เป็นน้ำมัน — และมันมาถึงก่อนวัน CPI แค่ 2 วัน</h1>
-    <div class="stamp">9 ก.ย. 2026 · ราคาปิดอังคาร 8 ก.ย. แท่งเต็มครบ 41/41 · 🆕 เพิ่มหุ้นปันผล 11 ตัว · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
+    <div class="stamp">9 ก.ย. 2026 · ราคาปิดอังคาร 8 ก.ย. แท่งเต็มครบ 41/41 · 🆕 เพิ่มหุ้นปันผล 11 ตัว + DCF ครบ 31 ตัว · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
   </header>
 </div>
 
@@ -202,6 +202,7 @@
     <li><a href="#pf">พอร์ต</a></li>
     <li><a href="#gaps">ข้อมูลที่ขาด</a></li>
     <li><a href="#div11">🆕 หุ้นปันผล 11 ตัว</a></li>
+    <li><a href="#dcf11">🆕 DCF 11 ตัว + JPM</a></li>
     <li><a href="#cal">ปฏิทิน</a></li>
   </ul>
 </nav>
@@ -326,32 +327,43 @@
 
 <!-- ============ DCF ============ -->
 <section id="dcf">
-  <h2>FV range + ส่วนลด <span class="h2note">20 ตัวที่มี DCF · ΔFV = 0 ทุกตัวรอบนี้</span></h2>
+  <h2>FV range + ส่วนลด <span class="h2note">🆕 31 ตัว — เพิ่ม 11 ตัวรอบนี้ · ΔFV ของ 20 ตัวเดิม = 0</span></h2>
   <div class="rule"></div>
   <div class="scroller">
   <table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>Base FV</th><th>Bull FV</th><th>MoS vs Base</th><th>MC P90</th><th>ราคา/P90</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>Base FV</th><th>Bull FV</th><th>MoS vs Base</th><th>MC P90</th><th>ราคา/P90</th><th>ใช้เป็นด่านซื้อได้ไหม</th></tr></thead>
     <tbody>
-      <tr><td class="tkr">HCA</td><td class="n">402.02</td><td class="n">441.74</td><td class="n">604.1</td><td class="n b-buy"><strong>+9.0%</strong></td><td class="n">549.27</td><td class="n ">0.73x</td></tr>
-      <tr><td class="tkr">NVDA</td><td class="n">225.73</td><td class="n">239.22</td><td class="n">387.0</td><td class="n b-buy"><strong>+5.6%</strong></td><td class="n">325.77</td><td class="n ">0.69x</td></tr>
-      <tr><td class="tkr">UNH</td><td class="n">400.84</td><td class="n">422.66</td><td class="n">536.73</td><td class="n b-buy"><strong>+5.2%</strong></td><td class="n">542.54</td><td class="n ">0.74x</td></tr>
-      <tr><td class="tkr">META</td><td class="n">613.48</td><td class="n">589.09</td><td class="n">820.01</td><td class="n "><strong>-4.1%</strong></td><td class="n">712.8</td><td class="n ">0.86x</td></tr>
-      <tr><td class="tkr">NFLX</td><td class="n">76.77</td><td class="n">70.78</td><td class="n">104.43</td><td class="n "><strong>-8.5%</strong></td><td class="n">85.19</td><td class="n ">0.90x</td></tr>
-      <tr><td class="tkr">PFE</td><td class="n">27.79</td><td class="n">23.05</td><td class="n">30.56</td><td class="n "><strong>-20.6%</strong></td><td class="n">27.81</td><td class="n ">1.00x</td></tr>
-      <tr><td class="tkr">PG</td><td class="n">145.58</td><td class="n">102.04</td><td class="n">118.45</td><td class="n "><strong>-42.7%</strong></td><td class="n">116.27</td><td class="n ">1.25x</td></tr>
-      <tr><td class="tkr">MSFT</td><td class="n">493.95</td><td class="n">338.73</td><td class="n">437.35</td><td class="n "><strong>-45.8%</strong></td><td class="n">401.27</td><td class="n ">1.23x</td></tr>
-      <tr><td class="tkr">LLY</td><td class="n">1123.91</td><td class="n">721.14</td><td class="n">1067.0</td><td class="n "><strong>-55.9%</strong></td><td class="n">891.33</td><td class="n ">1.26x</td></tr>
-      <tr><td class="tkr">GOOGL</td><td class="n">338.36</td><td class="n">214.93</td><td class="n">280.03</td><td class="n "><strong>-57.4%</strong></td><td class="n">265.0</td><td class="n ">1.28x</td></tr>
-      <tr><td class="tkr">SNPS</td><td class="n">392.03</td><td class="n">243.53</td><td class="n">360.52</td><td class="n "><strong>-61.0%</strong></td><td class="n">309.02</td><td class="n ">1.27x</td></tr>
-      <tr><td class="tkr">MRK</td><td class="n">148.46</td><td class="n">89.36</td><td class="n">113.15</td><td class="n "><strong>-66.1%</strong></td><td class="n">104.32</td><td class="n ">1.42x</td></tr>
-      <tr><td class="tkr">MELI</td><td class="n">1926.25</td><td class="n">1138.11</td><td class="n">2652.27</td><td class="n "><strong>-69.2%</strong></td><td class="n">1673.48</td><td class="n ">1.15x</td></tr>
-      <tr><td class="tkr">AVGO</td><td class="n">368.56</td><td class="n">196.54</td><td class="n">290.17</td><td class="n "><strong>-87.5%</strong></td><td class="n">251.04</td><td class="n ">1.47x</td></tr>
-      <tr><td class="tkr">AMZN</td><td class="n">256.97</td><td class="n">119.78</td><td class="n">192.11</td><td class="n b-avoid"><strong>-114.5%</strong></td><td class="n">154.15</td><td class="n b-avoid">1.67x</td></tr>
-      <tr><td class="tkr">COHR</td><td class="n">301.88</td><td class="n">132.7</td><td class="n">254.86</td><td class="n b-avoid"><strong>-127.5%</strong></td><td class="n">181.4</td><td class="n b-avoid">1.66x</td></tr>
-      <tr><td class="tkr">COST</td><td class="n">910.18</td><td class="n">387.51</td><td class="n">501.64</td><td class="n b-avoid"><strong>-134.9%</strong></td><td class="n">443.94</td><td class="n b-avoid">2.05x</td></tr>
-      <tr><td class="tkr">MRVL</td><td class="n">225.41</td><td class="n">95.84</td><td class="n">160.66</td><td class="n b-avoid"><strong>-135.2%</strong></td><td class="n">126.58</td><td class="n b-avoid">1.78x</td></tr>
-      <tr><td class="tkr">PANW</td><td class="n">336.98</td><td class="n">70.67</td><td class="n">103.06</td><td class="n b-avoid"><strong>-376.8%</strong></td><td class="n">89.3</td><td class="n b-avoid">3.77x</td></tr>
-      <tr><td class="tkr">CRWD</td><td class="n">210.02</td><td class="n">28.43</td><td class="n">48.31</td><td class="n b-avoid"><strong>-638.7%</strong></td><td class="n">36.47</td><td class="n b-avoid">5.76x</td></tr>
+      <tr><td class="tkr">NEE <span class="hint">🆕</span></td><td class="n">83.83</td><td class="n">-6.21</td><td class="n">14.58</td><td class="n b-buy"><strong>+1449.9%</strong></td><td class="n">2.7</td><td class="n">31.05x</td><td class="b-avoid">🔴 INVALID — โมเดลไม่ fit สาธารณูปโภค</td></tr>
+      <tr><td class="tkr">HCA</td><td class="n">402.02</td><td class="n">441.74</td><td class="n">604.1</td><td class="n b-buy"><strong>+9.0%</strong></td><td class="n">549.27</td><td class="n">0.73x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">NVDA</td><td class="n">225.73</td><td class="n">239.22</td><td class="n">387.0</td><td class="n b-buy"><strong>+5.6%</strong></td><td class="n">325.77</td><td class="n">0.69x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">UNH</td><td class="n">400.84</td><td class="n">422.66</td><td class="n">536.73</td><td class="n b-buy"><strong>+5.2%</strong></td><td class="n">542.54</td><td class="n">0.74x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">META</td><td class="n">613.48</td><td class="n">589.09</td><td class="n">820.01</td><td class="n "><strong>-4.1%</strong></td><td class="n">712.8</td><td class="n">0.86x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">NFLX</td><td class="n">76.77</td><td class="n">70.78</td><td class="n">104.43</td><td class="n "><strong>-8.5%</strong></td><td class="n">85.19</td><td class="n">0.90x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">PFE</td><td class="n">27.79</td><td class="n">23.05</td><td class="n">30.56</td><td class="n "><strong>-20.6%</strong></td><td class="n">27.81</td><td class="n">1.00x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">BLK <span class="hint">🆕</span></td><td class="n">1095.37</td><td class="n">890.7</td><td class="n">1166.36</td><td class="n "><strong>-23.0%</strong></td><td class="n">1000.4</td><td class="n">1.09x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">PG</td><td class="n">145.58</td><td class="n">102.04</td><td class="n">118.45</td><td class="n "><strong>-42.7%</strong></td><td class="n">116.27</td><td class="n">1.25x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">MSFT</td><td class="n">493.95</td><td class="n">338.73</td><td class="n">437.35</td><td class="n "><strong>-45.8%</strong></td><td class="n">401.27</td><td class="n">1.23x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">LLY</td><td class="n">1123.91</td><td class="n">721.14</td><td class="n">1067.0</td><td class="n "><strong>-55.9%</strong></td><td class="n">891.33</td><td class="n">1.26x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">GOOGL</td><td class="n">338.36</td><td class="n">214.93</td><td class="n">280.03</td><td class="n "><strong>-57.4%</strong></td><td class="n">265.0</td><td class="n">1.28x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">SNPS</td><td class="n">392.03</td><td class="n">243.53</td><td class="n">360.52</td><td class="n "><strong>-61.0%</strong></td><td class="n">309.02</td><td class="n">1.27x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">MRK</td><td class="n">148.46</td><td class="n">89.36</td><td class="n">113.15</td><td class="n "><strong>-66.1%</strong></td><td class="n">104.32</td><td class="n">1.42x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">MELI</td><td class="n">1926.25</td><td class="n">1138.11</td><td class="n">2652.27</td><td class="n "><strong>-69.2%</strong></td><td class="n">1673.48</td><td class="n">1.15x</td><td class="b-buy">✅ ใช้ได้</td></tr>
+      <tr><td class="tkr">JPM <span class="hint">🆕</span></td><td class="n">353.51</td><td class="n">204.51</td><td class="n">242.1</td><td class="n "><strong>-72.9%</strong></td><td class="n">228.78</td><td class="n">1.55x</td><td class="b-wait">🟡 อ่านทิศทาง (คนละโมเดล — excess return)</td></tr>
+      <tr><td class="tkr">MCD <span class="hint">🆕</span></td><td class="n">255.81</td><td class="n">137.48</td><td class="n">174.9</td><td class="n "><strong>-86.1%</strong></td><td class="n">160.44</td><td class="n">1.59x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">AVGO</td><td class="n">368.56</td><td class="n">196.54</td><td class="n">290.17</td><td class="n "><strong>-87.5%</strong></td><td class="n">251.04</td><td class="n">1.47x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">AMZN</td><td class="n">256.97</td><td class="n">119.78</td><td class="n">192.11</td><td class="n b-avoid"><strong>-114.5%</strong></td><td class="n">154.15</td><td class="n">1.67x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">ABBV <span class="hint">🆕</span></td><td class="n">248.78</td><td class="n">115.8</td><td class="n">174.16</td><td class="n b-avoid"><strong>-114.8%</strong></td><td class="n">135.2</td><td class="n">1.84x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">JNJ <span class="hint">🆕</span></td><td class="n">269.12</td><td class="n">124.45</td><td class="n">160.13</td><td class="n b-avoid"><strong>-116.2%</strong></td><td class="n">140.76</td><td class="n">1.91x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">COHR</td><td class="n">301.88</td><td class="n">132.7</td><td class="n">254.86</td><td class="n b-avoid"><strong>-127.5%</strong></td><td class="n">181.4</td><td class="n">1.66x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">COST</td><td class="n">910.18</td><td class="n">387.51</td><td class="n">501.64</td><td class="n b-avoid"><strong>-134.9%</strong></td><td class="n">443.94</td><td class="n">2.05x</td><td class="b-wait">🟠 อ่านทิศทางเท่านั้น</td></tr>
+      <tr><td class="tkr">MRVL</td><td class="n">225.41</td><td class="n">95.84</td><td class="n">160.66</td><td class="n b-avoid"><strong>-135.2%</strong></td><td class="n">126.58</td><td class="n">1.78x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">RTX <span class="hint">🆕</span></td><td class="n">198.81</td><td class="n">78.59</td><td class="n">113.15</td><td class="n b-avoid"><strong>-153.0%</strong></td><td class="n">97.4</td><td class="n">2.04x</td><td class="b-wait">🟠 อ่านทิศทางเท่านั้น</td></tr>
+      <tr><td class="tkr">WMT <span class="hint">🆕</span></td><td class="n">106.05</td><td class="n">41.16</td><td class="n">55.43</td><td class="n b-avoid"><strong>-157.7%</strong></td><td class="n">61.05</td><td class="n">1.74x</td><td class="b-wait">🟡 อ่านทิศทาง คุมขนาดไม้ได้</td></tr>
+      <tr><td class="tkr">MDLZ <span class="hint">🆕</span></td><td class="n">61.63</td><td class="n">23.26</td><td class="n">36.71</td><td class="n b-avoid"><strong>-165.0%</strong></td><td class="n">30.02</td><td class="n">2.05x</td><td class="b-wait">🟠 อ่านทิศทางเท่านั้น</td></tr>
+      <tr><td class="tkr">CAT <span class="hint">🆕</span></td><td class="n">822.48</td><td class="n">263.42</td><td class="n">388.25</td><td class="n b-avoid"><strong>-212.2%</strong></td><td class="n">313.61</td><td class="n">2.62x</td><td class="b-wait">🟠 อ่านทิศทางเท่านั้น</td></tr>
+      <tr><td class="tkr">PANW</td><td class="n">336.98</td><td class="n">70.67</td><td class="n">103.06</td><td class="n b-avoid"><strong>-376.8%</strong></td><td class="n">89.3</td><td class="n">3.77x</td><td class="b-avoid">🔴 INVALID</td></tr>
+      <tr><td class="tkr">DE <span class="hint">🆕</span></td><td class="n">680.73</td><td class="n">123.71</td><td class="n">244.8</td><td class="n b-avoid"><strong>-450.3%</strong></td><td class="n">171.33</td><td class="n">3.97x</td><td class="b-avoid">🔴 INVALID</td></tr>
+      <tr><td class="tkr">CRWD</td><td class="n">210.02</td><td class="n">28.43</td><td class="n">48.31</td><td class="n b-avoid"><strong>-638.7%</strong></td><td class="n">36.47</td><td class="n">5.76x</td><td class="b-avoid">🔴 INVALID</td></tr>
     </tbody>
   </table>
   </div>
@@ -671,9 +683,185 @@
 
   <div class="call warn">
     <h4>⚠️ ข้อจำกัดที่ต้องพูดตรงๆ</h4>
-    <p><strong>1. ยังไม่มี DCF สักตัวใน 11 ตัวนี้</strong> — ตอนนี้ตัดสินได้แค่จาก Q + ส่วนลดจากไฮ + เส้นกราฟ <strong>ยังไม่มี fair value ให้เทียบ</strong> · ถ้านายท่านอยากได้ ผมแนะนำเริ่มที่ <strong>WMT</strong> (ใกล้เส้นที่สุด) แล้วตามด้วย CAT/MCD</p>
-    <p><strong>2. JPM ทำ Earth Evans (FCFF DCF) ไม่ได้</strong> — ธนาคารต้องใช้ excess-return model หรือ P/TBV คนละวิธีกันทั้งหมด · ถ้าจะประเมิน JPM ต้องสร้างเครื่องมือใหม่ ไม่ใช่ยัดเข้า engine เดิม</p>
+    <p><strong>1.</strong> <s>ยังไม่มี DCF สักตัวใน 11 ตัวนี้</s> → ✅ <strong>ปิดแล้ว</strong> (นายท่านสั่งต่อทันที) — ทำครบทั้ง 11 ตัว แต่ทุกตัวติดป้าย FIRST-PASS · ดูหัวข้อ <a href="#dcf11">DCF 11 ตัว + JPM</a></p>
+    <p><strong>2.</strong> <s>JPM ทำ Earth Evans ไม่ได้</s> → ✅ <strong>ปิดแล้ว</strong> — สร้าง <code>bank_engine.py</code> (Excess Return Model) ขึ้นใหม่ ไม่ได้ยัดเข้า engine เดิม</p>
     <p><strong>3. <code>conviction</code> ยังเป็น MED ตั้งต้นทุกตัว</strong> รอนายท่านยืนยัน · <strong>4. Q ที่ผมให้เป็นการตัดสินของผม</strong> — เทียบสเกลกับเล่มเดิมแล้ว แต่ยังเป็นดุลพินิจ ไม่ใช่สูตร นายท่านแก้ได้ทุกตัว</p>
+  </div>
+</section>
+
+
+<!-- ============ DCF 11 ============ -->
+<section id="dcf11">
+  <h2>🆕 ทำ DCF ให้ครบทั้ง 11 ตัว + สร้างเครื่องมือประเมินธนาคาร <span class="h2note">นายท่านสั่งต่อ 9 ก.ย. · สมุด valuation 20 → 31 ตัว</span></h2>
+  <div class="rule"></div>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>ทำอะไร</th><th>เครื่องมือ</th></tr></thead>
+    <tbody>
+      <tr><td><strong>ข้อ 2</strong></td><td>DCF 10 ตัว: WMT · CAT · MCD · ABBV · JNJ · BLK · DE · NEE · MDLZ · RTX</td><td><code>earth_evans_engine.py</code> (FCFF เดิม)</td></tr>
+      <tr><td><strong>ข้อ 3</strong></td><td><strong>JPM</strong> — สร้างเครื่องมือใหม่ทั้งตัว</td><td>🆕 <code>bank_engine.py</code> (Excess Return Model)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>ที่มาตัวเลข:</strong> ฐานทุกตัวมาจาก<strong>งบที่รายงานจริง</strong> (LTM 4 ไตรมาสล่าสุด) — รายได้ · EBIT · ภาษี · หนี้ · เงินสด · ส่วนของผู้ถือหุ้น · จำนวนหุ้น · sales-to-capital คำนวณจากงบดุลจริง · ทุกตัวใช้ <code>terminal_g = 0.0473</code> เท่ากับอีก 20 ตัวในเล่ม ไม่งั้นเทียบ MoS ข้ามตัวไม่ได้</p>
+  <blockquote><p>⚠️ <strong>ทั้ง 11 ตัวติดป้าย FIRST-PASS</strong> — ยังไม่ได้อ่าน 10-Q/10-K ตัวเต็มทีละฉบับแบบที่ทำกับ PANW/COST</p></blockquote>
+
+  <div class="call warn">
+    <h4>อ่านตัวเลขก่อน — FV ต่ำกว่าราคาตลาดทั้ง 11 ตัว แต่นั่นคือสิ่งที่คาดไว้แล้ว</h4>
+    <p>กติกาบ้านบังคับ <strong>terminal ROIC = terminal WACC</strong> = ล็อกให้ทุกบริษัทออกจากเกมที่ ~11× NOPAT · กติกานี้ <strong>ลงโทษบริษัท ROIC สูงอย่างเป็นระบบ</strong> ซึ่งก็คือหุ้นปันผลคุณภาพดีเกือบทั้งกลุ่มนี้</p>
+    <p>→ <strong>ตัวเลขที่มีความหมายจริงคือ “ราคา/P90” กับ “reverse DCF” ไม่ใช่ MoS</strong></p>
+  </div>
+
+  <h3>ผ่อนกติกา terminal ROIC + reverse DCF</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>FV ที่ ROIC=WACC</th><th>ผ่อน 2x</th><th>ผ่อน 3x</th><th>ราคา/FV(3x)</th><th>reverse: margin ปลายทาง</th><th>ฐานจริง</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">BLK</td><td class="n">1095.37</td><td class="n">890.70</td><td class="n">1144.95</td><td class="n">1229.69</td><td class="n b-buy"><strong>0.89x</strong></td><td class="n">47.6%</td><td class="n">38.0%</td></tr>
+      <tr><td class="tkr">MCD</td><td class="n">255.81</td><td class="n">137.48</td><td class="n">207.84</td><td class="n">231.29</td><td class="n b-buy"><strong>1.11x</strong></td><td class="n">74.4%</td><td class="n">47.0%</td></tr>
+      <tr><td class="tkr">ABBV</td><td class="n">248.78</td><td class="n">115.80</td><td class="n">164.81</td><td class="n">181.14</td><td class="n "><strong>1.37x</strong></td><td class="n">64.7%</td><td class="n">34.0%</td></tr>
+      <tr><td class="tkr">JNJ</td><td class="n">269.12</td><td class="n">124.45</td><td class="n">164.25</td><td class="n">177.52</td><td class="n "><strong>1.52x</strong></td><td class="n">59.6%</td><td class="n">28.0%</td></tr>
+      <tr><td class="tkr">WMT</td><td class="n">106.05</td><td class="n">41.16</td><td class="n">59.25</td><td class="n">65.28</td><td class="n "><strong>1.62x</strong></td><td class="n">11.4%</td><td class="n">4.8%</td></tr>
+      <tr><td class="tkr">RTX</td><td class="n">198.81</td><td class="n">78.59</td><td class="n">113.65</td><td class="n">125.34</td><td class="n "><strong>1.59x</strong></td><td class="n">28.0%</td><td class="n">13.5%</td></tr>
+      <tr><td class="tkr">MDLZ</td><td class="n">61.63</td><td class="n">23.26</td><td class="n">36.79</td><td class="n">41.30</td><td class="n "><strong>1.49x</strong></td><td class="n">26.8%</td><td class="n">14.0%</td></tr>
+      <tr><td class="tkr">CAT</td><td class="n">822.48</td><td class="n">263.42</td><td class="n">372.78</td><td class="n">409.24</td><td class="n b-avoid"><strong>2.01x</strong></td><td class="n">49.5%</td><td class="n">19.0%</td></tr>
+      <tr><td class="tkr">DE</td><td class="n">680.73</td><td class="n">123.71</td><td class="n">238.49</td><td class="n">276.76</td><td class="n b-avoid"><strong>2.46x</strong></td><td class="n">47.9%</td><td class="n">19.0%</td></tr>
+      <tr><td class="tkr">NEE</td><td class="n">83.83</td><td class="n">-6.21</td><td class="n">24.17</td><td class="n">34.30</td><td class="n b-avoid"><strong>2.44x</strong></td><td class="n">78.5%</td><td class="n">36.0%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>อ่านคอลัมน์ “reverse” ยังไง:</strong> คือมาร์จิ้นปลายทางที่ต้องทำได้จริง ถ้าจะให้ DCF ออกมาเท่ากับราคาตลาดวันนี้ (ปรับตัวแปรเดียว ตัวอื่นคงเดิม)</p>
+  <ul class="tight">
+    <li><strong>BLK เป็นตัวเดียวที่ผ่อน 3x แล้วราคาต่ำกว่า FV (0.89×)</strong> — reverse ขอมาร์จิ้น 47.6% เทียบกับฐาน 38% · BLK ทำ non-GAAP operating margin ได้ราว 44% อยู่แล้ว → <strong>ข้อเรียกร้องของตลาดต่อ BLK คือ “ทำได้ดีกว่าที่เคยเล็กน้อย” ซึ่งไม่ใช่เรื่องเพ้อฝัน</strong></li>
+    <li><strong>MCD</strong> ผ่อน 3x เหลือ 1.11× — ใกล้ที่สุดรองจาก BLK · แต่ reverse ขอมาร์จิ้น <strong>74.4%</strong> ซึ่งเป็นไปไม่ได้กับโมเดลแฟรนไชส์</li>
+    <li><strong>WMT</strong> reverse ขอมาร์จิ้น <strong>11.4% = 2.4 เท่าของฐาน 4.8%</strong> — ค้าปลีกไม่มีทางทำได้ · <strong>นี่คือเคสเดียวกับ COST เป๊ะ</strong> (ค้าปลีก ROIC สูงโดนกติกา terminal ROIC ลงโทษ) ไม่ใช่หลักฐานว่า WMT แพงเป็น 2.6 เท่า</li>
+    <li><strong>NEE</strong> reverse <strong>“ไม่ลู่เข้า”</strong> ทั้งฝั่งมาร์จิ้นและฝั่งการเติบโต = ไม่มีชุดสมมติฐานไหนไปถึงราคาได้เลย</li>
+  </ul>
+
+  <h3>🔴 สองตัวที่ INVALID เพราะ fit ไม่ได้ ไม่ใช่เพราะราคาแพง</h3>
+  <div class="call alert">
+    <h4>NEE — โมเดลผิดประเภท แก้ด้วยการผ่อนสมมติฐานไม่ได้</h4>
+    <p>Base FV <strong>−6.21 (ติดลบ)</strong> · ราคา <strong>31.05× P90</strong> · ต้นเหตุคือ <code>s2c 0.17</code> ต่ำสุดทั้งเล่ม → การลงทุนซ้ำกินกำไรจากการดำเนินงานหมด (FCF จริง −17.8B)</p>
+    <p>สาธารณูปโภคที่ถูกกำกับสร้างมูลค่าจาก <strong>rate base × allowed ROE</strong> ไม่ใช่จากการเติบโตของรายได้ → 🔴 <strong><code>dcf_validity: INVALID</code> — ห้ามใช้เป็นด่านซื้อ และห้ามใช้อ่านทิศทางด้วย</strong> · ถ้าจะประเมิน NEE จริงต้องสร้าง rate-base model แยก (กลุ่มเดียวกับที่ JPM ต้องมี bank_engine)</p>
+    <p><em>ผมเขียนธงเตือนเรื่องนี้ไว้ใน config ตั้งแต่ตอนใส่ NEE เมื่อเช้า และผลออกมายืนยัน — บันทึกไว้ว่าเป็นการเดาที่ถูก ไม่ใช่การหาเหตุผลย้อนหลัง</em></p>
+  </div>
+
+  <p><strong>DE + CAT — โมเดลถูกประเภท แต่งบดุลรวมบริษัทลูกทางการเงินเข้ามาด้วย</strong> · ทั้งคู่มี captive finance arm (John Deere Capital / Cat Financial) ที่มีหนี้ก้อนใหญ่ <strong>โดยมีลูกหนี้เช่าซื้อหนุนอยู่</strong> แต่โมเดลหักหนี้ออกจากมูลค่าหุ้น<strong>เต็มจำนวน</strong> พร้อมกับที่ลูกหนี้ดัน invested capital ให้สูง = s2c ต่ำเกินจริง → <strong>ตีสองเด้ง</strong></p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>FV ตามงบรวม</th><th>ราคา/P90</th><th>ถอดหนี้บริษัทลูก (ประมาณการ)</th><th>ราคา/FV ใหม่</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">DE</td><td class="n">123.71</td><td class="n b-avoid"><strong>3.97×</strong></td><td class="n">ถอด 45,000M · s2c → 1.7/2.0</td><td class="n b-buy"><strong>356.61</strong> → 1.91×</td></tr>
+      <tr><td class="tkr">CAT</td><td class="n">263.42</td><td class="n b-wait"><strong>2.62×</strong></td><td class="n">ถอด 30,000M · s2c → 2.7/3.0</td><td class="n b-buy"><strong>359.31</strong> → 2.29×</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <blockquote><p><strong>DE เปลี่ยนจาก “แพง 5.5 เท่า” เป็น “แพง 1.9 เท่า” ด้วยการแก้วิธีนับอย่างเดียว</strong> — ตัวเลขที่ถอดออกเป็น<strong>การประมาณการของผม ไม่ได้มาจาก filing แยกส่วนงาน</strong> จึงใช้เป็นทิศทางเท่านั้น · สิ่งที่ต้องทำต่อถ้าจะเอาจริง: ดึงงบส่วนงาน (Equipment Operations vs Financial Services) จาก 10-K แล้วประเมินสองส่วนแยกกัน</p></blockquote>
+
+  <h3>🆕 JPM — เครื่องมือใหม่ และมันให้คำตอบที่คมที่สุดในเล่ม</h3>
+  <p><strong>ทำไมต้องเปลี่ยนเครื่องมือ:</strong> FCFF DCF ต้องแยก <em>หนี้เพื่อระดมทุน</em> ออกจาก <em>หนี้ที่เป็นวัตถุดิบ</em> — แต่ของธนาคาร <strong>เงินฝากกับเงินกู้คือวัตถุดิบ แยกไม่ได้</strong> · capex/working capital ไม่มีความหมาย · สินทรัพย์รวม <strong>5.02 ล้านล้านดอลลาร์</strong> บนส่วนของผู้ถือหุ้น 374.6B = เลเวอเรจ ~13 เท่า ซึ่งเป็น<strong>โครงสร้างธุรกิจ ไม่ใช่หนี้ที่ต้องจ่ายคืน</strong></p>
+  <div class="call">
+    <h4>Excess Return Model (Damodaran)</h4>
+    <p><strong>มูลค่าส่วนของผู้ถือหุ้น = book value วันนี้ + PV(ผลตอบแทนส่วนเกินในอนาคต)</strong><br>
+    ผลตอบแทนส่วนเกินปีที่ t = (ROE − ต้นทุนส่วนของผู้ถือหุ้น) × book equity ต้นปี</p>
+  </div>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>ตัวเลขจากงบจริง</th><th></th><th>ผล</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>ส่วนของผู้ถือหุ้นสามัญ</td><td class="n"><strong>353,558M</strong></td><td><strong>Base FV</strong> (terminal ROE = Ke)</td><td class="n"><strong>204.51</strong> · ราคา = <strong>1.73×</strong></td></tr>
+      <tr><td>Tangible book → TBVPS</td><td class="n">289,254M → <strong>108.82</strong></td><td>ผ่อน terminal ROE = Ke+2pp</td><td class="n">256.37</td></tr>
+      <tr><td>กำไรสุทธิส่วนสามัญ LTM</td><td class="n">63,633M</td><td>ผ่อน terminal ROE = Ke+4pp</td><td class="n b-buy"><strong>310.17</strong> → 1.14×</td></tr>
+      <tr><td>ROE · ROTCE</td><td class="n"><strong>18.0% · 22.0%</strong></td><td>ราคา vs P90 (228.78)</td><td class="n">1.55×</td></tr>
+      <tr><td>ต้นทุนส่วนของผู้ถือหุ้น (Ke)</td><td class="n">4.73% + 0.975 × 4.33% = <strong>8.95%</strong></td><td>P/B · P/TBV</td><td class="n">2.66 · <strong>3.25</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call alert">
+    <h4>🎯 ตัวเลขที่มีค่าที่สุดคือ reverse</h4>
+    <p><strong>ราคา 353.51 กำลังตั้งราคาว่า JPM รักษา terminal ROE = 14.51% ไปตลอดกาล</strong> = ส่วนเกินเหนือต้นทุนส่วนของผู้ถือหุ้น <strong>5.6pp ถาวร</strong> (ปัจจุบันทำ ROE 18.0% / ROTCE 22.0%)</p>
+    <p>เทียบกับเคส <strong>PANW ที่ reverse ขอมาร์จิ้นปลายทาง 137% = เป็นไปไม่ได้เชิงคณิตศาสตร์</strong> — ข้อเรียกร้องของตลาดต่อ JPM <strong>เข้ม แต่ไม่ไร้เหตุผล</strong> สำหรับธนาคารที่บริหารดีที่สุดในสหรัฐ · <strong>นี่คือความต่างที่มีความหมาย ไม่ใช่คำแก้ตัว</strong></p>
+  </div>
+
+  <p><strong>และ JPM มีคุณสมบัติที่ไม่มีตัวไหนในเล่มนี้มี:</strong></p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>JPM</th><th>ตัว FCFF ทั่วไปในเล่ม</th></tr></thead>
+    <tbody>
+      <tr><td>มูลค่าที่มาจาก terminal value</td><td class="n b-buy"><strong>0%</strong></td><td class="n b-avoid"><strong>80–90%</strong></td></tr>
+      <tr><td>ที่เป็น book equity ที่มีอยู่จริงวันนี้</td><td class="n b-buy"><strong>65%</strong></td><td class="n">0%</td></tr>
+      <tr><td>ที่เป็นผลตอบแทนส่วนเกิน 10 ปีข้างหน้า</td><td class="n">35%</td><td class="n">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <blockquote><p><strong>นี่คือประมาณการที่ “ยึดกับของจริง” มากที่สุดในสมุดทั้งเล่ม</strong> — สองในสามของมูลค่าคือทุนที่มีอยู่แล้ว ไม่ใช่การคาดการณ์ (เกิดจากกติกา terminal ROE = Ke ทำให้ TV = 0 พอดี — คู่ขนานตรงๆ กับกติกา terminal ROIC = WACC ฝั่ง FCFF)</p></blockquote>
+
+  <div class="call warn">
+    <h4>⚠️ ข้อจำกัดของ bank_engine ที่ต้องพูด</h4>
+    <p>① <strong>ไม่มีการจำลองวัฏจักรสินเชื่อ</strong> — ROE 18% เป็นตัวเลขในภาวะ credit cost ต่ำ ถ้าเข้าถดถอย ROE ปีนั้นอาจหล่นไป 8–11% → <strong>ต้องอ่าน P10 (181.63) / P25 (192.48) ควบเสมอ</strong> ② <strong>ไม่มีข้อจำกัดเงินกองทุน (CET1)</strong> — ถ้าเกณฑ์กำกับเข้มขึ้น payout 65% อาจทำไม่ได้ ③ beta 0.975 มาจากแหล่งข้อมูล ไม่ได้คำนวณเอง ④ ยังไม่ได้อ่าน 10-Q ตัวเต็ม</p>
+  </div>
+
+  <h3>อันดับความน่าเชื่อถือของ FV ทั้ง 11 ตัว</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>ราคา/P90</th><th>ตัว</th><th>ใช้ยังไง</th></tr></thead>
+    <tbody>
+      <tr><td class="n b-buy"><strong>1.09×</strong></td><td class="tkr">BLK</td><td class="b-buy">✅ <strong>ตัวเดียวในกลุ่มที่ราคายังอยู่ในกรอบ distribution</strong> — ใช้เป็นด่านได้จริง</td></tr>
+      <tr><td class="n">1.55×</td><td class="tkr">JPM</td><td>🟡 อ่านทิศทาง + คุมขนาดไม้ · แต่เป็นประมาณการที่ยึดของจริงที่สุดในเล่ม</td></tr>
+      <tr><td class="n">1.59–1.91×</td><td class="tkr">MCD · WMT · ABBV · JNJ</td><td>🟡 อ่านทิศทาง คุมขนาดไม้ได้ ไม่ใช่ trigger</td></tr>
+      <tr><td class="n">2.04–2.05×</td><td class="tkr">RTX · MDLZ</td><td>🟠 อ่านทิศทางเท่านั้น (ระดับเดียวกับ COST 2.05×)</td></tr>
+      <tr><td class="n">2.62×</td><td class="tkr">CAT</td><td>🟠 อ่านทิศทางเท่านั้น · แก้วิธีนับแล้วเหลือ 2.29×</td></tr>
+      <tr><td class="n b-avoid"><strong>3.97×</strong></td><td class="tkr">DE</td><td class="b-avoid">🔴 INVALID ตามเกณฑ์ · <strong>แต่เป็นปัญหา fit ไม่ใช่ราคา</strong> (ถอด captive finance → 1.91×)</td></tr>
+      <tr><td class="n b-avoid"><strong>31.05×</strong></td><td class="tkr">NEE</td><td class="b-avoid">🔴 <strong>INVALID เต็มรูปแบบ — FV ติดลบ ห้ามใช้ทั้งเป็นด่านและอ่านทิศทาง</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Price Map ของ 11 ตัวใหม่</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>EMA200</th><th>MA200</th><th>low 3 เดือน</th><th>vs EMA200</th><th>โซนสะสมจาก DCF</th><th>ใช้ตั้ง limit ได้ไหม</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">WMT</td><td class="n">106.05</td><td class="n">113.9</td><td class="n">118.17</td><td class="n">102.15</td><td class="n">-6.9%</td><td class="n">41-43</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">CAT</td><td class="n">822.48</td><td class="n">769.91</td><td class="n">772.52</td><td class="n">771.39</td><td class="n">+6.8%</td><td class="n">261-277</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">MCD</td><td class="n">255.81</td><td class="n">283.63</td><td class="n">291.64</td><td class="n">254.28</td><td class="n">-9.8%</td><td class="n">136-144</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">ABBV</td><td class="n">248.78</td><td class="n">228.75</td><td class="n">225.91</td><td class="n">213.85</td><td class="n">+8.8%</td><td class="n">115-122</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">JNJ</td><td class="n">269.12</td><td class="n">233.17</td><td class="n">233.87</td><td class="n">226.38</td><td class="n">+15.4%</td><td class="n">123-131</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">BLK</td><td class="n">1095.37</td><td class="n">1055.85</td><td class="n">1047.9</td><td class="n">942.37</td><td class="n">+3.7%</td><td class="n">882-935</td><td class="b-wait">⚠️ ต่ำกว่าราคามาก</td></tr>
+      <tr><td class="tkr">DE</td><td class="n">680.73</td><td class="n">573.18</td><td class="n">567.22</td><td class="n">555.18</td><td class="n">+18.8%</td><td class="n">122-130</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">NEE</td><td class="n">83.83</td><td class="n">84.95</td><td class="n">86.55</td><td class="n">80.75</td><td class="n">-1.3%</td><td class="n">-6--7</td><td class="b-avoid">❌ FV ติดลบ — ใช้ไม่ได้เลย</td></tr>
+      <tr><td class="tkr">MDLZ</td><td class="n">61.63</td><td class="n">60.12</td><td class="n">58.48</td><td class="n">57.78</td><td class="n">+2.5%</td><td class="n">23-24</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">RTX</td><td class="n">198.81</td><td class="n">189.6</td><td class="n">191.94</td><td class="n">176.34</td><td class="n">+4.9%</td><td class="n">78-83</td><td class="b-wait">⚠️ ไกลเกิน ใช้อ่านทิศทาง</td></tr>
+      <tr><td class="tkr">JPM</td><td class="n">353.51</td><td class="n">319.8</td><td class="n">316.61</td><td class="n">307.49</td><td class="n">+10.5%</td><td class="n">202-215</td><td class="b-wait">⚠️ ต่ำกว่าราคามาก</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <blockquote><p><strong>โซนสะสมจาก DCF ของ 10 ตัว FCFF อยู่ต่ำกว่าราคาปัจจุบัน 40–70% ทั้งหมด = ตัวเลขอ้างอิง ไม่ใช่ระดับตั้ง limit</strong> (กติกาเดิม: ถ้าโซนไกลเกิน ให้ใช้ EMA200 / MA200 / low 3 เดือน แทน)<br>
+  <strong>มีตัวเดียวที่โซน DCF อยู่ในระยะใช้งานได้จริง: BLK 882–935</strong> (ต่ำกว่าราคา 15–19% · และ <strong>low 3 เดือน 942.37 อยู่ติดขอบบนของโซนพอดี</strong>) — จุดที่โมเดลกับกราฟชี้ตรงกันที่สุดในกลุ่ม 11 ตัวนี้</p></blockquote>
+
+  <h3>สรุปสิ่งที่เปลี่ยนในเล่ม</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>ก่อน</th><th>หลัง</th></tr></thead>
+    <tbody>
+      <tr><td>ตัวที่มี valuation</td><td class="n">20</td><td class="n b-buy"><strong>31</strong></td></tr>
+      <tr><td>ตัวที่ยังไม่มี valuation ในบอร์ด 41 ตัว</td><td class="n">21</td><td class="n"><strong>10</strong> (ASML · TSM · V · MA · AAPL · MSFT ฯลฯ)</td></tr>
+      <tr><td>เครื่องมือใน kit</td><td>FCFF DCF อย่างเดียว</td><td><strong>+ Excess Return Model สำหรับสถาบันการเงิน</strong></td></tr>
+      <tr><td>ตัวที่ติดธง INVALID</td><td>CRWD · PANW · COST</td><td>+ <strong>NEE</strong> (โมเดลผิดประเภท) · <strong>DE</strong> (fit ไม่ได้จาก captive finance)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call warn">
+    <h4>สิ่งที่ยังไม่ได้ทำ และไม่แกล้งบอกว่าทำแล้ว</h4>
+    <p>❌ ยังไม่ได้อ่าน 10-Q/10-K ตัวเต็มของทั้ง 11 ตัว (ใช้งบที่ดึงจาก filing แต่ไม่ได้เปิดเอกสารอ่านทีละฉบับ) → <strong>ทุกตัวติดป้าย FIRST-PASS</strong><br>
+    ❌ ยังไม่ได้แยกงบส่วนงาน Equipment vs Financial Services ของ DE/CAT (ตัวเลขที่ถอดออกเป็นการประมาณการ)<br>
+    ❌ ยังไม่ได้สร้าง rate-base model สำหรับ NEE<br>
+    ❌ ยังไม่มี valuation ให้อีก 10 ตัวที่เหลือในบอร์ด</p>
+    <p><strong>และผลต่อการตัดสินใจรอบนี้: ไม่เปลี่ยน</strong> — ไม่มีตัวไหนในกลุ่ม 11 ตัวที่ราคาต่ำกว่า base FV เลย · ตัวที่ใกล้ที่สุดคือ BLK (ราคาสูงกว่า FV 23%) ซึ่งยังไม่ผ่าน Disc ≥35 อยู่ดี (Disc 9)</p>
   </div>
 </section>
 
