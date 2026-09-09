@@ -185,7 +185,7 @@
   <header class="mast">
     <div class="kicker">Yuri Algorithm · รอบ 8 ก.ย.</div>
     <h1>แกนของตลาดเปลี่ยนจาก Fed เป็นน้ำมัน — และมันมาถึงก่อนวัน CPI แค่ 2 วัน</h1>
-    <div class="stamp">9 ก.ย. 2026 · ราคาปิดอังคาร 8 ก.ย. แท่งเต็มครบ 41/41 · 🆕 เพิ่มหุ้นปันผล 11 ตัว + DCF ครบ 31 ตัว · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
+    <div class="stamp">9 ก.ย. 2026 · ราคาปิดอังคาร 8 ก.ย. แท่งเต็มครบ 41/41 · 🆕 เพิ่มหุ้นปันผล 11 ตัว + valuation ครบ 41/41 · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
   </header>
 </div>
 
@@ -203,6 +203,7 @@
     <li><a href="#gaps">ข้อมูลที่ขาด</a></li>
     <li><a href="#div11">🆕 หุ้นปันผล 11 ตัว</a></li>
     <li><a href="#dcf11">🆕 DCF 11 ตัว + JPM</a></li>
+    <li><a href="#full41">🆕 ครบ 41/41 + VICI</a></li>
     <li><a href="#cal">ปฏิทิน</a></li>
   </ul>
 </nav>
@@ -860,8 +861,202 @@
     <p>❌ ยังไม่ได้อ่าน 10-Q/10-K ตัวเต็มของทั้ง 11 ตัว (ใช้งบที่ดึงจาก filing แต่ไม่ได้เปิดเอกสารอ่านทีละฉบับ) → <strong>ทุกตัวติดป้าย FIRST-PASS</strong><br>
     ❌ ยังไม่ได้แยกงบส่วนงาน Equipment vs Financial Services ของ DE/CAT (ตัวเลขที่ถอดออกเป็นการประมาณการ)<br>
     ❌ ยังไม่ได้สร้าง rate-base model สำหรับ NEE<br>
-    ❌ ยังไม่มี valuation ให้อีก 10 ตัวที่เหลือในบอร์ด</p>
+    <s>ยังไม่มี valuation ให้อีก 10 ตัวที่เหลือ</s> → ✅ <strong>ปิดแล้ว — ครบ 41/41</strong></p>
     <p><strong>และผลต่อการตัดสินใจรอบนี้: ไม่เปลี่ยน</strong> — ไม่มีตัวไหนในกลุ่ม 11 ตัวที่ราคาต่ำกว่า base FV เลย · ตัวที่ใกล้ที่สุดคือ BLK (ราคาสูงกว่า FV 23%) ซึ่งยังไม่ผ่าน Disc ≥35 อยู่ดี (Disc 9)</p>
+  </div>
+</section>
+
+
+<!-- ============ FULL 41 ============ -->
+<section id="full41">
+  <h2>🆕 ปิดบอร์ดครบ 41/41 + ปัญหาการเทียบข้าม engine <span class="h2note">นายท่านสั่งทำต่อ · สมุด 31 → 41 ตัว</span></h2>
+  <div class="rule"></div>
+
+  <div class="scroller">
+  <table>
+    <thead><tr><th>เครื่องมือ</th><th>ใช้กับ</th><th>จำนวน</th></tr></thead>
+    <tbody>
+      <tr><td><code>earth_evans_engine.py</code> (FCFF DCF)</td><td>บริษัททั่วไป</td><td class="n"><strong>37</strong></td></tr>
+      <tr><td><code>bank_engine.py</code> (Excess Return)</td><td>JPM · 🆕 <strong>BRK-B</strong></td><td class="n">2</td></tr>
+      <tr><td>🆕 <code>reit_engine.py</code> (AFFO DDM + NAV)</td><td>🆕 <strong>O · VICI · IIPR</strong></td><td class="n">3</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>ผลของ 10 ตัวสุดท้าย</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>Base FV</th><th>MoS (base)</th><th>NAV / BVPS</th><th>ราคา/P90</th><th>โมเดล</th><th>ทำไมต้องใช้โมเดลนี้</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">O</td><td class="n">61.02</td><td class="n">72.15</td><td class="n b-buy"><strong>+15.4%</strong></td><td class="n">59.79</td><td class="n">0.71x</td><td>REIT AFFO-DDM</td><td>REIT — s2c 0.09 ทำให้ FCFF พังแบบเดียวกับ NEE · REIT ถูกบังคับจ่ายกำไร ≥90% ออก</td></tr>
+      <tr><td class="tkr">VICI</td><td class="n">25.27</td><td class="n">38.38</td><td class="n b-buy"><strong>+34.2%</strong></td><td class="n">34.65</td><td class="n">0.55x</td><td>REIT AFFO-DDM</td><td>REIT — และรับรู้รายได้แบบ sales-type lease ทำให้ค่าเสื่อมในงบแค่ 4M ใช้คำนวณ FFO เองไม่ได้</td></tr>
+      <tr><td class="tkr">IIPR</td><td class="n">57.21</td><td class="n">62.13</td><td class="n b-buy"><strong>+7.9%</strong></td><td class="n">68.7</td><td class="n">0.74x</td><td>REIT AFFO-DDM</td><td>REIT — payout 104% ของ AFFO</td></tr>
+      <tr><td class="tkr">BRK-B</td><td class="n">505.83</td><td class="n">388.49</td><td class="n "><strong>-30.2%</strong></td><td class="n">349.38</td><td class="n">1.12x</td><td>Excess Return</td><td>โฮลดิ้ง/ประกัน — float คือแหล่งทุนไม่ใช่หนี้ · มูลค่าส่วนใหญ่เป็นสินทรัพย์ทางการเงิน</td></tr>
+      <tr><td class="tkr">ASML</td><td class="n">1764.85</td><td class="n">592.32</td><td class="n b-avoid"><strong>-198.0%</strong></td><td class="n">—</td><td class="n">2.66x</td><td>FCFF DCF</td><td>FCFF ปกติ — แต่งบเป็นยูโร ต้องแปลงก่อน</td></tr>
+      <tr><td class="tkr">TSM</td><td class="n">439.0</td><td class="n">296.26</td><td class="n "><strong>-48.2%</strong></td><td class="n">—</td><td class="n">1.33x</td><td>FCFF DCF</td><td>FCFF ปกติ — งบเป็นดอลลาร์ไต้หวัน</td></tr>
+      <tr><td class="tkr">V</td><td class="n">368.64</td><td class="n">251.59</td><td class="n "><strong>-46.5%</strong></td><td class="n">—</td><td class="n">1.30x</td><td>FCFF DCF</td><td>FCFF — แต่ต้องใช้ marginal s2c (capex จริง 3.0% ของรายได้)</td></tr>
+      <tr><td class="tkr">MA</td><td class="n">570.89</td><td class="n">420.43</td><td class="n "><strong>-35.8%</strong></td><td class="n">—</td><td class="n">1.21x</td><td>FCFF DCF</td><td>FCFF — แต่ต้องใช้ marginal s2c (capex จริง 3.4% ของรายได้)</td></tr>
+      <tr><td class="tkr">AAPL</td><td class="n">316.22</td><td class="n">140.47</td><td class="n b-avoid"><strong>-125.1%</strong></td><td class="n">—</td><td class="n">2.00x</td><td>FCFF DCF</td><td>FCFF ปกติ</td></tr>
+      <tr><td class="tkr">NVO</td><td class="n">45.16</td><td class="n">50.36</td><td class="n b-buy"><strong>+10.3%</strong></td><td class="n">—</td><td class="n">0.80x</td><td>FCFF DCF</td><td>FCFF ปกติ — งบเป็นโครนเดนมาร์ก</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>🔴 ผมทำพลาดสองครั้งระหว่างทาง — และทั้งสองครั้งจับได้ด้วยการเช็คซ้ำ ไม่ใช่ด้วยความรู้สึก</h3>
+
+  <div class="call alert">
+    <h4>พลาดครั้งที่ 1 — จำนวนหุ้นผิด 4 ตัวจาก 6 ตัว</h4>
+    <p>รันครั้งแรก <strong>TSM ได้ FV 1,481 เทียบราคา 439 = สูงกว่า 3.4 เท่า</strong> ซึ่งเป็นไปไม่ได้ · เช็คด้วย <strong>market cap ÷ ราคา</strong> แล้วเจอว่าฟีดข้อมูลให้จำนวนหุ้นที่ไม่ตรงกับราคาถึง 4 ตัว</p>
+  </div>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>ที่ฟีดให้</th><th>ที่ถูก (mcap ÷ ราคา)</th><th>ผมพลาดยังไง</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">TSM</td><td class="n">5,186.5M</td><td class="n"><strong>5,186.5M</strong></td><td>ผมเอาไปหาร 5 เพราะคิดว่าเป็นหุ้นสามัญ (1 ADR = 5 หุ้น) — <strong>ที่จริงฟีดให้หน่วย ADR มาแล้ว</strong></td></tr>
+      <tr><td class="tkr">NVO</td><td class="n">3,344.1M</td><td class="n"><strong>4,418.9M</strong></td><td>ฟีดนับเฉพาะหุ้นชั้น B ไม่รวมชั้น A ที่มูลนิธิถือ</td></tr>
+      <tr><td class="tkr">V</td><td class="n">1,704.1M</td><td class="n"><strong>1,867.0M</strong></td><td>ฟีดนับเฉพาะชั้น A ไม่รวม B/C ที่แปลงได้</td></tr>
+      <tr><td class="tkr">MA</td><td class="n">869.5M</td><td class="n"><strong>876.0M</strong></td><td>ต่างเล็กน้อย</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <blockquote><p>🔴 <strong>เพิ่มเป็นกติกาถาวรแล้ว: ตรวจจำนวนหุ้นด้วย <code>market cap ÷ ราคา</code> ทุกครั้งก่อนรัน DCF</strong> — ตัวเลขอื่นถูกหมดก็ไม่ช่วย จำนวนหุ้นผิดทำให้ FV ผิดเป็นเท่าตัวโดยตรง และมันไม่ส่งสัญญาณอะไรเลยนอกจากตัวเลขที่ดูแปลก</p></blockquote>
+
+  <div class="call alert">
+    <h4>พลาดครั้งที่ 2 — เอา <code>terminal_g</code> ของบ้าน (4.73%) ไปใช้กับ REIT</h4>
+    <p>รันครั้งแรก <strong>O ได้ FV 105.70 = สูงกว่าราคา 73%</strong> · ต้นเหตุ: Ke ของ O = 7.81% ลบ g 4.73% เหลือ <strong>3.08%</strong> → terminal value ระเบิด</p>
+    <p><strong>REIT จ่ายกำไรออกไป ~73% เหลือเก็บแค่ 27% → โตเองได้แค่ <code>ROE(AFFO) × retention</code></strong> ของจริงคือ <strong>O 2.85% · VICI 2.49% · IIPR −0.48%</strong> ไม่ใช่ 4.73%</p>
+    <p>เพิ่มยาม <code>sustainable_growth()</code> เข้า <code>reit_engine.py</code> และยาม <code>payout_guard</code> เข้า <code>bank_engine.py</code> (เจอว่า BRK payout 5% ทำให้ book โต 8.55%/ปี เกิน terminal g → ตัวเลขผ่อน Ke+2pp/Ke+4pp ของ BRK <strong>พองเกินจริง อ่านเป็นเพดานบนเท่านั้น</strong>)</p>
+  </div>
+
+  <h3>🎯 เรื่องใหญ่ที่สุดของรอบนี้ — MoS ข้าม engine เทียบกันตรงๆ ไม่ได้</h3>
+  <p>พอทำครบ 41 ตัวแล้วมีปัญหาโผล่ทันที: <strong>ตัวที่ MoS บวกสูงสุดกลายเป็น REIT ทั้งหมด</strong> — เหตุผลไม่ใช่เพราะ REIT ถูกกว่า แต่เพราะ <strong>สาม engine ลงโทษไม่เท่ากัน</strong></p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>engine</th><th>ข้อจำกัดปลายทาง</th><th>ผล</th></tr></thead>
+    <tbody>
+      <tr><td>FCFF (37 ตัว)</td><td><strong>terminal ROIC = WACC</strong> → ส่วนเกิน = 0</td><td>กด FV ลงอย่างเป็นระบบ</td></tr>
+      <tr><td>Excess Return (2 ตัว)</td><td><strong>terminal ROE = Ke</strong> → ส่วนเกิน = 0</td><td>กด FV ลงเหมือนกัน</td></tr>
+      <tr><td class="b-wait">REIT DDM (3 ตัว)</td><td class="b-wait"><strong>ไม่มีข้อจำกัดแบบนั้น</strong> — ปันผลโตที่ g ตลอดกาลโดย ROE ยังสูงกว่า Ke</td><td class="b-wait"><strong>ใจกว้างกว่าอีก 39 ตัว</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>ผมจึงคำนวณ FV ของ REIT ใหม่แบบบังคับ <code>terminal ROE = Ke</code> ให้เท่ากับกติกาที่อีก 39 ตัวโดน:</p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>ROE(AFFO)</th><th>Ke</th><th>FV เดิม</th><th>MoS เดิม</th><th>FV กติกาเดียวกัน</th><th>MoS ที่เทียบได้</th></tr></thead>
+    <tbody>
+      <tr><td class="tkr">O</td><td class="n">10.6%</td><td class="n">7.81%</td><td class="n">72.15</td><td class="n">+15.4%</td><td class="n"><strong>47.66</strong></td><td class="n b-avoid"><strong>−28.0%</strong> ⬇️ พลิกเป็นลบ</td></tr>
+      <tr><td class="tkr">VICI</td><td class="n">9.3%</td><td class="n">7.68%</td><td class="n">38.38</td><td class="n">+34.2%</td><td class="n"><strong>29.92</strong></td><td class="n b-buy"><strong>+15.5%</strong> ✅ ยังบวก</td></tr>
+      <tr><td class="tkr">IIPR</td><td class="n">11.7%</td><td class="n">10.77%</td><td class="n">62.13</td><td class="n">+7.9%</td><td class="n"><strong>57.34</strong></td><td class="n">+0.2% ≈ ราคายุติธรรมพอดี</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <blockquote><p><strong>ตัวเลขที่ต้องใช้เวลาเทียบข้ามตัวคือคอลัมน์ขวาสุด</strong> (เก็บใน <code>valuations.json</code> ฟิลด์ <code>house_rule_fair_value</code>) · <strong>O พลิกจาก “ถูก 15%” เป็น “แพง 28%” เพราะเปลี่ยนกติกาอย่างเดียว ไม่ได้เปลี่ยนตัวเลขงบสักตัว</strong> — นี่คือเหตุผลที่ต้องพูดเรื่องนี้ก่อนพูดผลลัพธ์</p></blockquote>
+
+  <h3>ตาราง MoS ทั้งเล่ม 41 ตัว — กติกาเดียวกันทั้งหมด</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>#</th><th>Ticker</th><th>ราคา</th><th>FV (กติกาเดียวกัน)</th><th>MoS</th><th>ราคา/P90</th><th>โมเดล</th><th>Q</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td class="tkr">VICI <span class="hint">🆕</span></td><td class="n">25.27</td><td class="n">29.92</td><td class="n b-buy"><strong>+15.5%</strong></td><td class="n">0.55x</td><td>REIT AFFO-DDM</td><td class="n">72</td></tr>
+      <tr><td class="n">2</td><td class="tkr">NVO <span class="hint">🆕</span></td><td class="n">45.16</td><td class="n">50.36</td><td class="n b-buy"><strong>+10.3%</strong></td><td class="n">0.80x</td><td>FCFF DCF</td><td class="n">52</td></tr>
+      <tr><td class="n">3</td><td class="tkr">HCA</td><td class="n">402.02</td><td class="n">441.74</td><td class="n b-buy"><strong>+9.0%</strong></td><td class="n">0.73x</td><td>FCFF DCF</td><td class="n">70</td></tr>
+      <tr><td class="n">4</td><td class="tkr">NVDA</td><td class="n">225.73</td><td class="n">239.22</td><td class="n b-buy"><strong>+5.6%</strong></td><td class="n">0.69x</td><td>FCFF DCF</td><td class="n">95</td></tr>
+      <tr><td class="n">5</td><td class="tkr">UNH</td><td class="n">400.84</td><td class="n">422.66</td><td class="n b-buy"><strong>+5.2%</strong></td><td class="n">0.74x</td><td>FCFF DCF</td><td class="n">80</td></tr>
+      <tr><td class="n">6</td><td class="tkr">IIPR <span class="hint">🆕</span></td><td class="n">57.21</td><td class="n">57.34</td><td class="n b-buy"><strong>+0.2%</strong></td><td class="n">0.74x</td><td>REIT AFFO-DDM</td><td class="n">45</td></tr>
+      <tr><td class="n">7</td><td class="tkr">META</td><td class="n">613.48</td><td class="n">589.09</td><td class="n "><strong>-4.1%</strong></td><td class="n">0.86x</td><td>FCFF DCF</td><td class="n">80</td></tr>
+      <tr><td class="n">8</td><td class="tkr">NFLX</td><td class="n">76.77</td><td class="n">70.78</td><td class="n "><strong>-8.5%</strong></td><td class="n">0.90x</td><td>FCFF DCF</td><td class="n">75</td></tr>
+      <tr><td class="n">9</td><td class="tkr">PFE</td><td class="n">27.79</td><td class="n">23.05</td><td class="n "><strong>-20.6%</strong></td><td class="n">1.00x</td><td>FCFF DCF</td><td class="n">58</td></tr>
+      <tr><td class="n">10</td><td class="tkr">BLK</td><td class="n">1095.37</td><td class="n">890.7</td><td class="n "><strong>-23.0%</strong></td><td class="n">1.09x</td><td>FCFF DCF</td><td class="n">85</td></tr>
+      <tr><td class="n">11</td><td class="tkr">O <span class="hint">🆕</span></td><td class="n">61.02</td><td class="n">47.66</td><td class="n "><strong>-28.0%</strong></td><td class="n">0.71x</td><td>REIT AFFO-DDM</td><td class="n">75</td></tr>
+      <tr><td class="n">12</td><td class="tkr">BRK-B <span class="hint">🆕</span></td><td class="n">505.83</td><td class="n">388.49</td><td class="n "><strong>-30.2%</strong></td><td class="n">1.12x</td><td>Excess Return</td><td class="n">88</td></tr>
+      <tr><td class="n">13</td><td class="tkr">MA <span class="hint">🆕</span></td><td class="n">570.89</td><td class="n">420.43</td><td class="n "><strong>-35.8%</strong></td><td class="n">1.21x</td><td>FCFF DCF</td><td class="n">90</td></tr>
+      <tr><td class="n">14</td><td class="tkr">PG</td><td class="n">145.58</td><td class="n">102.04</td><td class="n "><strong>-42.7%</strong></td><td class="n">1.25x</td><td>FCFF DCF</td><td class="n">85</td></tr>
+      <tr><td class="n">15</td><td class="tkr">MSFT</td><td class="n">493.95</td><td class="n">338.73</td><td class="n "><strong>-45.8%</strong></td><td class="n">1.23x</td><td>FCFF DCF</td><td class="n">92</td></tr>
+      <tr><td class="n">16</td><td class="tkr">V <span class="hint">🆕</span></td><td class="n">368.64</td><td class="n">251.59</td><td class="n "><strong>-46.5%</strong></td><td class="n">1.30x</td><td>FCFF DCF</td><td class="n">92</td></tr>
+      <tr><td class="n">17</td><td class="tkr">TSM <span class="hint">🆕</span></td><td class="n">439.0</td><td class="n">296.26</td><td class="n "><strong>-48.2%</strong></td><td class="n">1.33x</td><td>FCFF DCF</td><td class="n">80</td></tr>
+      <tr><td class="n">18</td><td class="tkr">LLY</td><td class="n">1123.91</td><td class="n">721.14</td><td class="n "><strong>-55.9%</strong></td><td class="n">1.26x</td><td>FCFF DCF</td><td class="n">82</td></tr>
+      <tr><td class="n">19</td><td class="tkr">GOOGL</td><td class="n">338.36</td><td class="n">214.93</td><td class="n "><strong>-57.4%</strong></td><td class="n">1.28x</td><td>FCFF DCF</td><td class="n">95</td></tr>
+      <tr><td class="n">20</td><td class="tkr">SNPS</td><td class="n">392.03</td><td class="n">243.53</td><td class="n "><strong>-61.0%</strong></td><td class="n">1.27x</td><td>FCFF DCF</td><td class="n">78</td></tr>
+      <tr><td class="n">21</td><td class="tkr">MRK</td><td class="n">148.46</td><td class="n">89.36</td><td class="n "><strong>-66.1%</strong></td><td class="n">1.42x</td><td>FCFF DCF</td><td class="n">75</td></tr>
+      <tr><td class="n">22</td><td class="tkr">MELI</td><td class="n">1926.25</td><td class="n">1138.11</td><td class="n "><strong>-69.2%</strong></td><td class="n">1.15x</td><td>FCFF DCF</td><td class="n">82</td></tr>
+      <tr><td class="n">23</td><td class="tkr">JPM</td><td class="n">353.51</td><td class="n">204.51</td><td class="n "><strong>-72.9%</strong></td><td class="n">1.55x</td><td>Excess Return</td><td class="n">82</td></tr>
+      <tr><td class="n">24</td><td class="tkr">MCD</td><td class="n">255.81</td><td class="n">137.48</td><td class="n "><strong>-86.1%</strong></td><td class="n">1.59x</td><td>FCFF DCF</td><td class="n">78</td></tr>
+      <tr><td class="n">25</td><td class="tkr">AVGO</td><td class="n">368.56</td><td class="n">196.54</td><td class="n "><strong>-87.5%</strong></td><td class="n">1.47x</td><td>FCFF DCF</td><td class="n">82</td></tr>
+      <tr><td class="n">26</td><td class="tkr">AMZN</td><td class="n">256.97</td><td class="n">119.78</td><td class="n b-avoid"><strong>-114.5%</strong></td><td class="n">1.67x</td><td>FCFF DCF</td><td class="n">80</td></tr>
+      <tr><td class="n">27</td><td class="tkr">ABBV</td><td class="n">248.78</td><td class="n">115.8</td><td class="n b-avoid"><strong>-114.8%</strong></td><td class="n">1.84x</td><td>FCFF DCF</td><td class="n">80</td></tr>
+      <tr><td class="n">28</td><td class="tkr">JNJ</td><td class="n">269.12</td><td class="n">124.45</td><td class="n b-avoid"><strong>-116.2%</strong></td><td class="n">1.91x</td><td>FCFF DCF</td><td class="n">85</td></tr>
+      <tr><td class="n">29</td><td class="tkr">AAPL <span class="hint">🆕</span></td><td class="n">316.22</td><td class="n">140.47</td><td class="n b-avoid"><strong>-125.1%</strong></td><td class="n">2.00x</td><td>FCFF DCF</td><td class="n">85</td></tr>
+      <tr><td class="n">30</td><td class="tkr">COHR</td><td class="n">301.88</td><td class="n">132.7</td><td class="n b-avoid"><strong>-127.5%</strong></td><td class="n">1.66x</td><td>FCFF DCF</td><td class="n">70</td></tr>
+      <tr><td class="n">31</td><td class="tkr">COST</td><td class="n">910.18</td><td class="n">387.51</td><td class="n b-avoid"><strong>-134.9%</strong></td><td class="n">2.05x</td><td>FCFF DCF</td><td class="n">92</td></tr>
+      <tr><td class="n">32</td><td class="tkr">MRVL</td><td class="n">225.41</td><td class="n">95.84</td><td class="n b-avoid"><strong>-135.2%</strong></td><td class="n">1.78x</td><td>FCFF DCF</td><td class="n">72</td></tr>
+      <tr><td class="n">33</td><td class="tkr">RTX</td><td class="n">198.81</td><td class="n">78.59</td><td class="n b-avoid"><strong>-153.0%</strong></td><td class="n">2.04x</td><td>FCFF DCF</td><td class="n">78</td></tr>
+      <tr><td class="n">34</td><td class="tkr">WMT</td><td class="n">106.05</td><td class="n">41.16</td><td class="n b-avoid"><strong>-157.7%</strong></td><td class="n">1.74x</td><td>FCFF DCF</td><td class="n">85</td></tr>
+      <tr><td class="n">35</td><td class="tkr">MDLZ</td><td class="n">61.63</td><td class="n">23.26</td><td class="n b-avoid"><strong>-165.0%</strong></td><td class="n">2.05x</td><td>FCFF DCF</td><td class="n">72</td></tr>
+      <tr><td class="n">36</td><td class="tkr">ASML <span class="hint">🆕</span></td><td class="n">1764.85</td><td class="n">592.32</td><td class="n b-avoid"><strong>-198.0%</strong></td><td class="n">2.66x</td><td>FCFF DCF</td><td class="n">82</td></tr>
+      <tr><td class="n">37</td><td class="tkr">CAT</td><td class="n">822.48</td><td class="n">263.42</td><td class="n b-avoid"><strong>-212.2%</strong></td><td class="n">2.62x</td><td>FCFF DCF</td><td class="n">80</td></tr>
+      <tr><td class="n">38</td><td class="tkr">PANW</td><td class="n">336.98</td><td class="n">70.67</td><td class="n b-avoid"><strong>-376.8%</strong></td><td class="n">3.77x</td><td>FCFF DCF</td><td class="n">75</td></tr>
+      <tr><td class="n">39</td><td class="tkr">DE</td><td class="n">680.73</td><td class="n">123.71</td><td class="n b-avoid"><strong>-450.3%</strong></td><td class="n">3.97x</td><td>FCFF DCF</td><td class="n">78</td></tr>
+      <tr><td class="n">40</td><td class="tkr">CRWD</td><td class="n">210.02</td><td class="n">28.43</td><td class="n b-avoid"><strong>-638.7%</strong></td><td class="n">5.76x</td><td>FCFF DCF</td><td class="n">75</td></tr>
+      <tr><td class="n">41</td><td class="tkr">NEE</td><td class="n">83.83</td><td class="n">-6.21</td><td class="n "><strong>🔴 FV ติดลบ</strong></td><td class="n">31.05x</td><td>FCFF DCF</td><td class="n">75</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>สิ่งที่ตารางนี้บอก — และมันไปเชื่อมกับเพดาน Q ที่เจอเมื่อเช้า</h3>
+  <p><strong>มีแค่ 6 ตัวจาก 41 ที่ราคาต่ำกว่า FV</strong> (ก่อนหน้านี้มี 3): VICI · NVO · HCA · NVDA · UNH · IIPR</p>
+
+  <div class="call">
+    <h4>🥇 VICI ขึ้นเป็นอันดับ 1 ของทั้งบอร์ดที่ MoS +15.5% (แซง HCA ที่ +9.0%)</h4>
+  </div>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>VICI</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>MoS (กติกาเดียวกันทั้งเล่ม)</td><td class="n b-buy"><strong>+15.5%</strong> สูงสุดในบอร์ด</td></tr>
+      <tr><td>NAV (NOI ÷ cap rate 7.0% − หนี้สุทธิ)</td><td class="n"><strong>34.65</strong> — ราคา 25.27 ต่ำกว่า NAV <strong>27%</strong></td></tr>
+      <tr><td>ราคา/P90</td><td class="n b-buy"><strong>0.55×</strong> ต่ำสุดในบอร์ด = อยู่ลึกในกรอบ distribution</td></tr>
+      <tr><td>P/AFFO · ปันผล</td><td class="n">10.3× · <strong>7.13%</strong> โดย payout แค่ 73.2% ของ AFFO = คุ้มครองจริง</td></tr>
+      <tr><td>reverse</td><td class="n">ตลาดตั้งราคาว่า AFFO โตแค่ <strong>0.52%/ปี</strong> ขณะที่ guide บริษัทคือ ~3.8%</td></tr>
+      <tr><td>กราฟ</td><td class="n">ต่ำกว่า EMA200 <strong>7.8%</strong> · <strong>low 3 เดือน 25.23 อยู่ใต้ราคาแค่ 0.2%</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="call alert">
+    <h4>🔴 แต่ VICI มี Q = 72 = อยู่ใต้เพดาน Q ที่เจอเมื่อเช้า</h4>
+    <p><strong>ไม่มีทางขึ้น 🟢 ที่ regime 0.9 ต่อให้ราคาลงอีกเท่าไหร่</strong> · <strong>นี่คือเคสตัวอย่างที่ชัดที่สุดของสิ่งที่เตือนไว้ในหัวข้อหุ้นปันผล</strong> — ตัวที่ valuation ดีที่สุดในบอร์ด กับตัวที่ระบบคะแนนไม่มีวันไฟเขียว <strong>เป็นตัวเดียวกัน</strong></p>
+    <p>→ <strong>ถ้าจะทำอะไรกับ VICI ต้องตัดสินนอกเกณฑ์ Score โดยนายท่านเอง</strong> ผมเสนอตัวเลขให้ครบแล้ว แต่ระบบไฟเขียวให้ไม่ได้</p>
+  </div>
+
+  <ul class="tight">
+    <li>🟡 <strong>IIPR — ตัวเลขดูโอเค แต่เหตุผลที่ดูโอเคคือเหตุผลที่ไม่ควรซื้อ</strong> · MoS +0.2% · NAV 68.70 สูงกว่าราคา · แต่ <strong>จ่ายปันผล 104% ของ AFFO สองไตรมาสติด</strong> (Q1 AFFO 1.88 vs ปันผล 1.90 · Q2 AFFO <strong>1.83</strong> vs 1.90) → <strong>yield 13.3% ที่เห็นไม่ใช่ผลตอบแทน แต่คือตลาดกำลังตั้งราคาการหั่นปันผล</strong> · Q 45 → <strong>ยืนยันสถานะเดิม “เลิกนับเป็นตัวเติม”</strong></li>
+    <li>🟡 <strong>NVO +10.3% — และผมตั้งสมมติฐานให้หดตัวแล้วมันยังบวก</strong> · ตั้ง g1 เพียง <strong>2%</strong> และ margin_target <strong>40% ต่ำกว่า LTM 45.4%</strong> แล้วราคายังต่ำกว่า FV = <strong>ตลาดตั้งราคาแย่กว่าฐานที่ผมมองในแง่ร้ายอยู่แล้ว</strong> · แต่ conviction LOW + Q 52 + DB หั่นเป็น Sell → <strong>ไม่เปลี่ยนสถานะ candidate ทยอยออกตาม Sleep-Well</strong> (ของถูกที่ใจไม่ถึง = ข้าม)</li>
+    <li>🔴 <strong>ตัวที่แพงชัดเจน:</strong> ASML <strong>−198%</strong> (2.66× P90 · เหนือ EMA200 18.0%) · AAPL <strong>−125%</strong> (2.00× P90) · TSM −48.2% · V −46.5% · MA −35.8% · BRK-B −30.2%</li>
+    <li><strong>BRK-B น่าสังเกต:</strong> reverse บอกว่าตลาดตั้งราคาว่า BRK ทำ terminal ROE <strong>8.09%</strong> เทียบ Ke 7.34% = ส่วนเกินแค่ <strong>0.75pp</strong> — <strong>ข้อเรียกร้องต่ำที่สุดในบรรดาตัวที่ทำ reverse มาทั้งหมด</strong> (JPM ขอ 5.6pp · PANW ขอมาร์จิ้น 137%) แปลว่าราคา BRK ไม่ได้เรียกร้องอะไรเกินจริง แม้ MoS จะติดลบ 30%</li>
+  </ul>
+
+  <h3>สรุปสถานะเครื่องมือทั้งชุด</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th></th><th>ก่อนวันนี้</th><th>หลังวันนี้</th></tr></thead>
+    <tbody>
+      <tr><td>ตัวที่มี valuation</td><td class="n">20 / 30</td><td class="n b-buy"><strong>41 / 41 ครบบอร์ด</strong></td></tr>
+      <tr><td>engine</td><td class="n">1 (FCFF)</td><td class="n"><strong>3</strong> (FCFF · Excess Return · REIT DDM)</td></tr>
+      <tr><td>ยามในโค้ด</td><td>—</td><td><code>sustainable_growth()</code> · <code>payout_guard</code> · กติกาเช็คหุ้นด้วย mcap÷ราคา</td></tr>
+      <tr><td>ธง INVALID</td><td>CRWD · PANW · COST</td><td>+ NEE (โมเดลผิดประเภท) · DE (captive finance)</td></tr>
+      <tr><td>ตัวที่ MoS บวก</td><td class="n">3</td><td class="n b-buy"><strong>6</strong> (VICI · NVO · HCA · NVDA · UNH · IIPR)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="call warn">
+    <h4>สิ่งที่ยังไม่ได้ทำ และยังไม่แกล้งบอกว่าทำแล้ว</h4>
+    <p>❌ <strong>ยังไม่ได้อ่าน 10-Q/10-K ตัวเต็ม</strong> — ทั้ง 21 ตัวที่ทำวันนี้ยังเป็น FIRST-PASS ทั้งหมด<br>
+    ❌ <strong>ยังไม่ได้แยกงบส่วนงาน DE/CAT</strong> (Equipment vs Financial Services) — ตัวเลขที่ถอดยังเป็นการประมาณ<br>
+    ❌ <strong>ยังไม่ได้สร้าง rate-base model ให้ NEE</strong> — ยังติดธง INVALID<br>
+    ❌ <strong>NOI กับ cap rate ของ REIT ทั้งสามตัวเป็นการประมาณของผม</strong> ไม่ได้มาจาก supplemental ของบริษัท → NAV เป็นตัวเลขคร่าวๆ<br>
+    ❌ <strong>ยังไม่ได้ทำ two-column ของ BRK</strong> (พอร์ตลงทุนต่อหุ้น + กำไรดำเนินงานคูณมัลติเพิล) ซึ่งเป็นวิธีที่ Buffett แนะเอง</p>
+    <p><strong>ผลต่อการตัดสินใจรอบนี้:</strong> ไม่มีตัวไหนขึ้นเป็น 🟢 (Gate Stack ไม่เปลี่ยน) · แต่ <strong>ลำดับความน่าสนใจเปลี่ยนจริง</strong> — VICI ขึ้นมาอันดับ 1 ของบอร์ดในเลนส์ valuation จากเดิมที่อยู่ในลิสต์ “ขาดทุนหนัก รอทบทวน”</p>
   </div>
 </section>
 
