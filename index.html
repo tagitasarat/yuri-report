@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="YURI — รายงานสแกนหุ้น US ประจำรอบ (เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน)">
-<title>YURI — ตรวจ MoS ทั้งบอร์ด + ลิสต์ trim (11 ก.ย. 2026)</title>
+<title>YURI — ตรวจ beta/Ke ทั้งเล่ม (11 ก.ย. 2026)</title>
 <style>*{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%}</style>
 </head>
 <body>
@@ -193,6 +193,7 @@
   <ul>
     <li><a href="#verdict">สรุป</a></li>
     <li><a href="#mos">ตรวจ MoS</a></li>
+    <li><a href="#beta">ตรวจ beta</a></li>
     <li><a href="#board">ตาราง MoS</a></li>
     <li><a href="#trim">ลิสต์ trim</a></li>
     <li><a href="#div">ปันผล vs ดอกเบี้ย</a></li>
@@ -210,8 +211,10 @@
     <div class="vrow"><div class="vnum">2</div>
       <p><strong>MoS ตรวจแล้วทุกตัว — สูตรถูก แต่เจอของเสีย 6 ตัว</strong> · VICI ที่สงสัยคือของเสียจริง แก้แล้ว <strong>+29.4% → +20.6%</strong></p></div>
     <div class="vrow"><div class="vnum">3</div>
-      <p><strong>ลิสต์ trim พร้อม</strong> — แต่หุ้นรายตัวมีแค่ <strong>22.8% ของพอร์ต</strong> · ETF หุ้นอีก <strong>67.1%</strong> → trim หุ้นรายตัวหมดก็ยังไม่พอทำให้พอร์ตปลอดภัย</p></div>
+      <p><strong>ตรวจ beta/Ke ทั้งเล่มแล้ว — หุ้น 36 ตัวฝั่ง FCFF ไม่มี beta เลย</strong> และ <strong>MoS 6 ตัวในพอร์ต (13.4%) พลิกเครื่องหมายถ้าความเสี่ยงผิดแค่ 1pp</strong> → <strong>ลิสต์ trim แก้ใหม่แล้ว</strong> META/NFLX หลุดจากเหตุผล “แพง”</p></div>
     <div class="vrow"><div class="vnum">4</div>
+      <p><strong>ลิสต์ trim พร้อม</strong> — แต่หุ้นรายตัวมีแค่ <strong>22.8% ของพอร์ต</strong> · ETF หุ้นอีก <strong>67.1%</strong> → trim หุ้นรายตัวหมดก็ยังไม่พอทำให้พอร์ตปลอดภัย</p></div>
+    <div class="vrow"><div class="vnum">5</div>
       <p><strong>หุ้นปันผลร่วงจริงเมื่อดอกเบี้ยขึ้น แต่ไม่ใช่ทุกตัว</strong> — ตัวที่โดนคือ REIT/สาธารณูปโภค (เฉลี่ย <strong>−17.4%</strong>) ไม่ใช่หุ้นที่ขึ้นปันผลได้ (เฉลี่ย <strong>−7.7%</strong>)</p></div>
   </div>
 </section>
@@ -268,6 +271,58 @@
   </div>
 </section>
 
+<section id="beta">
+  <h2>ตรวจ beta/Ke ทั้งเล่ม <span class="h2note">41 ตัว · ผลแรงกว่าที่คิด</span></h2>
+  <div class="rule"></div>
+
+  <h3>🔴 ข้อค้นพบที่ 1: หุ้น 36 ตัวฝั่ง FCFF ไม่มี beta เลยแม้แต่ตัวเดียว</h3>
+  <p>มีแต่ <code>wacc_initial</code> ที่ใส่มือ และมันมาจาก<strong>เมนูค่าคงที่ 16 ค่า</strong> ไม่ได้คิดรายบริษัท:</p>
+  <div class="scroller"><table>
+    <thead><tr><th>WACC</th><th>beta แฝง</th><th>ตัวที่แชร์ค่าเดียวกัน</th></tr></thead>
+    <tbody>
+      <tr><td class="n">8.92%</td><td class="n">0.92</td><td class="b-avoid"><strong>AAPL · DE</strong> ← Apple กับ Deere เสี่ยงเท่ากัน?</td></tr>
+      <tr><td class="n">9.39%</td><td class="n">1.03</td><td class="b-avoid"><strong>ASML · AVGO · BLK · CAT · NFLX · TSM</strong> ← 6 ตัวคนละอุตสาหกรรมสิ้นเชิง</td></tr>
+      <tr><td class="n">8.19%</td><td class="n">0.75</td><td>ABBV · HCA · MA · NVO · V</td></tr>
+      <tr><td class="n">10.89%</td><td class="n">1.37</td><td>MELI · MRVL</td></tr>
+    </tbody>
+  </table></div>
+  <p><strong>= ไม่มีทางตรวจย้อนได้ว่าเลขมาจากไหน</strong> (ต่างจากฝั่ง REIT/bank ที่มี beta ให้เห็น) และการจับกลุ่มก็รวมบริษัทที่เทียบกันไม่ได้</p>
+  <div class="call">
+    <p>✅ <strong>ข้อที่ตรวจแล้วถูก</strong>: <code>wacc_terminal</code> 9.28% = risk-free 4.95% + ERP 4.33% = <strong>beta 1.00 พอดี</strong> → ยืนยันกติกาบ้าน “ปลายทางทุกบริษัทเสี่ยงเท่าตลาด” ถูกต้องและใช้ตรงกัน 28/36 ตัว</p>
+  </div>
+
+  <h3>🔴 ข้อค้นพบที่ 2 (สำคัญสุด): MoS 6 ตัวในพอร์ตพลิกเครื่องหมายถ้าความเสี่ยงผิดแค่ 1pp</h3>
+  <div class="scroller"><table>
+    <thead><tr><th>Ticker</th><th>%พอร์ต</th><th>MoS ที่รายงาน</th><th>ถ้าเสี่ยงกว่า 1pp</th><th>ถ้าเสี่ยงน้อยกว่า 1pp</th></tr></thead>
+    <tbody>
+      <tr><td><strong>META</strong></td><td class="n b-avoid"><strong>5.23%</strong></td><td class="n">−12.5% (แพง)</td><td class="n">−30.0%</td><td class="n b-buy"><strong>+3.9% (ถูก!)</strong></td></tr>
+      <tr><td><strong>O</strong></td><td class="n">3.52%</td><td class="n">+5.3% (ถูก)</td><td class="n b-avoid"><strong>−8.1% (แพง!)</strong></td><td class="n">+18.3%</td></tr>
+      <tr><td><strong>NFLX</strong></td><td class="n">1.40%</td><td class="n">−10.1% (แพง)</td><td class="n">−25.1%</td><td class="n b-buy"><strong>+4.3% (ถูก!)</strong></td></tr>
+      <tr><td><strong>UNH</strong></td><td class="n">1.32%</td><td class="n">+5.3% (ถูก)</td><td class="n b-avoid"><strong>−10.4% (แพง!)</strong></td><td class="n">+19.7%</td></tr>
+      <tr><td><strong>NVO</strong></td><td class="n">1.28%</td><td class="n">+10.5% (ถูก)</td><td class="n b-avoid"><strong>−1.2% (แพง!)</strong></td><td class="n">+21.8%</td></tr>
+      <tr><td><strong>NVDA</strong></td><td class="n">0.71%</td><td class="n">+6.4% (ถูก)</td><td class="n b-avoid"><strong>−6.8% (แพง!)</strong></td><td class="n">+18.9%</td></tr>
+    </tbody>
+  </table></div>
+  <div class="call alert">
+    <p><strong>6 ตัวนี้รวมกัน 13.4% ของพอร์ต</strong> — และคำว่า “ถูก” หรือ “แพง” ของมัน <strong>ไม่ได้มาจากธุรกิจ มาจากตัวเลขความเสี่ยงที่เราใส่มือ</strong> ซึ่งไม่มีที่มา (ข้อค้นพบที่ 1)</p>
+  </div>
+
+  <h3>✅ 13 ตัวที่เครื่องหมายมั่นคง — ใช้ตัดสินใจได้</h3>
+  <p><strong>ถูกจริงแน่ ๆ</strong>: VICI +20.6% (ช่วง +10.3 ถึง +30.6) · IIPR +8.9% (+1.0 ถึง +16.9)<br>
+  <strong>แพงจริงแน่ ๆ</strong>: ASML · AMZN · MELI · MRK · GOOGL · V · MSFT · TSM · PG · BRK-B · PFE</p>
+
+  <div class="call warn">
+    <h4>🎯 เรื่องที่ย้อนแย้งที่สุดของรอบนี้</h4>
+    <p>VICI ที่นายท่านสงสัยว่า “เยอะเกินไป” — หลังแก้ beta แล้ว <strong>กลายเป็นตัวที่มั่นคงที่สุดในพอร์ต</strong> คือถูกทั้งตอนสมมติว่าเสี่ยงมากและเสี่ยงน้อย · ส่วนตัวที่ดูปกติอย่าง <strong>META/NVDA/UNH/O กลับเป็นตัวที่เปราะ</strong></p>
+  </div>
+
+  <h3>ทำต่อในโค้ดแล้ว · และสิ่งที่ยังทำไม่ได้</h3>
+  <ul class="tight">
+    <li>✅ เพิ่ม <code>mos_risk_band</code> — ทุกรอบคำนวณ MoS ที่ความเสี่ยง ±1pp ให้เอง แล้ว<strong>เตือนทันทีถ้าเครื่องหมายพลิก</strong></li>
+    <li>🔴 <strong>ยังใส่ beta จริงให้ 36 ตัวไม่ได้</strong> — ต้องใช้ราคาย้อนหลังเทียบดัชนี ซึ่งดึงไม่ได้บน cloud (egress บล็อก) · <strong>ผมจะไม่เดา beta ใส่ให้</strong> เพราะจะกลายเป็นเลขที่ดูน่าเชื่อแต่ไม่มีที่มา = ปัญหาเดิมที่เพิ่งเจอ</li>
+  </ul>
+</section>
+
 <section id="board">
   <h2>ตาราง MoS พอร์ตจริง <span class="h2note">หลังแก้ + กรองของเสียออก</span></h2>
   <div class="rule"></div>
@@ -320,26 +375,31 @@
     </ul>
   </div>
 
-  <h3>ชั้น 1 — ครบทุกเกณฑ์ (กำไร + แพงกว่า FV + ธง watch) · trim ก่อน</h3>
+  <div class="call warn">
+    <p>🔄 <strong>ลิสต์นี้แก้ใหม่หลังตรวจ beta</strong> — เดิมผมเอา META/NFLX ขึ้นหัวลิสต์เพราะ MoS ติดลบ แต่ <strong>MoS ของสองตัวนี้พลิกเป็นบวกถ้าความเสี่ยงผิดแค่ 1pp</strong> → เหตุผลด้าน “แพง” ใช้ไม่ได้แล้ว</p>
+  </div>
+
+  <h3>ชั้น 1 — แพงแบบมั่นคง (MoS ติดลบทั้งสองทาง) + มีกำไร</h3>
   <div class="scroller"><table>
-    <thead><tr><th>Ticker</th><th>%พอร์ต</th><th>P/L%</th><th>MoS</th><th>เหตุผล</th><th>เสนอ</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>%พอร์ต</th><th>P/L%</th><th>MoS (ช่วง ±1pp)</th><th>เสนอ</th></tr></thead>
     <tbody>
-      <tr><td><strong>META</strong></td><td class="n b-avoid"><strong>5.23%</strong></td><td class="n">+8.4%</td><td class="n">−12.5%</td><td>ไม้ใหญ่สุดในพอร์ต · ธง watch ค้าง</td><td>ลงมา ~3.5% → ปลด <strong>1.7pp</strong></td></tr>
-      <tr><td><strong>GOOGL</strong></td><td class="n">1.55%</td><td class="n"><strong>+83.9%</strong></td><td class="n">−59.0%</td><td>กำไรเยอะ · ราคาเหนือ Bull case 22% · watch</td><td>trim 1/3–1/2 → <strong>0.5–0.8pp</strong></td></tr>
-      <tr><td><strong>MELI</strong></td><td class="n">1.45%</td><td class="n">+19.2%</td><td class="n">−74.4%</td><td>แพงสุดในกลุ่ม watch</td><td>trim 1/2 → <strong>0.7pp</strong></td></tr>
+      <tr><td><strong>ASML</strong></td><td class="n">0.44%</td><td class="n b-buy"><strong>+129.6%</strong></td><td class="n">−191.5% (−228 ถึง −156)</td><td>ขาย 1/2 — กำไรสูงสุดในพอร์ต</td></tr>
+      <tr><td><strong>MELI</strong></td><td class="n">1.45%</td><td class="n">+19.2%</td><td class="n">−74.4% (−116 ถึง −40)</td><td>trim 1/2 → <strong>0.7pp</strong> · ธง watch ด้วย</td></tr>
+      <tr><td><strong>GOOGL</strong></td><td class="n">1.55%</td><td class="n b-buy"><strong>+83.9%</strong></td><td class="n">−59.0% (−82 ถึง −37)</td><td>trim 1/3–1/2 → <strong>0.5–0.8pp</strong> · ธง watch ด้วย</td></tr>
+      <tr><td><strong>AMZN</strong></td><td class="n">1.21%</td><td class="n">+20.3%</td><td class="n">−118.1% (−162 ถึง −80)</td><td>trim 1/3</td></tr>
+      <tr><td><strong>MSFT</strong></td><td class="n">1.09%</td><td class="n">+24.9%</td><td class="n">−49.4% (−72 ถึง −28)</td><td>trim 1/3</td></tr>
+      <tr><td>MRK</td><td class="n">0.34%</td><td class="n">+80.9%</td><td class="n">−65.8% (−87 ถึง −45)</td><td>ขาย 1/2</td></tr>
+      <tr><td>TSM</td><td class="n">0.35%</td><td class="n">+82.5%</td><td class="n">−47.9% (−67 ถึง −30)</td><td>ขาย 1/2</td></tr>
+      <tr><td>V</td><td class="n">0.23%</td><td class="n">+21.4%</td><td class="n">−49.5% (−70 ถึง −30)</td><td>ไม้เล็กมาก ขายหมดก็ได้</td></tr>
     </tbody>
   </table></div>
 
-  <h3>ชั้น 2 — กำไรสูงมาก + แพงมาก (thesis intact · ไม้เล็ก)</h3>
+  <h3>ชั้น 2 — trim ด้วยเหตุผลอื่น ไม่ใช่เพราะแพง</h3>
   <div class="scroller"><table>
-    <thead><tr><th>Ticker</th><th>%พอร์ต</th><th>P/L%</th><th>MoS</th><th>เสนอ</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>%พอร์ต</th><th>เหตุผลที่ยังควร trim</th><th>เหตุผลที่ <strong>ห้าม</strong>อ้างว่าแพง</th></tr></thead>
     <tbody>
-      <tr><td>ASML</td><td class="n">0.44%</td><td class="n b-buy"><strong>+129.6%</strong></td><td class="n">−191.5%</td><td>ขาย 1/2 (กำไรสูงสุดในพอร์ต)</td></tr>
-      <tr><td>TSM</td><td class="n">0.35%</td><td class="n">+82.5%</td><td class="n">−47.9%</td><td>ขาย 1/2</td></tr>
-      <tr><td>MRK</td><td class="n">0.34%</td><td class="n">+80.9%</td><td class="n">−65.8%</td><td>ขาย 1/2</td></tr>
-      <tr><td>AMZN</td><td class="n">1.21%</td><td class="n">+20.3%</td><td class="n">−118.1%</td><td>trim 1/3</td></tr>
-      <tr><td>MSFT</td><td class="n">1.09%</td><td class="n">+24.9%</td><td class="n">−49.4%</td><td>trim 1/3</td></tr>
-      <tr><td>V</td><td class="n">0.23%</td><td class="n">+21.4%</td><td class="n">−49.5%</td><td>ไม้เล็กมาก ขายหมดก็ได้</td></tr>
+      <tr><td><strong>META</strong></td><td class="n b-avoid"><strong>5.23%</strong></td><td><strong>ไม้ใหญ่สุดในพอร์ต เกือบ 1/4 ของหุ้นรายตัวทั้งหมด</strong> + ธง watch ค้าง → trim เพื่อกระจายความเสี่ยง ลงมา ~3.5% = ปลด <strong>1.7pp</strong></td><td class="b-wait">MoS −12.5% <strong>พลิกเป็น +3.9%</strong> ถ้าความเสี่ยงผิด 1pp</td></tr>
+      <tr><td>NFLX</td><td class="n">1.40%</td><td>ไม่มีเหตุผลอื่น — thesis intact · ไม่ใช่ไม้ใหญ่ → <strong>ไม่ trim</strong></td><td class="b-wait">MoS −10.1% <strong>พลิกเป็น +4.3%</strong></td></tr>
     </tbody>
   </table></div>
 
@@ -348,9 +408,15 @@
     <p><strong>PFE (0.86%)</strong> — conviction <strong>LOW</strong> + ธง watch + <strong>ราคาแพงกว่า FV 23%</strong> + Q=58 → Sleep-Well บล็อกซื้อเพิ่มอยู่แล้ว = ถือไปก็ไม่มีวันเพิ่ม · กำไรแค่ +3.9% เก็บได้ก็เก็บ</p>
   </div>
 
-  <h3>❌ ไม่ trim — MoS ยังบวก</h3>
-  <p><code>VICI +20.6%</code> · <code>NVO +10.5%</code> · <code>IIPR +8.9%</code> · <code>NVDA +6.4%</code> · <code>O +5.3%</code> · <code>UNH +5.3%</code><br>
-  (NVO/IIPR ขาดทุนอยู่และ conviction LOW — ไม่ใช่ตัวที่ trim เพื่อเก็บกำไร และไม่ใช่ตัวที่ควรซื้อเพิ่ม แค่ถือ)</p>
+  <h3>❌ ไม่ trim</h3>
+  <div class="scroller"><table>
+    <thead><tr><th></th><th>Ticker</th><th>เหตุผล</th></tr></thead>
+    <tbody>
+      <tr><td>ถูกแบบมั่นคง</td><td class="b-buy"><code>VICI +20.6%</code> · <code>IIPR +8.9%</code></td><td>MoS บวกทั้งสองทาง — ถือต่อ (แต่ทั้งคู่เป็นกลุ่มที่โดนดอกเบี้ย)</td></tr>
+      <tr><td>ถูกแบบ<strong>ไม่</strong>มั่นคง</td><td class="b-wait"><code>NVDA</code> · <code>O</code> · <code>UNH</code> · <code>NVO</code></td><td><strong>พลิกเป็นแพงได้ที่ ±1pp</strong> → ไม่ trim แต่ <strong>ห้ามซื้อเพิ่มโดยอ้างว่าถูก</strong></td></tr>
+      <tr><td>ธง watch + LOW</td><td><code>NVO</code> · <code>IIPR</code></td><td>ขาดทุนอยู่ · Sleep-Well บล็อกซื้อเพิ่ม — แค่ถือ</td></tr>
+    </tbody>
+  </table></div>
 
   <h3>เงินสดที่จะได้</h3>
   <div class="scroller"><table>
