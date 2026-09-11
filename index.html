@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="YURI — รายงานสแกนหุ้น US ประจำรอบ (เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน)">
-<title>YURI — รายงานรอบ 11 ก.ย. 2026 (cloud)</title>
+<title>YURI — รายงานรอบ 11 ก.ย. 2026 เย็น (cloud)</title>
 <style>*{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%}</style>
 </head>
 <body>
@@ -183,18 +183,17 @@
 <div class="mastwrap">
   <button class="themebtn" id="tt" aria-label="สลับโหมดสว่าง/มืด">◐</button>
   <header class="mast">
-    <div class="kicker">Yuri Algorithm · รอบ 11 ก.ย. (cloud)</div>
-    <h1>ตลาดพลิกไป price การ “ขึ้นดอก” 69% — และฟิลด์ที่ใช้เทียบมูลค่าทั้งบอร์ด ไม่เคยอยู่ในโค้ดเลย</h1>
-    <div class="stamp">11 ก.ย. 2026 16:10 น. · ราคาปิดพฤหัส 10 ก.ย. (ดึงราคาสดไม่ได้ 0/41) · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
+    <div class="kicker">Yuri Algorithm · รอบ 11 ก.ย. เย็น (cloud)</div>
+    <h1>รันตอนตลาดเปิดแล้ว แต่ราคาไม่ขยับสักฟิลด์ — และยามที่ตั้งไว้กันเรื่องนี้ กลับเป็นคนรับรองว่า “สด”</h1>
+    <div class="stamp">11 ก.ย. 2026 21:02 น. (10:02 ET) · ราคาปิดพฤหัส 10 ก.ย. — ไม่ใช่ของสด · เครื่องมือช่วยคิด ไม่ใช่คำแนะนำการลงทุน</div>
   </header>
 </div>
 
 <nav aria-label="สารบัญ">
   <ul>
     <li><a href="#verdict">คำตอบ</a></li>
-    <li><a href="#macro">Fed + regime</a></li>
-    <li><a href="#rate">รื้อ risk-free</a></li>
-    <li><a href="#bug">บั๊กที่เจอ</a></li>
+    <li><a href="#bug">ราคาไม่สด</a></li>
+    <li><a href="#macro">CPI + Fed</a></li>
     <li><a href="#scan">ตารางสแกน</a></li>
     <li><a href="#mos">MoS</a></li>
     <li><a href="#key">ตัวเด่น</a></li>
@@ -206,303 +205,242 @@
 </nav>
 
 <section id="verdict">
-  <h2>คำตอบสั้น <span class="h2note">ไม่มีดีล = รอบที่ 12 ติด</span></h2>
+  <h2>คำตอบสั้น <span class="h2note">ไม่มีดีล = รอบที่ 13 ติด</span></h2>
   <div class="rule"></div>
   <div class="verdict">
     <div class="vrow"><div class="vnum">1</div>
-      <p><strong>ไม่มีดีล — 🟢/🟢🟢 ศูนย์ตัวจาก 41</strong> สูงสุดยังเป็น GOOGL <strong>63.4</strong> (เส้น BUY 65) → ถือ cash/SGOV ต่อ · dry powder <strong>10.09% ของพอร์ต</strong></p></div>
+      <p><strong>รอบนี้ไม่มีข้อมูลราคาใหม่เลยแม้แต่ฟิลด์เดียว</strong> — รันตอนตลาดเปิดแล้ว 34 นาที แต่ชีตคืนข้อมูลชุดเดียวกับรอบเช้า <strong>41/41 ตัวเป๊ะ</strong></p></div>
     <div class="vrow"><div class="vnum">2</div>
-      <p><strong>ตลาดพลิกไป price การขึ้นดอกเบี้ย</strong> — CME FedWatch ให้โอกาสขึ้น 25bp วันที่ 16 ก.ย. ที่ <strong>69.3%</strong> (จาก ~56% ไม่กี่วันก่อน · ก่อนสุนทรพจน์ Jackson Hole ของประธานเฟด Kevin Warsh ตลาดให้ “คงดอก” เกือบ 70%)</p></div>
+      <p><strong>ชีต recalc ล่าสุด 08:27 ET = ก่อน CPI ออก 3 นาที</strong> → กระดานทั้งใบ <strong>ยังไม่เห็น CPI</strong> ที่เพิ่งทำให้ตลาดเทน้ำหนัก “Fed ขึ้นดอก” เป็น 69%</p></div>
     <div class="vrow"><div class="vnum">3</div>
-      <p><strong>รื้อ risk-free ทั้งเล่ม 4.73% → 4.95%</strong> ตามกติกาที่จดไว้ล่วงหน้า (10Y ยืน 4.94–4.96% สองเซสชัน = เงื่อนไขครบ) → FV ลงทั้งกระดาน 2–4%</p></div>
+      <p><strong>เจอบั๊ก — ยาม staleness ถูกปิดปาก</strong> · <code>apply_prices.py</code> ประทับวันที่จากนาฬิกาตอนรัน ไม่ใช่จากตัวข้อมูล → engine รายงาน <code>stale: false</code> ให้ราคาเมื่อวาน · <strong>แก้แล้วในรอบนี้</strong></p></div>
     <div class="vrow"><div class="vnum">4</div>
-      <p><strong>เจอบั๊กโครงสร้าง</strong> — ฟิลด์ที่กติกาบ้านบังคับให้ใช้เทียบมูลค่าข้าม engine <strong>ไม่มี engine ตัวไหนเขียนเลย</strong> · แก้ที่ต้นเหตุแล้ว แต่ได้ค่าไม่ตรงของเดิม → <strong>ต้องให้นายท่านชี้ขาด</strong></p></div>
+      <p><strong>ไม่มี 🟢 สักตัวจาก 41</strong> สูงสุด GOOGL <strong>63.5</strong> (เส้น BUY 65) → ถือ cash/SGOV ต่อ · dry powder <strong>~10.1% ของพอร์ต</strong></p></div>
   </div>
 
   <div class="call alert">
-    <h4>⚠️ ข้อจำกัดของรอบนี้ — อ่านก่อนใช้ตัวเลข</h4>
-    <p>รันบน cloud เวลา <strong>16:10 ไทย = 05:10 ET = ก่อนตลาดเปิด</strong> · <strong>yfinance ใช้ไม่ได้</strong> — proxy ตอบ <code>403</code> ที่ขั้น CONNECT กับทุก host ของ Yahoo = <strong>นโยบายเครือข่าย ไม่ใช่บั๊กของ kit</strong></p>
-    <p><strong>ดึงราคาสดได้ 0 จาก 41 ตัว</strong> → ราคาทั้งเล่มคือ <strong>ปิดพฤหัส 10 ก.ย.</strong> เท่ากับรอบเช้าวันนี้ทุกตัว</p>
-  </div>
-</section>
-
-<section id="macro">
-  <h2>Fed + regime <span class="h2note">กติกาถูกทดสอบหนักที่สุด</span></h2>
-  <div class="rule"></div>
-
-  <h3>🔥 ตลาดพลิกไป price “ขึ้นดอก” ไม่ใช่ “คงดอก”</h3>
-  <div class="scroller"><table>
-    <thead><tr><th>ช่วงเวลา</th><th>โอกาสขึ้นดอก 25bp วันที่ 16 ก.ย.</th></tr></thead>
-    <tbody>
-      <tr><td>ก่อนสุนทรพจน์ Jackson Hole (Kevin Warsh)</td><td class="n">ตลาดให้ <strong>“คงดอก” เกือบ 70%</strong></td></tr>
-      <tr><td>ต้น ก.ย.</td><td class="n">~56%</td></tr>
-      <tr><td><strong>11 ก.ย. (CME FedWatch)</strong></td><td class="n b-avoid"><strong>69.3%</strong></td></tr>
-    </tbody>
-  </table></div>
-  <blockquote><p><code>fed_window</code> ยังเป็น <code>true</code> เหมือนเดิม <strong>แต่ความหมายเปลี่ยนไปแล้ว</strong> — เดิมแปลว่า “รอความชัดเจน ไม่ลงก้อนใหญ่” ตอนนี้แปลว่า <strong>“อาจโดนขึ้นดอกจริงใน 5 วัน”</strong> · คงไม้เล็ก ×0.5 ทั้งกระดาน</p></blockquote>
-
-  <h3>📊 PPI ส.ค. — ต้องอ่านละเอียดกว่าพาดหัว</h3>
-  <div class="scroller"><table>
-    <thead><tr><th></th><th>จริง</th><th>คาด</th><th>อ่านว่าอะไร</th></tr></thead>
-    <tbody>
-      <tr><td>Headline MoM</td><td class="n">+0.4%</td><td class="n">+0.4%</td><td>ตรงคาด</td></tr>
-      <tr><td>Headline YoY</td><td class="n b-wait"><strong>5.4%</strong></td><td class="n">5.3%</td><td>เหนือคาด 0.1pp</td></tr>
-      <tr><td><strong>Core MoM</strong></td><td class="n b-buy"><strong>+0.2%</strong></td><td class="n">+0.3%</td><td><strong>ต่ำกว่าคาด</strong></td></tr>
-      <tr><td>final demand energy</td><td class="n">+4.2%</td><td class="n">—</td><td>ดีเซล <strong>+24.1%</strong></td></tr>
-      <tr><td>final demand services</td><td class="n">+0.1%</td><td class="n">—</td><td>แทบไม่ขยับ</td></tr>
-    </tbody>
-  </table></div>
-  <blockquote><p><strong>กว่าสามในสี่ของที่ขึ้นมาจากพลังงาน</strong> และ core ต่ำกว่าคาด → นี่คือ<strong>ราคาน้ำมันไหลผ่าน ไม่ใช่เงินเฟ้อฝังตัวในภาคบริการ</strong> · แต่ตลาดพันธบัตรไม่แยกให้ — 10Y ขึ้นต่อเพราะกลัวเฟดต้องตอบสนองอยู่ดี</p></blockquote>
-
-  <h3>🛢️📈 น้ำมัน + ดอกเบี้ย</h3>
-  <div class="scroller"><table>
-    <thead><tr><th></th><th>9 ก.ย.</th><th>10 ก.ย.</th><th>11 ก.ย.</th></tr></thead>
-    <tbody>
-      <tr><td><strong>Brent</strong></td><td class="n">101.21</td><td class="n">107.76</td><td class="n"><strong>106.11</strong> <span class="hint">ระหว่างวัน · ยังไม่ปิด</span></td></tr>
-      <tr><td>WTI</td><td class="n">—</td><td class="n"><strong>102.48</strong> (+6.7%)</td><td class="n">ทะลุ 100</td></tr>
-      <tr><td><strong>10Y</strong></td><td class="n">4.84%</td><td class="n">4.94%</td><td class="n b-avoid"><strong>4.95–4.96%</strong></td></tr>
-      <tr><td>S&amp;P</td><td class="n">7,636.36</td><td class="n">7,591.70 (−0.58%)</td><td class="n">—</td></tr>
-      <tr><td>Nasdaq</td><td class="n">—</td><td class="n">26,081.72 (−0.65%)</td><td class="n">—</td></tr>
-      <tr><td>Dow</td><td class="n">—</td><td class="n">52,064.10 (−316.56)</td><td class="n">—</td></tr>
-    </tbody>
-  </table></div>
-  <p><strong>S&amp;P ลงติดกันเป็นวันที่ 4 รวม ~−2%</strong> · เหตุ: สงครามสหรัฐ–อิหร่านเข้าเดือนที่ 7 · 10Y สูงสุดตั้งแต่ปี 2023</p>
-
-  <h3>⚖️ regime คง 0.9 เป็นรอบที่ 11</h3>
-  <div class="scroller"><table>
-    <thead><tr><th>เงื่อนไขหั่นเป็น 0.8 (จดไว้ล่วงหน้า 9 ก.ย.)</th><th>สถานะจริง ณ 11 ก.ย. 16:10</th></tr></thead>
-    <tbody>
-      <tr><td>Brent <strong>ปิด</strong>เหนือ $100 ติดกัน <strong>3 เซสชัน</strong></td><td><strong>ปิดแล้ว 2</strong> (9–10 ก.ย.) · เซสชันที่ 3 อยู่ 106.11 <strong>แต่ยังไม่ปิด</strong></td></tr>
-      <tr><td>10Y ยืนเหนือ <strong>5.0%</strong></td><td>4.95–4.96% — <strong>ยังไม่ถึง</strong></td></tr>
-      <tr><td>core CPI ส.ค. ≥ 0.4% MoM</td><td><strong>ยังไม่ออก</strong> — 19:30 ไทย = อีก ~3 ชม. หลังรอบนี้</td></tr>
-      <tr><td>FOMC ขึ้นดอกจริง</td><td>ยังไม่ประชุม (16 ก.ย.) · <strong>แต่ตลาดให้ 69%</strong></td></tr>
-    </tbody>
-  </table></div>
-  <div class="call warn">
-    <h4>❌ ไม่มีข้อไหนครบ → ไม่หั่น</h4>
-    <p><strong>“เกือบครบสามข้อ” ไม่ใช่ “ครบ”</strong> — Brent ที่ 106 ระหว่างวันมีโอกาสปิดเหนือ 100 สูงมาก (ต้องร่วง −6% ใน 3 ชม.) <strong>แต่ยังไม่ปิดคือยังไม่ปิด</strong></p>
-    <p>นี่คือจุดที่ล่อให้ย้ายเสาประตูจาก “ปิด” เป็น “ระหว่างวัน” เพื่อให้ได้คำตอบที่รู้สึกว่าถูก — <strong>ไม่ทำ</strong></p>
-    <p>🔫 <strong>แต่ปืนขึ้นนกแล้ว</strong>: ถ้า <strong>Brent ปิดเหนือ 100 คืนนี้</strong> หรือ <strong>core CPI ≥ 0.4%</strong> → <strong>หั่น 0.8 รอบหน้าทันที ไม่ต้องคิดใหม่</strong></p>
-  </div>
-</section>
-
-<section id="rate">
-  <h2>🔧 รื้อ risk-free ทั้งเล่ม <span class="h2note">เงื่อนไขครบแล้ว จึงทำ</span></h2>
-  <div class="rule"></div>
-  <p>รอบเช้าวันนี้จดไว้ว่า: <em>“10Y จริง 4.94% vs โมเดล 4.73% = ห่าง 21bp เกินเกณฑ์แล้ว → <strong>รอบถัดไปต้องรื้อ FV ทั้งเล่ม ถ้า 10Y ยังยืนระดับนี้</strong>”</em></p>
-  <p><strong>สถานะตอนนี้</strong>: 10Y ยืน 4.94% (10 ก.ย.) → 4.95–4.96% (11 ก.ย.) = <strong>ยืนได้สองเซสชัน → เงื่อนไขครบ → รื้อ</strong></p>
-
-  <div class="call">
-    <h4>วิธีรื้อ สำคัญกว่าตัวเลข</h4>
-    <p><code>rf 4.73% → 4.95% (+22bp)</code> · ขยับ <strong>พร้อมกัน 3 ค่า</strong>: <code>terminal_g</code> + <code>wacc_initial</code> + <code>wacc_terminal</code> ทั้ง base และ bull</p>
-    <p><strong>ทำไมต้องพร้อมกัน</strong> — ถ้าขยับแต่ <code>terminal_g</code> อย่างเดียว ส่วนต่าง (WACC<sub>term</sub> − g<sub>term</sub>) จะแคบลง → terminal value ระเบิด → <strong>FV สูงขึ้นตอนดอกเบี้ยขึ้น</strong> ซึ่งกลับหัวกลับหาง</p>
-    <p>ขยับพร้อมกันทำให้ <strong>ส่วนต่างคงเดิม</strong> → ผลที่เหลือมาจากการคิดลดกระแสเงินปีต้นล้วน ๆ = FV ลงเล็กน้อยและสมเหตุสมผล (วิธี Damodaran: rf ขึ้นดัน Ke และ Kd ขึ้นด้วย ไม่ได้ดันแค่ g)</p>
-  </div>
-
-  <div class="scroller"><table>
-    <thead><tr><th>กลุ่ม</th><th>จำนวน</th><th>ΔFV</th></tr></thead>
-    <tbody>
-      <tr><td>FCFF (earth_evans)</td><td class="n">36 ตัว</td><td class="n"><strong>−2% ถึง −4%</strong></td></tr>
-      <tr><td>Bank (excess return)</td><td class="n">2 ตัว</td><td class="n">JPM −1.1% · BRK-B −1.4%</td></tr>
-      <tr><td>REIT (AFFO DDM)</td><td class="n">3 ตัว</td><td class="n"><strong>−4%</strong> (Ke ขึ้นเต็ม 22bp)</td></tr>
-    </tbody>
-  </table></div>
-
-  <div class="call alert">
-    <h4>🔴 สองตัวที่ไวผิดปกติ = โมเดลเปราะ ไม่ใช่ข่าว</h4>
-    <p><strong>NEE −33.2%</strong> (−6.21 → −8.27) — FV ติดลบอยู่แล้ว = <strong>INVALID</strong> · สาธารณูปโภคที่ถูกกำกับยังไม่มี engine → <strong>ห้ามใช้ตัวเลขนี้ตัดสินอะไร</strong></p>
-    <p><strong>DE −7.6%</strong> (123.71 → 114.31) — ไวกว่าเพื่อน 2–3 เท่า = terminal value ครองมูลค่าสูง + ยังไม่ได้แยกงบส่วนงาน</p>
+    <h4>⚠️ อ่านก่อนใช้ตัวเลขทุกตัวในหน้านี้</h4>
+    <p>ราคาทั้งเล่มคือ <strong>ปิดพฤหัส 10 ก.ย.</strong> ไม่ใช่ราคาวันศุกร์ → <strong>คอลัมน์ “ทรงวัน” เป็นทรงของวันพฤหัส</strong> อย่าเอาไปตัดสิน No-chase ของวันนี้ เพราะเซสชันวันศุกร์กำลังย่อยข่าว CPI อยู่ ซึ่งกระดานนี้ยังไม่เห็น</p>
+    <p>“ไม่มีดีล” ของรอบนี้จึงยิ่งเป็นคำตอบที่ถูก — <strong>ข้อมูลที่มีไม่พอจะตัดสินอะไรใหม่</strong></p>
   </div>
 </section>
 
 <section id="bug">
-  <h2>🐛 บั๊กโครงสร้างที่เจอรอบนี้ <span class="h2note">ต้องให้นายท่านชี้ขาด</span></h2>
+  <h2>🚨 เรื่องใหญ่สุดของรอบ <span class="h2note">ไม่ใช่ผลสแกน แต่คือราคา</span></h2>
   <div class="rule"></div>
-  <p><strong>เจอได้เพราะเช็คซ้ำหลังรัน ไม่ใช่เพราะเขียนถูกตั้งแต่แรก</strong></p>
-  <p><strong>อาการ</strong>: หลังรื้อ rf แล้วเทียบ FV ก่อน–หลัง <strong>REIT กลับ “แพงขึ้น” ตอนดอกเบี้ยขึ้น</strong> — O +44.9% ซึ่งเป็นไปไม่ได้</p>
-  <p><strong>ไล่แล้วเจอสองชั้น:</strong></p>
-  <ul class="tight">
-    <li><strong>ชั้นแรกเป็นบั๊กของผมเองตอนเทียบ</strong> — เอา <code>house_rule_fair_value</code> (ค่าเก่า) ไปเทียบกับ <code>base_fair_value</code> (ค่าใหม่) = คนละฟิลด์ · <strong>engine ทำถูกตลอด</strong> (O base 72.15 → 69.06 · Ke 7.81% → 8.03% ลงถูกทาง)</li>
-    <li><strong>ชั้นที่สองคือของจริงและใหญ่กว่า</strong> — <code>grep house_rule *.py</code> ได้ <strong>ศูนย์บรรทัด</strong></li>
-  </ul>
 
-  <div class="call alert">
-    <h4>🔴 ฟิลด์ที่กติกาบ้านบังคับให้ใช้เทียบ MoS ข้าม engine — ไม่มี engine ตัวไหนเขียนเลย</h4>
-    <p>เป็นค่าที่ <strong>คำนวณมือ</strong> รอบ 9 ก.ย. แล้วเขียนลงไฟล์ → <strong><code>reit_engine.py</code> เขียนทับหายทุกครั้งที่รันใหม่</strong> → รอบนี้ผมรันแล้วมันก็หายไปจริง ๆ</p>
-    <p>เป็นบั๊กพันธุ์เดียวกับที่เคยเจอ 9 ก.ย. (รันเต็มแล้ว valuations เหลือ 36 จาก 41) — <strong>ของที่ไม่ได้อยู่ในโค้ด จะหายเงียบ ๆ เสมอ</strong></p>
-  </div>
-
-  <p><strong>แก้ที่ต้นเหตุแล้ว</strong> — ใส่กติกาลงโค้ดให้เขียนทุกครั้งที่รัน: บังคับ <strong>terminal ROE = Ke</strong> → g ปลายทาง = Ke × retention → <strong>TV = AFFO₁₁ / Ke พอดี</strong> = การเติบโตไม่สร้างมูลค่าเพิ่ม (คู่ขนานกับ terminal ROIC = WACC ฝั่ง FCFF)</p>
-
-  <h3>⚠️ แต่ค่าที่ได้ไม่ตรงของเดิม — และผมสร้างของเดิมซ้ำไม่ได้</h3>
+  <h3>สิ่งที่เจอ — <code>git diff</code> หลังใส่ราคา</h3>
   <div class="scroller"><table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>house (กติกาในโค้ด)</th><th>MoS</th><th>house (มือ 9 ก.ย.)</th><th>MoS</th><th>g ที่ reverse ได้</th></tr></thead>
+    <thead><tr><th>ฟิลด์ที่เปลี่ยน</th><th>จำนวน</th></tr></thead>
     <tbody>
-      <tr><td class="tkr">O</td><td class="n">59.57</td><td class="n"><strong>62.89</strong></td><td class="n b-buy"><strong>+5.3%</strong></td><td class="n">47.66</td><td class="n b-avoid"><strong>−25.0%</strong></td><td class="n">−1.12%</td></tr>
-      <tr><td class="tkr">VICI</td><td class="n">24.73</td><td class="n"><strong>35.04</strong></td><td class="n b-buy"><strong>+29.4%</strong></td><td class="n">29.92</td><td class="n b-buy">+17.3%</td><td class="n">+0.35%</td></tr>
-      <tr><td class="tkr">IIPR</td><td class="n">55.60</td><td class="n"><strong>61.04</strong></td><td class="n b-buy">+8.9%</td><td class="n">57.34</td><td class="n b-buy">+3.0%</td><td class="n">−2.45%</td></tr>
+      <tr><td><code>price</code> / <code>prev_close</code> / <code>day_high</code> / <code>day_low</code> / <code>high_52w</code></td><td class="n b-avoid"><strong>0</strong></td></tr>
+      <tr><td><code>portfolio_pct</code> (mark-to-market)</td><td class="n b-avoid"><strong>0</strong></td></tr>
+      <tr><td><code>ds_bar_date</code> (ตราประทับวันที่)</td><td class="n">82</td></tr>
+      <tr><td><code>_price_src</code></td><td class="n">82</td></tr>
     </tbody>
   </table></div>
-  <blockquote><p>ค่า g ที่ reverse ออกมาได้ (−1.12% / +0.35% / −2.45%) <strong>ไม่ตรงกับกติกา Ke × retention ที่บันทึกไว้ และไม่เป็นแบบแผนอะไรเลย</strong> → ผมสร้างของเดิมซ้ำไม่ได้ และ <strong>จะไม่เดาว่ามันมาจากไหน</strong></p></blockquote>
-  <p>เก็บของเดิมไว้ที่ฟิลด์ <code>house_rule_fair_value_legacy_20260909</code> <strong>ไม่ลบทิ้ง</strong> · ตัวเลขในรายงานรอบนี้ใช้<strong>กติกาในโค้ด</strong> (สร้างซ้ำได้ ตรวจสอบได้)</p>
+  <p>ไม่ขยับเลยสักฟิลด์เดียวใน 41 ตัว · stamp ของชีต = <code>2026-09-11 05:27 PT</code> = <strong>08:27 ET</strong> แล้วไม่คำนวณใหม่อีกเลยตอนเราอ่าน (10:06 ET) = <strong>ตามหลัง 1.7 ชม.</strong></p>
+
+  <div class="call warn">
+    <h4>ข้อนี้ขัดกับที่จดไว้เองใน <code>CLAUDE.md</code></h4>
+    <p>เดิมจดว่า “ชีต recalc ใหม่ทุกครั้งที่อ่านผ่าน API (ทดสอบแล้ว)” — <strong>แต่ที่ทดสอบตอนนั้นคือ BTC ซึ่งเป็น <code>CURRENCY:</code> ไม่ใช่ <code>GOOGLEFINANCE()</code> ของหุ้น</strong> สอง function นี้ recalc คนละจังหวะ ข้อสรุปเดิมจึงกว้างเกินจริง</p>
+  </div>
+
+  <h3>🐛 ทำไมมันอันตรายกว่าที่เห็น — ยามถูกปิดปาก</h3>
+  <p><code>apply_prices.py</code> เดิมตัดสินวันที่ของแท่งราคาจาก <strong>นาฬิกาตอนรัน</strong> ไม่ใช่จากตัวข้อมูล:</p>
+  <pre><code>open_today = now_et.weekday() &lt; 5 and (now_et.hour, now_et.minute) &gt;= (9, 30)
+if open_today:
+    return now_et.strftime("%Y-%m-%d")   # &lt;-- ประทับเป็น "วันนี้"</code></pre>
+  <p>ตลาดเปิดอยู่ → ประทับ <code>ds_bar_date = 2026-09-11</code> ให้ราคาที่จริง ๆ เป็นของ <strong>10 ก.ย.</strong> → ยาม <code>price_staleness</code> ใน <code>yuri_engine.py</code> เทียบกับวันนี้แล้วเห็นตรงกัน → <strong>รายงาน <code>"stale": false</code> อย่างสบายใจ</strong></p>
+  <div class="call alert">
+    <p>= บั๊กเดิมที่ <code>CLAUDE.md</code> เตือนไว้เองเป๊ะ ๆ (“engine ไม่ error มันออกรายงานที่ดูเหมือนของสด”) — คราวนี้ไม่ได้หยิบราคาเก่าใน config แต่หยิบราคาเก่า<strong>จากชีต</strong>แล้วประทับว่าใหม่ · <strong>ยามตัวที่ตั้งมากันเรื่องนี้โดยตรง กลับเป็นคนรับรองให้</strong></p>
+  </div>
+
+  <h3>✅ แก้แล้วในรอบนี้</h3>
+  <ul class="tight">
+    <li><code>resolve_bar_date(stamp)</code> — <strong>ยึดเวลา recalc ของชีตเป็นตัวตัดสิน ไม่ใช่เวลาที่รัน</strong> (แปลง PT→ET · ถ้าตอนชีต recalc ตลาดยังไม่เปิด ให้ประทับเป็นราคาปิดของวันทำการก่อนหน้า)</li>
+    <li>เตือนเมื่อ stamp ตามหลังเวลาจริง <strong>เกิน 30 นาที</strong> (= ชีตไม่ recalc ตอนเราอ่าน)</li>
+    <li>เตือนเมื่อ <strong>ราคาไม่ขยับเลยสักตัว</strong> เทียบของเดิม (<code>price</code> และ <code>prev_close</code> เท่าเดิมครบทุกตัว)</li>
+  </ul>
+  <pre><code>🚨 ชีต recalc ล่าสุด 08:27 ET แต่ตอนนี้ 10:06 ET — ตามหลัง 1.7 ชม.
+🕒 ชีต recalc ตอน 08:27 ET = ตลาด US ยังไม่เปิด — ราคาที่ได้คือราคาปิดของ 2026-09-10
+🚨 ราคาไม่ขยับเลยสักตัว (41/41 เท่าเดิมเป๊ะทั้ง price และ prev_close)</code></pre>
+  <p><code>ds_bar_date</code> ตอนนี้ = <code>2026-09-10</code> ตรงตามความจริง</p>
+
+  <div class="call warn">
+    <h4>🔴 สิ่งที่ยังแก้ไม่ได้ — ต้องให้นายท่านชี้ขาด</h4>
+    <p>ยามใหม่ทำให้เรา <strong>รู้ตัว</strong> ว่าราคาเก่า แต่ <strong>ไม่ได้ทำให้ได้ราคาสด</strong> ราก 2 ชั้นยังอยู่:</p>
+    <div class="scroller"><table>
+      <thead><tr><th>ชั้น</th><th>ปัญหา</th><th>ทางแก้</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td>egress policy บล็อกทุก host ราคา (Yahoo · stooq · alphavantage · nasdaq · <strong>แม้แต่ <code>data.sec.gov</code></strong>)</td><td>เปิด <code>*.finance.yahoo.com</code> + <code>data.sec.gov</code> → กลับไปใช้ <code>--fetch</code> ได้</td></tr>
+        <tr><td class="n">2</td><td>Google Sheet ไม่ recalc <code>GOOGLEFINANCE()</code> ของหุ้นตอนอ่านผ่าน API</td><td>Apps Script ตั้ง time-trigger เขียนค่าใหม่ทุก 5–15 นาทีในเวลาตลาด</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>ถ้าไม่แก้ชั้นใดชั้นหนึ่ง รอบที่ตรงกับเวลาตลาดเปิดจะยังอ่าน “ทรงวัน” ไม่ได้ตลอดไป</strong> — และทรงวันคือหัวใจของ No-chase ซึ่งเป็น gate หลักของวิธี</p>
+  </div>
+</section>
+
+<section id="macro">
+  <h2>CPI + Fed <span class="h2note">กระดานเรายังไม่เห็นมัน</span></h2>
+  <div class="rule"></div>
+
+  <h3>📊 CPI ส.ค. — ออก 11 ก.ย. 08:30 ET (ชีต recalc 08:27 ET = ก่อนหน้า 3 นาที)</h3>
+  <div class="scroller"><table>
+    <thead><tr><th></th><th>จริง</th><th>คาด</th><th>อ่านว่า</th></tr></thead>
+    <tbody>
+      <tr><td>Headline MoM</td><td class="n">+0.4%</td><td class="n">+0.4%</td><td>ตรงคาด</td></tr>
+      <tr><td>Headline YoY</td><td class="n">3.4%</td><td class="n">3.4%</td><td>ตรงคาด</td></tr>
+      <tr><td><strong>Core MoM</strong></td><td class="n b-avoid"><strong>+0.3%</strong></td><td class="n">+0.2–0.3%</td><td><strong>เหนือคาด 0.1pp</strong></td></tr>
+      <tr><td>Core YoY</td><td class="n">2.4%</td><td class="n">2.4%</td><td>ตรงคาด</td></tr>
+    </tbody>
+  </table></div>
+  <p>นี่คือ<strong>ตัวเลขเงินเฟ้อตัวสุดท้ายที่ Fed จะเห็นก่อนประชุม</strong> — ตลาดอ่านว่ายังไม่เย็นพอ</p>
+
+  <h3>🔥 ตลาด price “ขึ้นดอก” 69%</h3>
+  <ul class="tight">
+    <li><strong>FOMC 15–16 ก.ย.</strong> (ประกาศพุธ 16 ก.ย. 14:00 ET + dot plot) — <strong>อีก 4–5 วัน</strong></li>
+    <li>กรอบปัจจุบัน <strong>3.50–3.75%</strong> · ก.ค. โหวต 9–3 ให้คง</li>
+    <li>หลัง CPI ตลาดให้น้ำหนัก <strong>ขึ้นดอกเบี้ย ~69%</strong> สัปดาห์หน้า</li>
+    <li>ตลาดลงติดกัน 4 วันก่อนหน้า · ยีลด์ 10Y ขึ้น · VIX ขึ้น · ดอลลาร์แข็ง</li>
+  </ul>
+
   <div class="call">
-    <h4>✅ ข่าวดีที่ทำให้เรื่องนี้ไม่ฉุกเฉิน</h4>
-    <p><strong>VICI เป็นอันดับ 1 ของบอร์ดทั้งสองกติกา</strong> (+29.4% หรือ +17.3%) → <strong>ข้อสรุปเชิงลำดับไม่เปลี่ยน</strong> ไม่ว่าจะเลือกทางไหน · ผลต่างใหญ่สุดคือ <strong>O: พลิกจาก −25.0% เป็น +5.3%</strong></p>
+    <h4>⚖️ regime คง 0.9 เป็นรอบที่ 12</h4>
+    <p>ไม่หั่นต่ำกว่า 0.9 เพราะกติกาบ้านให้หั่นเมื่อ<strong>ยืนยันด้วยราคาที่เห็นจริง</strong> — ซึ่งรอบนี้เราไม่มีราคาที่เห็นจริงของวันนี้เลย <strong>การหั่น regime จากข่าวที่ยังไม่ผ่านราคา = เดา</strong> ไม่ทำ</p>
+    <p><code>fed_window = True</code> ทำงานทั้งกระดาน (FOMC ≤5 วัน) → <strong>ทุกตัวถูกจำกัดเป็นไม้เล็ก sizeMult 0.50</strong></p>
   </div>
 </section>
 
 <section id="scan">
   <h2>ตารางสแกน <span class="h2note">41 ตัว · ราคาปิด 10 ก.ย.</span></h2>
   <div class="rule"></div>
-  <p><strong>ไม่มีตัวไหนได้ 🟢 หรือ 🟢🟢 — ศูนย์ตัว</strong> · ทั้งกระดานติด <code>fed_window</code> (ไม้เล็ก ×0.5) เป็นอย่างน้อย</p>
-
-  <h3>🔝 บนสุดของตาราง</h3>
+  <p><strong>🟢🟢 = 0 · 🟢 = 0 · ⚪ = 35 · 🟠 = 6 · 🔴 = 0</strong></p>
   <div class="scroller"><table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>%ต่ำกว่า 52wH</th><th>Q</th><th>Disc</th><th>Score</th><th>ทรงวัน</th><th>Gate</th><th>Action</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>ราคา</th><th>%ต่ำกว่า 52wH</th><th>Q</th><th>Disc</th><th>Score</th><th>ทรงวัน</th><th>Action</th><th>Gate</th></tr></thead>
     <tbody>
-      <tr><td class="tkr">GOOGL</td><td class="n">332.60</td><td class="n">18.5%</td><td class="n">95</td><td class="n">36</td><td class="n"><strong>63.4</strong></td><td>🟢↗ ยืนใกล้ไฮ</td><td><code>watch</code> + fed</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">AVGO</td><td class="n">360.83</td><td class="n">27.0%</td><td class="n">82</td><td class="n">57</td><td class="n"><strong>61.2</strong></td><td>🔴↘ แดงจมก้น</td><td>fed ×0.5</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">NFLX</td><td class="n">76.01</td><td class="n">39.4%</td><td class="n">75</td><td class="n">74</td><td class="n"><strong>60.6</strong></td><td>🔴↗ แดงเด้ง</td><td>fed + รอ base</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">COST</td><td class="n">902.38</td><td class="n">17.6%</td><td class="n">92</td><td class="n">33</td><td class="n"><strong>60.5</strong></td><td>🔴↘ แดงจมก้น</td><td>fed ×0.5</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">MELI</td><td class="n">1,906.24</td><td class="n">25.2%</td><td class="n">82</td><td class="n">53</td><td class="n"><strong>59.9</strong></td><td>🟢↘ เขียว-fade</td><td><code>watch</code> + fed</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">WMT</td><td class="n">105.73</td><td class="n">21.6%</td><td class="n">85</td><td class="n">44</td><td class="n">59.4</td><td>🔴↘ แดงจมก้น</td><td>fed ×0.5</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">CAT</td><td class="n">805.00</td><td class="n">24.9%</td><td class="n">80</td><td class="n">52</td><td class="n">58.2</td><td>🔴↗ แดงเด้ง</td><td>fed + แดงเด้ง</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">SNPS</td><td class="n">397.17</td><td class="n">26.4%</td><td class="n">78</td><td class="n">56</td><td class="n">57.8</td><td>🟢↘ เขียว-fade</td><td><code>watch</code> + fed</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">MCD</td><td class="n">253.05</td><td class="n">24.5%</td><td class="n">78</td><td class="n">51</td><td class="n">56.5</td><td>🔴↘ แดงจมก้น</td><td><code>watch</code> + fed</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-      <tr><td class="tkr">MRVL</td><td class="n">226.96</td><td class="n">31.2%</td><td class="n">72</td><td class="n">66</td><td class="n">56.0</td><td>🔴↘ แดงจมก้น</td><td>fed ×0.5</td><td class="b-hold">⚪ ถือ/รอย่อ</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>🟠 กลุ่มทบทวน (Score ต่ำกว่าเส้น 45)</h3>
-  <div class="scroller"><table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>Q</th><th>Disc</th><th>Score</th><th>ทรงวัน</th><th>หมายเหตุ</th></tr></thead>
-    <tbody>
-      <tr><td class="tkr">DE</td><td class="n">677.94</td><td class="n">78</td><td class="n">7</td><td class="n">44.1</td><td>🟢↘</td><td>Disc ต่ำ (ห่างไฮ 4.0%) ไม่ใช่สัญญาณตัด</td></tr>
-      <tr><td class="tkr">CRWD</td><td class="n">208.86</td><td class="n">75</td><td class="n">12</td><td class="n">43.8</td><td>🟢↘</td><td>—</td></tr>
-      <tr><td class="tkr">O</td><td class="n">59.57</td><td class="n">75</td><td class="n">12</td><td class="n">43.6</td><td>🔴↘ แดงจมก้น</td><td><strong>thesis intact · ถือใหญ่สุดในหุ้นรายตัว 3.52%</strong> — 🟠 มาจาก Disc 12 ล้วน ๆ ไม่ใช่สัญญาณตัด</td></tr>
-      <tr><td class="tkr">MRK</td><td class="n">144.71</td><td class="n">75</td><td class="n">9</td><td class="n">42.9</td><td>🔴↘</td><td>ราคาเหนือ FV มาก</td></tr>
-      <tr><td class="tkr">NVO</td><td class="n">44.01</td><td class="n">52</td><td class="n">60</td><td class="n">39.3</td><td>🔴↘</td><td><code>watch</code> · conviction LOW</td></tr>
-      <tr><td class="tkr">PFE</td><td class="n">27.65</td><td class="n">58</td><td class="n">8</td><td class="n">32.9</td><td>🔴↗</td><td><code>watch</code> · value-trap profile</td></tr>
-      <tr><td class="tkr">IIPR</td><td class="n">55.60</td><td class="n">45</td><td class="n">25</td><td class="n">28.3</td><td>🔴↘</td><td>Q ต่ำกว่าเส้น 50 · candidate ทยอยออก</td></tr>
-    </tbody>
-  </table></div>
-
-  <h3>🔵 กลุ่มติด NO-CHASE (ทรงไล่จริง)</h3>
-  <div class="scroller"><table>
-    <thead><tr><th>Ticker</th><th>ราคา</th><th>Score</th><th>ทรงวัน</th></tr></thead>
-    <tbody>
-      <tr><td class="tkr">MSFT</td><td class="n">492.44</td><td class="n">53.3</td><td>🟢↗ ยืนใกล้ไฮ</td></tr>
-      <tr><td class="tkr">BRK-B</td><td class="n">507.00</td><td class="n">50.0</td><td>🟢↘ + RSI 70.6 สูง</td></tr>
-      <tr><td class="tkr">AAPL</td><td class="n">326.57</td><td class="n">48.2</td><td>🟢↗ <strong>gap-up ยืน</strong></td></tr>
-      <tr><td class="tkr">ABBV</td><td class="n">255.00</td><td class="n">45.3</td><td>🟢↗ ยืนใกล้ไฮ</td></tr>
-      <tr><td class="tkr">MDLZ</td><td class="n">62.47</td><td class="n">41.0</td><td>🟢↗ ยืนใกล้ไฮ</td></tr>
+      <tr><td><strong>GOOGL</strong></td><td class="n">332.60</td><td class="n">18.6%</td><td class="n">95</td><td class="n">36</td><td class="n b-wait"><strong>63.5</strong></td><td>🟢↗ ยืนใกล้ไฮ</td><td>⚪ ถือ/รอย่อ</td><td>watch; fed_window</td></tr>
+      <tr><td><strong>AVGO</strong></td><td class="n">360.83</td><td class="n">27.1%</td><td class="n">82</td><td class="n">58</td><td class="n b-wait"><strong>61.3</strong></td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td><strong>NFLX</strong></td><td class="n">76.01</td><td class="n">40.0%</td><td class="n">75</td><td class="n">75</td><td class="n b-wait"><strong>60.8</strong></td><td>🔴↗ แดงเด้ง</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; รอ base</td></tr>
+      <tr><td><strong>COST</strong></td><td class="n">902.38</td><td class="n">17.7%</td><td class="n">92</td><td class="n">33</td><td class="n b-wait"><strong>60.6</strong></td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td><strong>MELI</strong></td><td class="n">1906.24</td><td class="n">25.2%</td><td class="n">82</td><td class="n">53</td><td class="n b-wait"><strong>59.9</strong></td><td>🟢↘ เขียว-fade</td><td>⚪ ถือ/รอย่อ</td><td>watch; fed_window</td></tr>
+      <tr><td>WMT</td><td class="n">105.73</td><td class="n">21.8%</td><td class="n">85</td><td class="n">44</td><td class="n">59.5</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>CAT</td><td class="n">805.00</td><td class="n">25.0%</td><td class="n">80</td><td class="n">53</td><td class="n">58.3</td><td>🔴↗ แดงเด้ง</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; รอ base</td></tr>
+      <tr><td>SNPS</td><td class="n">397.17</td><td class="n">26.4%</td><td class="n">78</td><td class="n">56</td><td class="n">57.8</td><td>🟢↘ เขียว-fade</td><td>⚪ ถือ/รอย่อ</td><td>watch; fed_window</td></tr>
+      <tr><td>MCD</td><td class="n">253.05</td><td class="n">26.0%</td><td class="n">78</td><td class="n">55</td><td class="n">57.5</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>watch; fed_window</td></tr>
+      <tr><td>MRVL</td><td class="n">226.96</td><td class="n">31.2%</td><td class="n">72</td><td class="n">66</td><td class="n">56.0</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>COHR</td><td class="n">293.17</td><td class="n">33.4%</td><td class="n">70</td><td class="n">68</td><td class="n">55.0</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>NVDA</td><td class="n">218.36</td><td class="n">7.7%</td><td class="n">95</td><td class="n">9</td><td class="n">54.3</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>MSFT</td><td class="n">492.44</td><td class="n">11.1%</td><td class="n">92</td><td class="n">13</td><td class="n">54.1</td><td>🟢↗ ยืนใกล้ไฮ</td><td>⚪ ถือ/รอย่อ</td><td class="b-avoid"><strong>NO-CHASE</strong></td></tr>
+      <tr><td>META</td><td class="n">644.38</td><td class="n">18.5%</td><td class="n">80</td><td class="n">36</td><td class="n">53.4</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>watch; fed_window</td></tr>
+      <tr><td>VICI</td><td class="n">24.73</td><td class="n">25.9%</td><td class="n">72</td><td class="n">55</td><td class="n">53.1</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>PG</td><td class="n">142.97</td><td class="n">14.5%</td><td class="n">85</td><td class="n">24</td><td class="n">53.1</td><td>🟢↘ เขียว-fade</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>ASML</td><td class="n">1687.43</td><td class="n">15.6%</td><td class="n">82</td><td class="n">27</td><td class="n">52.2</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>V</td><td class="n">367.21</td><td class="n">4.8%</td><td class="n">92</td><td class="n">7</td><td class="n">52.1</td><td>🔴↗ แดงเด้ง</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; รอ base</td></tr>
+      <tr><td>BLK</td><td class="n">1062.40</td><td class="n">12.9%</td><td class="n">85</td><td class="n">19</td><td class="n">51.6</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>UNH</td><td class="n">388.28</td><td class="n">15.9%</td><td class="n">80</td><td class="n">28</td><td class="n">51.2</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>MA</td><td class="n">565.37</td><td class="n">6.0%</td><td class="n">90</td><td class="n">8</td><td class="n">51.2</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>HCA</td><td class="n">421.21</td><td class="n">24.3%</td><td class="n">70</td><td class="n">51</td><td class="n">50.6</td><td>🔴↗ แดงเด้ง</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; รอ base</td></tr>
+      <tr><td>BRK-B</td><td class="n">507.00</td><td class="n">5.7%</td><td class="n">88</td><td class="n">8</td><td class="n">50.0</td><td>🟢↘ เขียว-fade</td><td>⚪ ถือ/รอย่อ</td><td class="b-avoid"><strong>NO-CHASE</strong> RSI 71</td></tr>
+      <tr><td>LLY</td><td class="n">1123.00</td><td class="n">13.1%</td><td class="n">82</td><td class="n">19</td><td class="n">50.0</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>NEE</td><td class="n">82.44</td><td class="n">16.5%</td><td class="n">75</td><td class="n">30</td><td class="n">48.5</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>AAPL</td><td class="n">326.57</td><td class="n">5.2%</td><td class="n">85</td><td class="n">8</td><td class="n">48.2</td><td>🟢↗ gap-up ยืน</td><td>⚪ ถือ/รอย่อ</td><td class="b-avoid"><strong>NO-CHASE</strong></td></tr>
+      <tr><td>JNJ</td><td class="n">266.35</td><td class="n">5.2%</td><td class="n">85</td><td class="n">8</td><td class="n">48.2</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>AMZN</td><td class="n">251.89</td><td class="n">12.3%</td><td class="n">80</td><td class="n">17</td><td class="n">48.1</td><td>🔴↗ แดงเด้ง</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; รอ base</td></tr>
+      <tr><td>PANW</td><td class="n">338.49</td><td class="n">15.1%</td><td class="n">75</td><td class="n">25</td><td class="n">47.4</td><td>🟢↘ เขียว-fade</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>RTX</td><td class="n">198.12</td><td class="n">12.7%</td><td class="n">78</td><td class="n">18</td><td class="n">47.2</td><td>🟢↘ เขียว-fade</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>TSM</td><td class="n">428.03</td><td class="n">10.6%</td><td class="n">80</td><td class="n">12</td><td class="n">46.6</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>JPM</td><td class="n">353.56</td><td class="n">3.5%</td><td class="n">82</td><td class="n">7</td><td class="n">46.3</td><td>🔴↗ แดงเด้ง</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; รอ base</td></tr>
+      <tr><td>ABBV</td><td class="n">255.00</td><td class="n">4.7%</td><td class="n">80</td><td class="n">7</td><td class="n">45.3</td><td>🟢↗ ยืนใกล้ไฮ</td><td>⚪ ถือ/รอย่อ</td><td class="b-avoid"><strong>NO-CHASE</strong></td></tr>
+      <tr><td>O</td><td class="n">59.57</td><td class="n">12.3%</td><td class="n">75</td><td class="n">17</td><td class="n">45.1</td><td>🔴↘ แดงจมก้น</td><td>⚪ ถือ/รอย่อ</td><td>fed_window; 0.50</td></tr>
+      <tr><td>DE</td><td class="n">677.94</td><td class="n">4.0%</td><td class="n">78</td><td class="n">7</td><td class="n">44.1</td><td>🟢↘ เขียว-fade</td><td>🟠 ทบทวน</td><td>fed_window; 0.50</td></tr>
+      <tr><td>CRWD</td><td class="n">208.86</td><td class="n">10.7%</td><td class="n">75</td><td class="n">12</td><td class="n">43.8</td><td>🟢↘ เขียว-fade</td><td>🟠 ทบทวน</td><td>fed_window; 0.50</td></tr>
+      <tr><td>MRK</td><td class="n">144.71</td><td class="n">7.8%</td><td class="n">75</td><td class="n">9</td><td class="n">42.9</td><td>🔴↘ แดงจมก้น</td><td>🟠 ทบทวน</td><td>fed_window; 0.50</td></tr>
+      <tr><td>MDLZ</td><td class="n">62.47</td><td class="n">6.3%</td><td class="n">72</td><td class="n">8</td><td class="n">41.0</td><td>🟢↗ ยืนใกล้ไฮ</td><td>⚪ ถือ/รอย่อ</td><td class="b-avoid"><strong>NO-CHASE</strong></td></tr>
+      <tr><td>NVO</td><td class="n">44.01</td><td class="n">31.4%</td><td class="n">52</td><td class="n">66</td><td class="n">40.5</td><td>🔴↘ แดงจมก้น</td><td>🟠 ทบทวน</td><td>watch; fed_window</td></tr>
+      <tr><td>PFE</td><td class="n">27.65</td><td class="n">5.3%</td><td class="n">58</td><td class="n">8</td><td class="n">32.9</td><td>🔴↗ แดงเด้ง</td><td>🟠 ทบทวน</td><td>watch; fed_window</td></tr>
+      <tr><td>IIPR</td><td class="n">55.60</td><td class="n">15.0%</td><td class="n">45</td><td class="n">25</td><td class="n">28.3</td><td>🔴↘ แดงจมก้น</td><td>🟠 ทบทวน</td><td>watch; fed_window</td></tr>
     </tbody>
   </table></div>
 </section>
 
 <section id="mos">
-  <h2>Margin of Safety <span class="h2note">บอร์ดเต็ม · FV = house rule</span></h2>
+  <h2>Margin of Safety <span class="h2note">พอร์ตจริง · FV = house_rule_fair_value</span></h2>
   <div class="rule"></div>
-  <p><strong>MoS เป็นบวก 7 ตัวจาก 40</strong> (NEE ใช้ไม่ได้) — เพิ่มจาก 6 ตัวรอบก่อน <strong>แต่เพิ่มเพราะเปลี่ยนกติกา REIT ไม่ใช่เพราะราคาถูกลง</strong></p>
   <div class="scroller"><table>
-    <thead><tr><th>#</th><th>Ticker</th><th>ราคา</th><th>FV (house)</th><th>MoS</th><th>Q</th><th>conviction</th><th>%พอร์ต</th><th>engine</th></tr></thead>
+    <thead><tr><th>Ticker</th><th>%พอร์ต</th><th>ราคา</th><th>FV (house)</th><th>MoS</th><th>P/L%</th><th>thesis</th></tr></thead>
     <tbody>
-      <tr><td>🥇</td><td class="tkr">VICI</td><td class="n">24.73</td><td class="n">35.04</td><td class="n b-buy"><strong>+29.4%</strong></td><td class="n">72</td><td>MED</td><td class="n">0.87%</td><td>REIT DDM</td></tr>
-      <tr><td>🥈</td><td class="tkr">NVO</td><td class="n">44.01</td><td class="n">49.16</td><td class="n b-buy"><strong>+10.5%</strong></td><td class="n b-avoid">52</td><td class="b-avoid">LOW</td><td class="n">1.28%</td><td>FCFF</td></tr>
-      <tr><td>🥉</td><td class="tkr">IIPR</td><td class="n">55.60</td><td class="n">61.04</td><td class="n b-buy">+8.9%</td><td class="n b-avoid">45</td><td class="b-avoid">LOW</td><td class="n">0.24%</td><td>REIT DDM</td></tr>
-      <tr><td>4</td><td class="tkr">NVDA</td><td class="n">218.36</td><td class="n">233.19</td><td class="n b-buy"><strong>+6.4%</strong></td><td class="n b-buy"><strong>95</strong></td><td class="b-buy"><strong>HIGH</strong></td><td class="n">0.71%</td><td>FCFF</td></tr>
-      <tr><td>5</td><td class="tkr">O</td><td class="n">59.57</td><td class="n">62.89</td><td class="n b-buy">+5.3%</td><td class="n">75</td><td>MED</td><td class="n">3.52%</td><td>REIT DDM</td></tr>
-      <tr><td>6</td><td class="tkr">UNH</td><td class="n">388.28</td><td class="n">409.85</td><td class="n b-buy">+5.3%</td><td class="n">80</td><td>MED</td><td class="n">1.32%</td><td>FCFF</td></tr>
-      <tr><td>7</td><td class="tkr">HCA</td><td class="n">421.21</td><td class="n">423.62</td><td class="n b-buy">+0.6%</td><td class="n">70</td><td>MED</td><td class="n">0.00%</td><td>FCFF</td></tr>
-      <tr><td>—</td><td class="tkr">NFLX</td><td class="n">76.01</td><td class="n">69.06</td><td class="n">−10.1%</td><td class="n">75</td><td>MED</td><td class="n">1.40%</td><td>FCFF</td></tr>
-      <tr><td>—</td><td class="tkr">META</td><td class="n">644.38</td><td class="n">572.78</td><td class="n">−12.5%</td><td class="n">80</td><td>HIGH</td><td class="n">5.23%</td><td>FCFF</td></tr>
-      <tr><td>—</td><td class="tkr">BLK</td><td class="n">1,062.40</td><td class="n">870.03</td><td class="n">−22.1%</td><td class="n">85</td><td>MED</td><td class="n">0.00%</td><td>FCFF</td></tr>
+      <tr><td><strong>VICI</strong></td><td class="n">0.87%</td><td class="n">24.73</td><td class="n">35.04</td><td class="n b-buy"><strong>+29.4%</strong></td><td class="n">−21.3%</td><td>intact</td></tr>
+      <tr><td><strong>NVO</strong></td><td class="n">1.28%</td><td class="n">44.01</td><td class="n">49.16</td><td class="n b-buy"><strong>+10.5%</strong></td><td class="n">−11.1%</td><td class="b-wait">⚠️ watch · LOW</td></tr>
+      <tr><td><strong>IIPR</strong></td><td class="n">0.24%</td><td class="n">55.60</td><td class="n">61.04</td><td class="n b-buy"><strong>+8.9%</strong></td><td class="n">−31.9%</td><td class="b-wait">⚠️ watch · LOW</td></tr>
+      <tr><td><strong>NVDA</strong></td><td class="n">0.71%</td><td class="n">218.36</td><td class="n">233.19</td><td class="n b-buy"><strong>+6.4%</strong></td><td class="n">+15.9%</td><td>intact</td></tr>
+      <tr><td><strong>O</strong></td><td class="n">3.52%</td><td class="n">59.57</td><td class="n">62.89</td><td class="n b-buy"><strong>+5.3%</strong></td><td class="n">+10.4%</td><td>intact</td></tr>
+      <tr><td><strong>UNH</strong></td><td class="n">1.32%</td><td class="n">388.28</td><td class="n">409.85</td><td class="n b-buy"><strong>+5.3%</strong></td><td class="n">+34.2%</td><td>intact</td></tr>
+      <tr><td>NFLX</td><td class="n">1.40%</td><td class="n">76.01</td><td class="n">69.06</td><td class="n">−10.1%</td><td class="n">+12.3%</td><td>intact</td></tr>
+      <tr><td>META</td><td class="n">5.23%</td><td class="n">644.38</td><td class="n">572.78</td><td class="n">−12.5%</td><td class="n">+8.4%</td><td class="b-wait">⚠️ watch</td></tr>
+      <tr><td>PFE</td><td class="n">0.86%</td><td class="n">27.65</td><td class="n">22.41</td><td class="n">−23.4%</td><td class="n">+3.9%</td><td class="b-wait">⚠️ watch · LOW</td></tr>
+      <tr><td>BRK-B</td><td class="n">0.31%</td><td class="n">507.00</td><td class="n">383.02</td><td class="n">−32.4%</td><td class="n">+6.7%</td><td>intact</td></tr>
+      <tr><td>PG</td><td class="n">0.37%</td><td class="n">142.97</td><td class="n">99.50</td><td class="n">−43.7%</td><td class="n">+0.7%</td><td>intact</td></tr>
+      <tr><td>TSM</td><td class="n">0.35%</td><td class="n">428.03</td><td class="n">289.46</td><td class="n">−47.9%</td><td class="n">+82.5%</td><td>intact</td></tr>
+      <tr><td>MSFT</td><td class="n">1.09%</td><td class="n">492.44</td><td class="n">329.59</td><td class="n">−49.4%</td><td class="n">+24.9%</td><td>intact</td></tr>
+      <tr><td>V</td><td class="n">0.23%</td><td class="n">367.21</td><td class="n">245.60</td><td class="n">−49.5%</td><td class="n">+21.4%</td><td>intact</td></tr>
+      <tr><td>GOOGL</td><td class="n">1.55%</td><td class="n">332.60</td><td class="n">209.24</td><td class="n">−59.0%</td><td class="n">+83.9%</td><td class="b-wait">⚠️ watch</td></tr>
+      <tr><td>MRK</td><td class="n">0.34%</td><td class="n">144.71</td><td class="n">87.27</td><td class="n">−65.8%</td><td class="n">+80.9%</td><td>intact</td></tr>
+      <tr><td>MELI</td><td class="n">1.45%</td><td class="n">1906.24</td><td class="n">1092.73</td><td class="n">−74.4%</td><td class="n">+19.2%</td><td class="b-wait">⚠️ watch</td></tr>
+      <tr><td>AMZN</td><td class="n">1.21%</td><td class="n">251.89</td><td class="n">115.51</td><td class="n">−118.1%</td><td class="n">+20.3%</td><td>intact</td></tr>
+      <tr><td>ASML</td><td class="n">0.44%</td><td class="n">1687.43</td><td class="n">578.88</td><td class="n">−191.5%</td><td class="n">+129.6%</td><td>intact</td></tr>
     </tbody>
   </table></div>
-  <p class="hint">🔴 ที่แพงชัดที่สุด: CRWD −654% · DE −493% · PANW −392% · CAT −216% · ASML −192% · MDLZ −182% · WMT −166% · RTX −162%</p>
-  <blockquote><p><strong>อ่าน MoS ติดลบหนักให้ถูก</strong> — โมเดลบ้านเราบังคับ <strong>ส่วนเกินปลายทาง = 0</strong> ทั้งสาม engine = <strong>ไม่ให้ค่า moat หลังปีที่ 10 เลย</strong> · ตัวคุณภาพสูงที่ moat ยาวจริง (MA / V / COST / PG / AAPL) จึงติดลบเป็นปกติ <strong>ไม่ได้แปลว่าต้องขาย</strong> แปลว่า<strong>ไม่ใช่จุดเติมด้วยส่วนลด</strong></p></blockquote>
+  <div class="call">
+    <p><strong>มีแค่ 6 ตัวที่ MoS เป็นบวก</strong> และ 3 ใน 6 ติดธง watch หรือ conviction LOW (NVO · IIPR) = <strong>Sleep-Well บล็อกซื้อเพิ่ม</strong> → เหลือที่ซื้อเพิ่มได้ตามกติกาจริง ๆ แค่ <strong>VICI · NVDA · O · UNH</strong> และทั้ง 4 ตัวติด <code>fed_window</code> ไม้เล็ก 0.50 อยู่ดี</p>
+  </div>
 </section>
 
 <section id="key">
-  <h2>ตัวเด่น <span class="h2note">VICI · GOOGL · AVGO · NVDA</span></h2>
+  <h2>Price Map ตัวเด่น</h2>
   <div class="rule"></div>
 
-  <h3>⚔️ VICI — ความขัดแย้งที่ยังไม่หาย</h3>
-  <p><strong>อันดับ 1 ของบอร์ด valuation ทั้ง 41 ตัว เป็นรอบที่ 2 ติด — และระบบคะแนนยังไฟเขียวให้ไม่ได้</strong></p>
-  <div class="scroller"><table>
-    <thead><tr><th>เลนส์</th><th>ตัวเลข</th></tr></thead>
-    <tbody>
-      <tr><td>MoS (house rule)</td><td class="n b-buy"><strong>+29.4%</strong> — อันดับ 1 ทั้งบอร์ด</td></tr>
-      <tr><td>ราคา / 52wH</td><td class="n">−21.3%</td></tr>
-      <tr><td>RSI</td><td class="n"><strong>17.1</strong> = oversold ลึกสุดในบอร์ด</td></tr>
-      <tr><td>ทรงวัน</td><td>🔴↘ <strong>แดงจมก้น = โซนเก็บตามนิยาม</strong></td></tr>
-      <tr><td><strong>Q</strong></td><td class="n b-avoid"><strong>72</strong> ← นี่คือตัวบล็อก</td></tr>
-      <tr><td>Score</td><td class="n">50.1 (เส้น BUY = 65)</td></tr>
-    </tbody>
-  </table></div>
-  <p><strong>ข่าวใหม่รอบนี้:</strong></p>
+  <h3>GOOGL — สูงสุดของตาราง (63.5) แต่ MoS −59%</h3>
   <ul class="tight">
-    <li>✅ <strong>ขึ้นปันผล 2.2% เป็น 1.84/หุ้น/ปี</strong> (ประกาศ 3 ก.ย. · จ่าย 8 ต.ค. · XD 17 ก.ย.) = <strong>ปันผลยังโตจริง ไม่ใช่ทรงตัว</strong></li>
-    <li>✅ แต่งตั้ง John M. Sullivan เป็นกรรมการอิสระ</li>
-    <li>⚠️ <strong>ออกหุ้นกู้ 1.75B รีไฟแนนซ์ตั๋ว 4.500% ที่ครบกำหนด ก.ย. 26</strong> → ในโลกที่ 10Y = 4.95% นี่คือ<strong>การรีไฟแนนซ์ต้นทุนขาขึ้นของจริง</strong> = จุดที่ต้องเฝ้าต่อ ไม่ใช่ข่าวดี</li>
+    <li>ราคา <strong>332.60</strong> · Base FV <strong>209.24</strong> · Bull <strong>272.22</strong> · P50 <strong>207.53</strong></li>
+    <li><strong>ราคาตลาดอยู่เหนือ Bull case 22%</strong> — ตลาด price เกินฐานไปแล้วชัดเจน</li>
+    <li>ทรง 🟢↗ ยืนใกล้ไฮ (ของวันพฤหัส) · Disc แค่ 36 · ธง watch ยังไม่ถอด</li>
+    <li>🎯 โซนที่จะเริ่มคุยได้: <strong>ต่ำกว่า ~272</strong> · โซนเก็บจริง <strong>~209</strong> = ต้องลงอีก 37%</li>
+    <li><strong>สรุป: ถือ ไม่เพิ่ม ไม่ตัด</strong> — P/L +83.9% ปล่อยวิ่งตามวินัย</li>
   </ul>
-  <blockquote><p>ตัวที่ valuation ดีที่สุดในบอร์ด กับตัวที่ระบบคะแนนไม่มีวันไฟเขียว <strong>เป็นตัวเดียวกัน</strong> (Q 72 อยู่ใต้เพดานที่ regime 0.9) → <strong>ถ้าจะทำอะไรกับ VICI ต้องตัดสินนอกเกณฑ์ Score โดยนายท่านเอง</strong> · ผมเสนอตัวเลขครบแล้ว แต่ระบบไฟเขียวให้ไม่ได้</p></blockquote>
 
-  <h3>GOOGL — สูงสุดของตาราง แต่ธง watch แน่นขึ้น ไม่ใช่คลายลง</h3>
-  <div class="scroller"><table>
-    <thead><tr><th></th><th>ตัวเลข</th></tr></thead>
-    <tbody>
-      <tr><td>ราคา</td><td class="n"><strong>332.60</strong></td></tr>
-      <tr><td>FV base (หลังรื้อ rf)</td><td class="n"><strong>209.24</strong> <span class="hint">เดิม 214.93 · ΔFV −2.6%</span></td></tr>
-      <tr><td>FV bull</td><td class="n">272.22</td></tr>
-      <tr><td>MoS base</td><td class="n b-avoid"><strong>−59.0%</strong> · ราคายังเหนือ bull อยู่ 22%</td></tr>
-    </tbody>
-  </table></div>
-  <div class="call alert">
-    <h4>🔴 ข่าวรอบนี้ทำให้เงื่อนไขปลดธงไกลออกไป</h4>
-    <p>capex FY26 ยกเป็น <strong>195–205B</strong> และผู้บริหารบอกชัดว่า <strong>ปี 2027 จะเพิ่มอีกอย่างมีนัยสำคัญ</strong> · ภาระผูกพันตามสัญญา <strong>&gt; 800B</strong> · <strong>Q2 FCF −5.9B</strong> (LTM FCF 53.3B)</p>
-    <p>① ราคาต่ำกว่า bull FV → ❌ ยังเหนือ bull 22% · ② FCF ไตรมาสกลับเป็นบวก → ❌ <strong>เลื่อนออกไป</strong></p>
-  </div>
-  <blockquote><p>⚠️ <strong>ช่องว่างที่ยังไม่ปิด (ไม่แกล้งบอกว่าปิดแล้ว)</strong>: assumptions ของ GOOGL ยังเป็นฐาน <strong>LTM ถึง Q1-2026 ลงวันที่ 13 ก.ค. = ช้าไปหนึ่งไตรมาส</strong> · งบ Q2 (rev +24% · Cloud +82%) <strong>ยังไม่ถูกนำเข้าโมเดล</strong></p></blockquote>
-
-  <h3>AVGO — โมเดลเพิ่งรื้อสด แต่ guidance วิ่งนำโมเดล</h3>
-  <p>ราคา <strong>360.83</strong> · ต่ำกว่า 52wH <strong>27.0%</strong> · FV base <strong>236.07</strong> · bull 385.38 · <strong>MoS −52.8%</strong></p>
-  <p><strong>Q3 FY26</strong> (รายงาน 4 ก.ย. · 10-Q ยื่น 10 ก.ย. — นำเข้าโมเดลแล้วรอบเช้า):</p>
+  <h3>AVGO — อันดับ 2 (61.3) · Disc 58 สูงสุดในกลุ่มหัวตาราง</h3>
   <ul class="tight">
-    <li>รายได้ <strong>29.6B +86% YoY</strong> · non-GAAP op income <strong>+92%</strong></li>
-    <li><strong>AI semi 16.7B +221% YoY · +54% QoQ</strong> · ลูกค้า XPU 6 ราย รวม Google, Anthropic, OpenAI</li>
-    <li>guide Q4 AI <strong>21.7B (+236% YoY)</strong> · FY26 AI <strong>58B (+186%)</strong></li>
-    <li>outlook: <strong>FY27 AI 115B · FY28 230B = เท่าตัวสองปีติด</strong></li>
+    <li>ราคา <strong>360.83</strong> · Base <strong>236.07</strong> · Bull <strong>385.38</strong> · P50 <strong>234.71</strong></li>
+    <li>ราคาอยู่ <strong>ระหว่าง Base กับ Bull</strong> (เหนือ Base 53% · ต่ำกว่า Bull 6%) = ตลาด price ฝั่ง Bull เกือบเต็ม</li>
+    <li>ทรง 🔴↘ แดงจมก้น = ทรงที่กติกาชอบ <strong>แต่เป็นทรงของเมื่อวาน</strong></li>
+    <li>🎯 โซนเก็บตามโมเดล <strong>&lt; 236</strong> (−35%) · ยังไม่ถือ ยังไม่ต้องรีบ</li>
   </ul>
-  <div class="call warn">
-    <h4>⚠️ จุดที่ต้องซื่อสัตย์</h4>
-    <p>โมเดลใช้ <strong>g1 = 30%</strong> ขณะที่ guidance ชี้ AI revenue <strong>โตเท่าตัวสองปีติด</strong> → <strong>โมเดลน่าจะต่ำกว่าแผนบริษัทอยู่มาก</strong></p>
-    <p>MoS −52.8% จึงอ่านว่า <strong>“ต้องซื้อด้วยเรื่องเล่าการเติบโต ไม่ใช่ด้วยส่วนลด”</strong> เหมือนเคส LLY — ไม่ใช่ “แพงจนต้องหนี” · <strong>การจะยก g1 ต้องมีฐานจาก 10-K/แผนที่ตรวจได้ ไม่ใช่จากพาดหัว → ยังไม่ยก</strong></p>
-  </div>
 
-  <h3>NVDA — MoS บวกต่อเนื่องเป็นรอบที่ 2</h3>
-  <p>ราคา <strong>218.36</strong> · FV base <strong>233.19</strong> (เดิม 239.22 · ΔFV −2.5%) · bull 376.46 · <strong>MoS +6.4%</strong></p>
-  <p>Q 95 · conviction HIGH · thesis intact · ถือแค่ <strong>0.71%</strong> จากเพดาน 8% · ทรงวัน <strong>🔴↘ แดงจมก้น = โซนเก็บตามนิยาม</strong> · ติดแค่ <code>fed_window</code> — <strong>ไม่ติด NO-CHASE แล้ว</strong> (ต่างจากรอบ 28 ส.ค.) · Score 54.3 ยังต่ำกว่าเส้น 65 เพราะ <strong>Disc แค่ 9</strong> (ห่างไฮ 7.5%)</p>
+  <h3>VICI — MoS บวกสูงสุดในพอร์ต (+29.4%) และยังขัดกับตัวเอง</h3>
+  <ul class="tight">
+    <li>ราคา <strong>24.73</strong> (ก้น 52 สัปดาห์พอดี 24.66) · Base DDM <strong>36.80</strong> · house <strong>35.04</strong> · NAV <strong>34.65</strong> · Bull 42.57</li>
+    <li>yield <strong>7.28%</strong> · P/AFFO <strong>10.1</strong> · Ke 7.90%</li>
+    <li>reverse-DCF: ตลาด price ว่า AFFO จะโตแค่ <strong>0.58%/ปี ตลอดกาล</strong></li>
+    <li>⚔️ <strong>ความขัดแย้งที่ยังไม่หาย</strong>: ทั้ง DDM และ NAV บอกถูก แต่ราคานิ่งที่ก้นมา 3 รอบ และ P/L ยังลบ 21.3% → ถ้าโมเดลถูก ตลาดคิดผิดมานาน · ถ้าตลาดถูก แปลว่ามีอะไรใน cap rate / ความเสี่ยงผู้เช่าคาสิโนที่โมเดลบ้านยังไม่จับ</li>
+    <li>Q=72 &lt; 73.1 → <strong>VICI ไม่มีทางขึ้น 🟢 ได้เลยที่ regime 0.9</strong> ต่อให้ราคาลงอีก 90%</li>
+    <li><strong>สรุป: ถือต่อ ไม่เพิ่มจนกว่าจะเคลียร์เรื่อง cap rate</strong> · ไม่ตัดเพราะ thesis ยัง intact</li>
+  </ul>
 </section>
 
 <section id="shop">
   <h2>🛒 Shopping list <span class="h2note">สัปดาห์นี้</span></h2>
   <div class="rule"></div>
-  <div class="tickets">
-    <div class="tk stop">
-      <div class="tkhead"><span class="tick">ไม่มีดีล</span><span class="lots">รอบที่ 12 ติด</span><span class="px">cash / SGOV</span></div>
-      <p class="why"><strong>ถือ cash / SGOV / VGSH ต่อ · dry powder 10.09% ของพอร์ต</strong></p>
-      <div class="meta"><span class="chip">🟢 = 0 ตัว</span><span class="chip">สูงสุด 63.4 / 65</span><span class="chip">fed_window ×0.5</span></div>
-    </div>
+  <div class="call alert">
+    <h4>❌ ไม่มี — รอบที่ 13 ติด</h4>
+    <ol class="tight">
+      <li><strong>ไม่มีข้อมูลราคาใหม่</strong> — ตัดสินใจซื้อจากกระดานที่ยังไม่เห็น CPI = เดา</li>
+      <li><strong>ไม่มีตัวไหนแตะเส้น BUY 65</strong> — สูงสุด GOOGL 63.5</li>
+      <li><strong>FOMC อีก 4–5 วัน + ตลาด price ขึ้นดอก 69%</strong> → <code>fed_window</code> บล็อกไม้ใหญ่ทั้งกระดานอยู่แล้ว</li>
+      <li>ตัวที่ MoS บวกและ conviction ผ่าน (VICI/NVDA/O/UNH) <strong>ไม่มีตัวไหนอยู่ในโซนเก็บของตัวเอง</strong></li>
+    </ol>
+    <p><strong>ถือ dry powder ต่อ</strong> — SGOV 8.97% + VGSH 0.66% + cash 0.47% ≈ <strong>10.1% ของพอร์ต</strong> พร้อมช้อนถ้า FOMC ทำให้ของถูกจริง</p>
   </div>
-  <p><strong>เหตุผลตรง ๆ ไม่อ้อม:</strong></p>
-  <ul class="tight">
-    <li><strong>ไม่มีตัวไหนได้ 🟢 หรือ 🟢🟢 — ศูนย์ตัวจาก 41</strong> · สูงสุด GOOGL 63.4 ยังต่ำกว่าเส้น 65</li>
-    <li><strong><code>fed_window</code> บล็อกก้อนใหญ่ทั้งกระดาน</strong> — FOMC เหลือ 5 วัน และ<strong>ตลาดให้โอกาสขึ้นดอก 69%</strong></li>
-    <li><strong>core CPI ออกอีก ~3 ชม. หลังรอบนี้</strong> — ลงเงินก่อนตัวเลขที่จะตัดสิน regime = เดา ไม่ใช่การลงทุน</li>
-    <li>ตัวที่ MoS ดีที่สุดติดคนละด่าน: <strong>VICI</strong> ติด Q 72 · <strong>NVO/IIPR</strong> ติด conviction LOW (Sleep-Well บล็อก) · <strong>NVDA</strong> ติด Disc 9 + fed_window</li>
-  </ul>
-  <blockquote><p><strong>ไม่ฝืนหาดีล</strong> — dry powder 10.09% มีไว้ช้อนโซนลึก ไม่ใช่ไว้ใช้ให้หมดทุกรอบ · ถ้า CPI ออกร้อน (≥0.4%) แล้วตลาดลงแรง <strong>นั่นคือรอบที่ dry powder มีค่า</strong> — ไม่ใช่ตอนนี้</p></blockquote>
 </section>
 
 <section id="thesis">
@@ -511,67 +449,56 @@
   <div class="scroller"><table>
     <thead><tr><th>Ticker</th><th>ธง</th><th>สถานะรอบนี้</th></tr></thead>
     <tbody>
-      <tr><td class="tkr">GOOGL</td><td><code>watch</code></td><td class="b-avoid"><strong>🔴 แน่นขึ้น</strong> — capex 195–205B และจะขึ้นอีกปี 2027 · commitments &gt;800B · FCF Q2 −5.9B → เงื่อนไขปลดธงไกลออกไป</td></tr>
-      <tr><td class="tkr">META</td><td><code>watch</code></td><td>คงเดิม — capex FY26 130–145B กด FCF · รอทบทวนหลังงบ Q3 ปลาย ต.ค.</td></tr>
-      <tr><td class="tkr">MELI</td><td><code>watch</code></td><td>คงเดิม — op margin หด 2 ไตรมาสติด · เงื่อนไขปลด: margin Q3 &gt; 8% · งบ 4 พ.ย.</td></tr>
-      <tr><td class="tkr">NVO</td><td><code>watch</code></td><td>คงเดิม · Q 52 · conviction LOW → <strong>candidate ทยอยออก</strong> (MoS +10.5% ไม่เปลี่ยนสถานะ — ของถูกที่ใจไม่ถึง = ข้าม)</td></tr>
-      <tr><td class="tkr">PFE</td><td><code>watch</code></td><td>คงเดิม — cliff จริง (Eliquis ปลาย 26 · Ibrance มี.ค. 27) · MoS −23.4%</td></tr>
-      <tr><td class="tkr">IIPR</td><td><code>watch</code></td><td>คงเดิม · Q 45 ต่ำกว่าเส้น 50 · จ่ายปันผล &gt;100% ของ AFFO 2 ไตรมาสติด → <strong>yield ไม่ใช่ผลตอบแทน แต่คือตลาด price การหั่นปันผล</strong></td></tr>
-      <tr><td class="tkr">SNPS / MCD</td><td><code>watch</code></td><td>คงเดิม</td></tr>
+      <tr><td>META</td><td>watch</td><td>%พอร์ตสูงสุด 5.23% (ใต้เพดาน core 8%) · MoS −12.5% · ไม่มีข่าวใหม่ที่เปลี่ยนธง</td></tr>
+      <tr><td>GOOGL</td><td>watch</td><td>ราคาเหนือ Bull 22% · ธงยังไม่ถอด</td></tr>
+      <tr><td>MELI</td><td>watch</td><td>MoS −74.4% · ราคาเหนือ Base 74%</td></tr>
+      <tr><td>SNPS</td><td>watch</td><td>ไม่ถือ · Score 57.8</td></tr>
+      <tr><td>MCD</td><td>watch</td><td>ไม่ถือ · Score 57.5</td></tr>
+      <tr><td>NVO</td><td class="b-avoid">watch + LOW</td><td>P/L −11.1% · MoS +10.5% แต่ <strong>Sleep-Well บล็อก</strong> · Q=52 = ไม่มีทางขึ้น 🟢</td></tr>
+      <tr><td>PFE</td><td class="b-avoid">watch + LOW</td><td>MoS −23.4% (แพงกว่า FV) · Q=58 · Sleep-Well บล็อก</td></tr>
+      <tr><td>IIPR</td><td class="b-avoid">watch + LOW</td><td>P/L −31.9% · MoS +8.9% · Q=45 ต่ำสุดบอร์ด · Sleep-Well บล็อก</td></tr>
     </tbody>
   </table></div>
-  <p><strong>ไม่มีตัวไหนขยับเป็น <code>broken</code> → ไม่มีคำสั่งตัดรอบนี้</strong></p>
+  <p><strong>ไม่มีตัวไหนเปลี่ยนจาก watch → broken ในรอบนี้</strong> → ไม่มีคำสั่งตัด</p>
 </section>
 
 <section id="gaps">
   <h2>🔴 ยังไม่ได้ทำ <span class="h2note">ไม่แกล้งบอกว่าทำแล้ว</span></h2>
   <div class="rule"></div>
-  <ul class="tight">
-    <li><strong>ดึงราคาสดไม่ได้เลย 0/41</strong> — proxy บล็อก Yahoo ทั้งหมด · ราคาทั้งเล่มคือปิด 10 ก.ย. ไม่ใช่ราคาวันศุกร์</li>
-    <li><strong>GOOGL DCF ช้าไปหนึ่งไตรมาส</strong> — ฐาน LTM ถึง Q1-2026 · งบ Q2 ยังไม่นำเข้า</li>
-    <li><strong>AVGO g1 = 30% น่าจะต่ำกว่าแผนบริษัทมาก</strong> — ยังไม่ยก เพราะต้องมีฐานจากเอกสารที่ตรวจได้</li>
-    <li><strong>NEE ยังไม่มี engine</strong> — FV −8.27 = <strong>INVALID ห้ามใช้</strong> · ต้องสร้าง rate-base model</li>
-    <li><strong>DE ยังไม่แยกงบส่วนงาน</strong> — ΔFV −7.6% จาก rf 22bp = โมเดลเปราะผิดปกติ</li>
-    <li><strong>NOI / cap rate ของ REIT ทั้งสามตัวยังเป็นการประมาณ</strong> ไม่ได้มาจาก supplemental → NAV เป็นตัวเลขคร่าว ๆ</li>
-    <li><strong><code>house_rule_fair_value</code> เดิมสร้างซ้ำไม่ได้</strong> — รอนายท่านชี้ขาดว่าจะยึดกติกาไหน</li>
-    <li><strong>ยังไม่ได้อ่าน 10-Q/10-K ตัวเต็ม</strong> ของตัวที่เป็น FIRST-PASS</li>
-  </ul>
+  <ol class="tight">
+    <li><strong>ราคา intraday ของวันนี้</strong> — ไม่มี ทั้งรอบใช้ราคาปิด 10 ก.ย.</li>
+    <li><strong>ทรงวันของวันศุกร์</strong> — อ่านไม่ได้ → No-chase gate รอบนี้ทำงานบนข้อมูลเมื่อวาน</li>
+    <li><strong>ปฏิกิริยาราคาหลัง CPI</strong> — ไม่มีในกระดาน ต้องรอรอบหน้า (อังคาร 15 ก.ย. ซึ่งตรงกับวันแรกของ FOMC พอดี)</li>
+    <li><strong>รื้อ DCF จากงบจริง</strong> — <code>data.sec.gov</code> ยังถูกบล็อก → FV ทุกตัวยังมาจากสมมติฐานเดิม · <strong>delta FV เทียบรอบก่อน = 0 ทุกตัว</strong></li>
+    <li><strong>ข้อขัดแย้ง VICI</strong> (cap rate / ความเสี่ยงผู้เช่า) — ยังไม่เคลียร์ ต้องใช้ข้อมูลงบจริงซึ่งดึงไม่ได้บน cloud</li>
+  </ol>
 </section>
 
 <section id="cal">
   <h2>📅 ปฏิทินข้างหน้า</h2>
   <div class="rule"></div>
   <div class="scroller"><table>
-    <thead><tr><th>วันที่</th><th>เหตุการณ์</th><th>ทำไมสำคัญ</th></tr></thead>
+    <thead><tr><th>วันที่</th><th>เรื่อง</th><th>ผลต่อกระดาน</th></tr></thead>
     <tbody>
-      <tr><td class="n"><strong>คืนนี้ 19:30 ไทย</strong></td><td><strong>core CPI ส.ค.</strong></td><td class="b-avoid"><strong>≥0.4% → หั่น regime 0.8 รอบหน้าทันที</strong></td></tr>
-      <tr><td class="n"><strong>16 ก.ย.</strong></td><td><strong>FOMC</strong></td><td>ตลาดให้ขึ้นดอก <strong>69.3%</strong> · ขึ้นจริง = หั่น regime</td></tr>
-      <tr><td class="n">17 ก.ย.</td><td>VICI XD</td><td>ปันผลใหม่ 0.46/ไตรมาส</td></tr>
-      <tr><td class="n"><strong>24 ก.ย.</strong></td><td><strong>COST งบ Q4 FY26</strong></td><td>Score 60.5 อันดับ 4 · จะเข้า binary gate (≤3 วัน) รอบถัดไป</td></tr>
-      <tr><td class="n">30 ก.ย.</td><td>SNPS Investor Day</td><td>—</td></tr>
-      <tr><td class="n">22 ต.ค.</td><td>AMZN งบ Q3</td><td>—</td></tr>
-      <tr><td class="n">4 พ.ย.</td><td>MELI + LLY งบ Q3</td><td>MELI = เงื่อนไขปลดธง watch</td></tr>
-      <tr><td class="n">25 พ.ย.</td><td>NVDA งบ (ประมาณ)</td><td>⚠️ ยังไม่ยืนยันจาก IR</td></tr>
+      <tr><td><strong>15–16 ก.ย.</strong></td><td><strong>FOMC</strong> (ประกาศพุธ 16 ก.ย. 14:00 ET + dot plot)</td><td class="b-avoid">ตลาด price ขึ้นดอก 69% · <code>fed_window</code> บล็อกไม้ใหญ่จนกว่าจะผ่าน</td></tr>
+      <tr><td>~24–25 ก.ย.</td><td>COST งบ FQ4</td><td>ไม่ถือ · Score 60.6</td></tr>
+      <tr><td>กลาง ต.ค.</td><td>เปิดฤดูงบ Q3</td><td>รอบทบทวน Q pillars รายตัว</td></tr>
     </tbody>
   </table></div>
 </section>
 
 <footer>
   <p><strong>เครื่องมือช่วยคิด — decision สุดท้ายของนายท่านครับ</strong> · ไม่ใช่คำแนะนำการลงทุน</p>
-  <p class="src">
-    ที่มา ·
-    <a href="https://www.bloomberg.com/news/articles/2026-09-11/global-bond-selloff-sends-10-year-treasury-yields-to-cusp-of-5">Global bond selloff — 10Y ใกล้ 5%</a> ·
-    <a href="https://tradingeconomics.com/united-states/government-bond-yield">ยีลด์ 10 ปี</a> ·
-    <a href="https://tradingeconomics.com/commodity/brent-crude-oil">Brent</a> ·
-    <a href="https://www.bls.gov/news.release/ppi.nr0.htm">BLS — PPI ส.ค. 2026</a> ·
-    <a href="https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html">PPI ส.ค. (CNBC)</a> ·
-    <a href="https://nowflation.com/cpi-release-dates">กำหนดออก CPI — 11 ก.ย. 08:30 ET</a> ·
-    <a href="https://finance.yahoo.com/economy/policy/articles/fomc-september-2026-odds-rate-201618784.html">FedWatch — โอกาสขึ้นดอก ก.ย.</a> ·
-    <a href="https://www.cnbc.com/2026/09/09/stock-market-today-live-updates.html">ตลาด 10 ก.ย.</a> ·
-    <a href="https://investors.viciproperties.com/news-releases/news-release-details/vici-properties-inc-increases-regular-quarterly-dividend-2">VICI ขึ้นปันผล (3 ก.ย.)</a> ·
-    <a href="https://seekingalpha.com/news/4639799-broadcom-forecasts-58b-fiscal-2026-ai-revenue-and-outlines-115b-in-2027-230b-in-2028">AVGO — แผน AI FY26-28</a> ·
-    <a href="https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx">Alphabet Q2 2026 IR</a>
+  <p>Yuri Algorithm · รอบ 11 ก.ย. 2026 21:02 น. (ไทย) · ราคาปิดพฤหัส 10 ก.ย. · Gate Stack v3 · regime 0.9</p>
+  <p class="src">แหล่งอ้างอิงรอบนี้ ·
+    <a href="https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html">CPI ส.ค. 2026 (CNBC)</a> ·
+    <a href="https://www.cbsnews.com/news/august-cpi-report-inflation-fed-rates/">CPI 3.4% YoY (CBS)</a> ·
+    <a href="https://www.benzinga.com/markets/economic-data/26/09/61736703/august-inflation-report-2026">เงินเฟ้อหนุนเดิมพันขึ้นดอก (Benzinga)</a> ·
+    <a href="https://fedratecalc.com/fomc-meeting-schedule/">FOMC 15–16 ก.ย.</a> ·
+    <a href="https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm">FOMC minutes ก.ค. (โหวต 9–3)</a> ·
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-11-2026">ตลาด 11 ก.ย.</a>
   </p>
+</footer>
 </footer>
 
 </div>
