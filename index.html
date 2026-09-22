@@ -277,6 +277,7 @@
   <h2>Fair Value 5 ตัวที่รันรอบนี้ <span class="h2note">FCFF DCF + Monte Carlo</span></h2>
   <div class="rule"></div>
   <p>ทุกตัวเป็นธุรกิจทั่วไป → ใช้ <code>earth_evans_engine.py</code> ทั้งหมด (ไม่มีธนาคาร/REIT ในชุดนี้) · <strong>ΔFV เทียบรอบก่อน = 0.00 ทุกตัว</strong> — สมมติฐานไม่ถูกแตะ ที่ขยับคือราคา ไม่ใช่มูลค่า</p>
+  <blockquote><p><strong>คอลัมน์ “เครื่องหมายทน?” คืออะไร</strong> — DCF ต้องเดา “ความเสี่ยง” (อัตราคิดลด) หนึ่งตัว ยามตัวนี้ถามว่า <em>ถ้าเดาพลาดไปแค่ 1% คำตอบว่าถูก/แพงจะพลิกไหม</em> · <strong>✅ ทน</strong> = ขยับแล้วเครื่องหมาย MoS ไม่เปลี่ยน เชื่อทิศทางได้ · <strong>❌ ไม่ทน</strong> = พลิกจากถูกเป็นแพงได้ด้วยการขยับนิดเดียว → <strong>ห้ามใช้ DCF เป็นเหตุผลซื้อตัวนั้น</strong> ต้องอาศัย Disc/ทรงวัน/thesis แทน · ไม่มีผลกับการขาย (Yuri ขายเพราะ thesis พังเท่านั้น)</p></blockquote>
   <div class="scroller"><table>
     <thead><tr><th>Ticker</th><th>FV ฐาน</th><th>FV bull</th><th>MC P50</th><th>P25–P75</th><th>ราคาสด</th><th>MoS</th><th>เครื่องหมายทน?</th></tr></thead>
     <tbody>
@@ -288,9 +289,17 @@
     </tbody>
   </table></div>
   <div class="call warn">
-    <h4>⚠️ COST 2.4 เท่า และ WMT 2.7 เท่า — อ่านให้ถูก</h4>
-    <p>ทั้งคู่ยัง <strong>ไม่ถึงเกณฑ์ “สงสัยโมเดลก่อน” (~3 เท่า)</strong> แต่เฉียด · ทั้งคู่เป็นค้าปลีก ROIC สูง และกติกาบ้าน <strong>terminal ROIC = WACC ตัดค่า franchise ที่ปลายทางออกทั้งหมด</strong></p>
-    <p>→ โมเดลนี้ให้ <strong>“พื้น”</strong> ไม่ใช่ <strong>“ราคาที่ควรเป็น”</strong> · อ่านว่า <em>ตลาดจ่ายพรีเมียมให้คุณภาพก้อนใหญ่มาก</em> ถูกต้องกว่าอ่านว่า <em>หุ้นแพงเกินจริง 2.4 เท่า</em></p>
+    <h4>⚠️ COST / WMT — FV ฐานต่ำเพราะกติกาบ้าน ไม่ใช่เพราะหุ้นแพง 2-3 เท่าจริง</h4>
+    <p>“ราคา ÷ FV” ของ COST = 898.54 ÷ 377 = <strong>2.4 เท่า</strong> · WMT = 107.97 ÷ 39.83 = <strong>2.7 เท่า</strong> — ตัวเลขนี้สูงเพราะกติกาบ้านบังคับให้สองตัวนี้ <strong>กันกำไร ~58% ไปลงทุนซ้ำตลอดกาลโดยไม่ได้ส่วนเกิน</strong> (terminal ROIC = WACC) ซึ่งไม่ใช่ธรรมชาติของธุรกิจ ROIC 20%+</p>
+    <p>รอบนี้เพิ่มบรรทัด <strong>“ผ่อน terminal ROIC”</strong> เข้า engine แล้ว — ถ้าให้เครดิตว่า franchise อยู่ตลอดกาล FV ขยับเป็น:</p>
+    <div class="scroller"><table>
+      <thead><tr><th></th><th>FV ฐาน</th><th>ROIC = WACC+10pp</th><th>ROIC = WACC+15pp</th><th>ราคาสด</th><th>ราคา ÷ FV (+15pp)</th></tr></thead>
+      <tbody>
+        <tr><td class="tkr">COST</td><td class="n">377</td><td class="n">548</td><td class="n">579</td><td class="n">898.54</td><td class="n b-wait"><strong>1.55×</strong></td></tr>
+        <tr><td class="tkr">WMT</td><td class="n">39.83</td><td class="n">59.31</td><td class="n">62.89</td><td class="n">107.97</td><td class="n b-wait"><strong>1.72×</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p>→ แม้ให้เครดิตเต็มที่ COST ยังแพงกว่ามูลค่ากระแสเงินสด ~55% (ตลาดจ่าย 47× NOPAT) · <strong>นี่คือธรรมชาติของ COST มา 10 ปี ไม่ใช่สัญญาณขาย</strong> — วิธีเก็บตัวแบบนี้ของ Yuri คือรอ <em>Disc</em> (ย่อจากไฮจริง) ไม่ใช่รอ MoS เป็นบวก · headline ในตารางยังใช้ FV ฐานเสมอ</p>
   </div>
   <h3>MELI — อยู่ decision zone ไม่ใช่โซนเก็บ</h3>
   <div class="pmap">
